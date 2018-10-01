@@ -1,0 +1,176 @@
+.three-images-wrapper {
+    min-height: 40rem;
+    width: 100%;
+}
+.three-images-wrapper .three-images {
+    margin-bottom: 4rem;
+    min-height: 360px;
+    position: relative;
+}
+.three-images-wrapper .featured-image-outer {
+    position: absolute;
+    margin-left: -10%;
+    min-height: 360px;
+    overflow: hidden;
+    width: 40%;
+    -ms-transform: skew(-15deg, 0deg);
+    /* IE 9 */
+    -webkit-transform: skew(-15deg, 0deg);
+    /* Safari */
+    transform: skew(-15deg, 0deg);
+    /* Standard syntax */
+}
+.three-images-wrapper .featured-image-inner,
+.three-images-wrapper .two-images-inner {
+    background-size: cover;
+    background-position: center;
+}
+
+.three-images-wrapper .featured-image-inner,
+.three-images-wrapper .middle-image-inner{
+    background-size: cover;
+    background-position: center;
+}
+
+.three-images-wrapper .featured-image-inner,
+.three-images-wrapper .last-image-inner{
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*.three-images-wrapper .featured-image-inner:hover,*/
+/*.three-images-wrapper .two-images-inner:hover {*/
+    /*cursor: pointer;*/
+    /*opacity: 0.7;*/
+/*}*/
+.three-images-wrapper .featured-image-inner {
+    left: 50px;
+    position: absolute;
+    top: 0;
+    height: 360px;
+    width: 100%;
+    -ms-transform: skew(15deg, 0deg);
+    /* IE 9 */
+    -webkit-transform: skew(15deg, 0deg);
+    /* Safari */
+    transform: skew(15deg, 0deg);
+    /* Standard syntax */
+}
+
+.three-images-wrapper .middle-image{
+    min-height: 360px;
+    position: absolute;
+    right: 30%;
+    top: 0;
+    width: 40%;
+    -ms-transform: skew(-15deg, 0deg);
+    /* IE 9 */
+    -webkit-transform: skew(-15deg, 0deg);
+    /* Safari */
+    transform: skew(-15deg, 0deg);
+    /* Standard syntax */
+}
+
+.three-images-wrapper .middle-image .middle-image-outer {
+    min-height: 360px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.three-images-wrapper .middle-image .middle-image-outer {
+    min-height: 360px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.three-images-wrapper .middle-image .middle-image-outer .middle-image-inner {
+    position: absolute;
+    height: 360px;
+    right: -10%;
+    width: 700px;
+    -ms-transform: skew(15deg, 0deg);
+    /* IE 9 */
+    -webkit-transform: skew(15deg, 0deg);
+    /* Safari */
+    transform: skew(15deg, 0deg);
+    /* Standard syntax */
+}
+
+.three-images-wrapper .last-image{
+    min-height: 360px;
+    position: absolute;
+    right: -5%;
+    top: 0;
+    width: 35%;
+    -ms-transform: skew(-15deg, 0deg);
+    /* IE 9 */
+    -webkit-transform: skew(-15deg, 0deg);
+    /* Safari */
+    transform: skew(-15deg, 0deg);
+    /* Standard syntax */
+}
+
+.three-images-wrapper .last-image .last-image-outer {
+    min-height: 360px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.three-images-wrapper .last-image .last-image-outer {
+    min-height: 360px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.three-images-wrapper .last-image .last-image-outer .last-image-inner {
+    position: absolute;
+    height: 360px;
+    right: 10%;
+    width: 600px;
+    -ms-transform: skew(15deg, 0deg);
+    /* IE 9 */
+    -webkit-transform: skew(15deg, 0deg);
+    /* Safari */
+    transform: skew(15deg, 0deg);
+    /* Standard syntax */
+}
+
+
+
+.three-images-wrapper .two-images {
+    min-height: 360px;
+    position: relative;
+    right: -50%;
+    top: 0;
+    width: 50%;
+    -ms-transform: skew(-15deg, 0deg);
+    /* IE 9 */
+    -webkit-transform: skew(-15deg, 0deg);
+    /* Safari */
+    transform: skew(-15deg, 0deg);
+    /* Standard syntax */
+}
+.three-images-wrapper .two-images .two-images-outer {
+    min-height: 180px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.three-images-wrapper .two-images .two-images-outer .two-images-inner {
+    position: absolute;
+    height: 170px;
+    right: 10%;
+    width: 100%;
+    -ms-transform: skew(15deg, 0deg);
+    /* IE 9 */
+    -webkit-transform: skew(15deg, 0deg);
+    /* Safari */
+    transform: skew(15deg, 0deg);
+    /* Standard syntax */
+}
+.three-images-wrapper .two-images .two-images-outer:nth-of-type(2) {
+    margin-top: 10px;
+}

@@ -1,0 +1,31 @@
+<div class="row justify-content-center" style="margin-top: 75px">
+    <div class="col-md-12">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <h4>Account</h4>
+                <br>
+                <ul class="nav nav-pills flex-column account-list" style="margin-bottom: auto; list-style: none; width: 90%">
+                    <li><a href="#profile" data-toggle="pill" class="active"><span><i class="fa fa-user fa-fw"></i> Account Info</span></a></li>
+                    <li><a href="#payment" data-toggle="pill"><span><i class="fa fa-credit-card fa-fw"></i> Payment Information</span></a></li>
+                    <li><a href="#orderHistory" data-toggle="pill"><span><i class="fa fa-history fa-fw"></i> Order History</span></a></li>
+                    <br>
+                    <li><a ng-click="logout()"><span data-toggle="pill" ><i class="fa fa-sign-out-alt fa-fw"></i> Logout</span></a></li>
+                </ul>
+            </div>
+            <div class="tab-content col-md-7 account-container">
+                <!--PROFILE-->
+                <div class="tab-pane active" id="profile">
+                    <div ui-view="accountInfo"></div>
+                </div>
+                <!--PAYMENT-->
+                <div class="tab-pane" id="payment">
+                    <div ui-view="accountPayment"></div>
+                </div>
+                <!--ORDER HISTORY-->
+                <div class="tab-pane" id="orderHistory">
+                    <div ui-view="accountOrderHistory"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
