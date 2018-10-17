@@ -1,0 +1,72 @@
+/**************************************
+
+      = Galleries
+        ¬ gallery wrapper
+        ¬ gallery grid
+        ¬ blog gallery
+        ¬ brands row
+
+      = thumbnail
+                                     */
+
+/**        ¬ gallery wrapper         **/
+.gallery-content-inner {
+  padding: 5px;
+  background-color: $gray-light;
+
+  > .row {
+    margin: 0;
+  }
+}
+
+
+/**        ¬ gallery grid         **/
+$grid-columns: 20;
+.grid-gallery {
+  margin: 0;
+
+  &--20 { // 20 columns wide screen
+    .col-lg-1 {
+      @include make-lg-column(1, $gutter: 0)
+    }
+    .col-lg-4 {
+      @include make-lg-column(4, $gutter: 0)
+    }
+    .col-lg-6 {
+      @include make-lg-column(6, $gutter: 0)
+    }
+    .col-lg-3 {
+      @include make-lg-column(3, $gutter: 0)
+    }
+  }
+
+  .grid-item {
+    padding: 5px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/**        ¬ brands row         **/
+.brands-row {
+  padding-bottom: 80px;
+  background-color: $gray-darker;
+  color: #fff;
+}
+
+.brands-carousel {
+  .owl-stage {
+    margin-left: 1px;
+  }
+
+  &__slide {
+    border-right: 1px solid $gray;
+  }
+}
+
+/**        = thumbnail         **/
+.thumb {
+  border: 1px solid $brand-gray;
+}

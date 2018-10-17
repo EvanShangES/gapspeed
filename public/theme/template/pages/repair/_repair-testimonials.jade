@@ -1,0 +1,91 @@
+//           ¬ testimonials           /
+section.section-row.testimonials
+  .container
+    //           ¬ section-header           /
+    +section-number('03. ', 'Testimonials')
+
+    //           ¬ testimonials carousel           /
+    .testimonials-carousel.owl-carousel.owl-theme
+      - for (var i = 0; i < 3; i++)
+        //           ¬ group slides           /
+        .testimonials-panel
+          figure.testimonials-panel__avatar
+            img.img-responsive(src="#{dir.img + 'upload/avatars/avatar1.jpg'}", alt="")
+
+          .testimonials-panel__inner
+            .testimonials-panel__heading.text-center
+              h3.testimonials-panel__title Sammy T. Stone
+              ul.social-list
+                li
+                  a.fa.fa-stack.fa-lg(href="#")
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-instagram.fa-stack-1x.fa-inverse
+                li
+                  a.fa-stack.fa-lg(href="#")
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-facebook.fa-stack-1x.fa-inverse
+            .testimonials-panel__body
+              p Wrote water woman of heart it total other. By in entirely securing suitable graceful at families improved. Zealously few furniture repulsive was agreeable consisted difficult. Collected breakfast estimable questions in to favourite it. Known he place worth words it as to. Spoke now noise off smart her ready.
+        =ind
+
+        .testimonials-panel
+          figure.testimonials-panel__avatar
+            img.img-responsive(src="#{dir.img + 'upload/avatars/avatar4.jpg'}", alt="")
+
+          .testimonials-panel__inner
+            .testimonials-panel__heading.text-center
+              h3.testimonials-panel__title Maria Danhem
+              ul.social-list
+                li
+                  a.fa.fa-stack.fa-lg(href="#")
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-instagram.fa-stack-1x.fa-inverse
+                li
+                  a.fa-stack.fa-lg(href="#")
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                li
+                  a.fa-stack.fa-lg(href="#")
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-twitter.fa-stack-1x.fa-inverse
+            .testimonials-panel__body
+              p Fertile how old address did showing because sitting replied six. Had arose guest visit going off child she new.
+        =ind
+
+        .testimonials-panel
+          figure.testimonials-panel__avatar
+            img.img-responsive(src="#{dir.img + 'upload/avatars/avatar2.jpg'}", alt="")
+
+          .testimonials-panel__inner
+            .testimonials-panel__heading.text-center
+              h3.testimonials-panel__title Michael
+              ul.social-list
+                li
+                  a.fa.fa-stack.fa-lg(href="#")
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-instagram.fa-stack-1x.fa-inverse
+                li
+                  a.fa-stack.fa-lg(href="#")
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                li
+                  a.fa-stack.fa-lg(href="#")
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-twitter.fa-stack-1x.fa-inverse
+            .testimonials-panel__body
+              p Shy celebrated met sentiments she reasonably but. Proposal its disposed eat advanced marriage sociable. Drawings led greatest add subjects endeavor gay remember. Principles one yet assistance you met impossible.
+        =ind
+
+        //           end group slides           /
+        =ind2
+    //           end testimonials carousel           /
+
+
+    //           ¬ control carousel           /
+    .control-carousel
+      button.btn-control.prev: i.fa.fa-angle-left
+      button.btn-control.next: i.fa.fa-angle-right
+      .control-carousel__dots(data-control-dots)
+    //           end control carousel           /
+
+//           end testimonials           /

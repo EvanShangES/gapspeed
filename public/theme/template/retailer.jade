@@ -1,0 +1,304 @@
+//- Home page
+extends _base
+
+block page
+  -
+    page = {
+      language: 'en',
+      title: 'Carros | Retailer',
+      appTitle: 'Carros Retailer',
+      description: '',
+      id: 'page_retailer',
+      class: 'page-retailer page-home'
+    }
+
+block icons
+
+block header
+  include partials/_header-retailer
+
+block content
+  main.page-content
+    include partials/_intro-retailer
+    =ind
+
+    include partials/_category-filter
+    =ind
+
+    //           ¬ content inner           /
+    .page-content-wrapper
+      .container
+        .row
+          //           ¬ sidebar finder           /
+          aside.sidebar.sidebar--md-right.col-xs-12.col-md-3
+            include pages/retailer/_panel-finder
+          //           end sidebar finder           /
+          =ind
+
+          //           ¬ intro catalog           /
+          .col-xs-12.col-md-9
+            //           ¬ catalog sorting panel           /
+
+            .catalog-sort-panel(data-slide-panel)
+              .catalog-sort-panel__track(data-slide-track)
+                ul.catalog-sort-panel__list
+                  li
+                    a(href="#") Top Parts
+                  li
+                    a(href="#") Popular Parts
+                  li
+                    a(href="#") Featured parts
+                  li
+                    a(href="#") Top Parts
+                  li
+                    a(href="#") Popular Parts
+                  li
+                    a(href="#") Featured parts
+
+
+              .catalog-sort-panel__controls
+                button.btn-control.prev: i.fa.fa-angle-left
+                button.btn-control.next: i.fa.fa-angle-right
+
+            //           end catalog sorting panel           /
+            =ind
+
+            //           ¬ catalog items           /
+            .catalog-row-wrapper
+              .catalog-row.row
+                //           ¬ item           /
+                .col-rs.col-xs-6.col-sm-4.col-md-4
+                  article.catalog-item-panel
+                    figure.catalog-item-panel__img.hover-anim
+                      img.img-responsive.thumb(src=ROOT + goods[0], alt="")
+                      +over-catalog-link(ROOT + link.catalog_details)
+                    .catalog-item-panel__body
+                      .catalog-item-header.js-equalHeight
+                        a.link-title(href=ROOT + link.catalog_details)
+                          h3 C.B.S. Brake disc
+                        p Rear axle lucas w/o accessories, for AUDI A3 (8L1) 1.6 101 HP..
+
+                      .media.media-footer
+                        .media-body
+                          .media-counter
+                            input.form-control-count(type='text', data-number, value='1', readonly)
+                        .media-right.cost-row
+                          span.cost-current.text-danger $55.98
+                        +btn-link
+                          | Buy
+
+                //           end item           /
+                =ind
+
+                //           ¬ item           /
+                .col-rs.col-xs-6.col-sm-4.col-md-4
+                  article.catalog-item-panel
+                    figure.catalog-item-panel__img.hover-anim
+                      img.img-responsive.thumb(src=ROOT + goods[1], alt="")
+                      +over-catalog-link(ROOT + link.catalog_details)
+                    .catalog-item-panel__body
+                      .catalog-item-header.js-equalHeight
+                        a.link-title(href=ROOT + link.catalog_details)
+                          h3 SWAP Tappet
+                        p Filter insert, for BMW X5 (E53) 3.0 228 HP..
+
+                      .media.media-footer
+                        .media-body
+                          .media-counter
+                            input.form-control-count(type='text', data-number, value='1', readonly)
+                        .media-right.cost-row
+                          span.cost-current.text-danger $4.00
+                      +btn-link
+                        | Buy
+
+                //           end item           /
+                =ind
+
+                //           ¬ item           /
+                .col-rs.col-xs-6.col-sm-4.col-md-4
+                  article.catalog-item-panel
+                    figure.catalog-item-panel__img.hover-anim
+                      img.img-responsive.thumb(src=ROOT + goods[2], alt="")
+                      +over-catalog-link(ROOT + link.catalog_details)
+                    .catalog-item-panel__body
+                      .catalog-item-header.js-equalHeight
+                        a.link-title(href=ROOT + link.catalog_details)
+                          h3 Elysium Oil filter
+                        p Person how having tended direct own day man. Saw sufficient indulgence one own you inquietude sympat..
+
+                      .media.media-footer
+                        .media-body
+                          .media-counter
+                            input.form-control-count(type='text', data-number, value='1', readonly)
+                        .media-right.cost-row
+                          span.cost-current.text-danger $12.50
+                      +btn-link
+                        | Buy
+
+                //           end item           /
+                =ind
+
+                //           ¬ item           /
+                .col-rs.col-xs-6.col-sm-4.col-md-4
+                  article.catalog-item-panel
+                    figure.catalog-item-panel__img.hover-anim
+                      img.img-responsive.thumb(src=ROOT + goods[3], alt="")
+                      +over-catalog-link(ROOT + link.catalog_details)
+                    .catalog-item-panel__body
+                      .catalog-item-header.js-equalHeight
+                        a.link-title(href=ROOT + link.catalog_details)
+                          h3 OBI Springs
+                        p Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular ..
+
+                      .media.media-footer
+                        .media-body
+                          .media-counter
+                            input.form-control-count(type='text', data-number, value='1', readonly)
+                        .media-right.cost-row
+                          span.cost-current.text-danger $22.25
+                      +btn-link
+                        | Buy
+
+                //           end item           /
+                =ind
+
+                //           ¬ item           /
+                .col-rs.col-xs-6.col-sm-4.col-md-4
+                  article.catalog-item-panel
+                    figure.catalog-item-panel__img.hover-anim
+                      img.img-responsive.thumb(src=ROOT + goods[4], alt="")
+                      +over-catalog-link(ROOT + link.catalog_details)
+                    .catalog-item-panel__body
+                      .catalog-item-header.js-equalHeight
+                        a.link-title(href=ROOT + link.catalog_details)
+                          h3 Elysium Oil filter
+                        p 8 Mechanical steel
+
+                      .media.media-footer
+                        .media-body
+                          .media-counter
+                            input.form-control-count(type='text', data-number, value='1', readonly)
+                        .media-right.cost-row
+                          span.cost-current.text-danger $10.50
+                      +btn-link
+                        | Buy
+
+                //           end item           /
+                =ind
+
+                //           ¬ item           /
+                .col-rs.col-xs-6.col-sm-4.col-md-4
+                  article.catalog-item-panel
+                    figure.catalog-item-panel__img.hover-anim
+                      img.img-responsive.thumb(src=ROOT + goods[5], alt="")
+                      +over-catalog-link(ROOT + link.catalog_details)
+                    .catalog-item-panel__body
+                      .catalog-item-header.js-equalHeight
+                        a.link-title(href=ROOT + link.catalog_details)
+                          h3 C.B.S. Spark plug
+                        p Copper plus, for Chevrolet (all models)
+
+                      .media.media-footer
+                        .media-body
+                          .media-counter
+                            input.form-control-count(type='text', data-number, value='1', readonly)
+                        .media-right.cost-row
+                          span.cost-current.text-danger $19.50
+                      +btn-link
+                        | Buy
+
+                //           end item           /
+                =ind
+
+                //           ¬ item           /
+                .col-rs.col-xs-6.col-sm-4.col-md-4
+                  article.catalog-item-panel
+                    figure.catalog-item-panel__img.hover-anim
+                      img.img-responsive.thumb(src=ROOT + goods[6], alt="")
+                      +over-catalog-link(ROOT + link.catalog_details)
+                    .catalog-item-panel__body
+                      .catalog-item-header.js-equalHeight
+                        a.link-title(href=ROOT + link.catalog_details)
+                          h3 C.B.S. Brake disc
+                        p Front axle vented, for for MERCEDES-BENZ M-CLASS (W164) ML 280 CDI 4-matic (164.120)
+
+                      .media.media-footer
+                        .media-body
+                          .media-counter
+                            input.form-control-count(type='text', data-number, value='1', readonly)
+                        .media-right.cost-row
+                          span.cost-current.text-danger $55.98
+                      +btn-link
+                        | Buy
+
+                //           end item           /
+                =ind
+
+                //           ¬ item           /
+                .col-rs.col-xs-6.col-sm-4.col-md-4
+                  article.catalog-item-panel
+                    figure.catalog-item-panel__img.hover-anim
+                      img.img-responsive.thumb(src=ROOT + goods[7], alt="")
+                      +over-catalog-link(ROOT + link.catalog_details)
+                    .catalog-item-panel__body
+                      .catalog-item-header.js-equalHeight
+                        a.link-title(href=ROOT + link.catalog_details)
+                          h3 SWAP Tappet
+                        p for HONDA CIVIC VIII Hatchback (FN, FK) 1.4 83 HP
+
+                      .media.media-footer
+                        .media-body
+                          .media-counter
+                            input.form-control-count(type='text', data-number, value='1', readonly)
+                        .media-right.cost-row
+                          span.cost-current.text-danger $14.50
+                      +btn-link
+                        | Buy
+
+                //           end item           /
+                =ind
+
+                //           ¬ item           /
+                .col-rs.col-xs-6.col-sm-4.col-md-4
+                  article.catalog-item-panel
+                    figure.catalog-item-panel__img.hover-anim
+                      img.img-responsive.thumb(src=ROOT + goods[8], alt="")
+                      +over-catalog-link(ROOT + link.catalog_details)
+                    .catalog-item-panel__body
+                      .catalog-item-header.js-equalHeight
+                        a.link-title(href=ROOT + link.catalog_details)
+                          h3 Elysium Oil filter
+                        p Filter insert, for BMW X5 (E53) 3.0 228 HP
+
+                      .media.media-footer
+                        .media-body
+                          .media-counter
+                            input.form-control-count(type='text', data-number, value='1', readonly)
+                        .media-right.cost-row
+                          span.cost-current.text-danger $9.00
+
+                        +btn-link
+                          | Buy
+
+                //           end item           /
+                =ind
+
+              //           ¬ loader content           /
+              .btn-wrapper
+                +btn-link('dark', ROOT + link.catalog)(class='btn-lg')
+                  | View catalog
+              //           end loader content           /
+
+            //           end catalog items           /
+
+          //           end intro catalog           /
+
+    //           end content inner           /
+
+    include pages/retailer/_brands-carousel
+
+block footer
+  include partials/_footer
+
+block bottom
+

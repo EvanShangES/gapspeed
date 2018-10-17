@@ -1,0 +1,284 @@
+/**************************************
+      = Pricing
+        ¬ table custom
+        ¬ sections price
+        ¬ table pricing
+        ¬ total panel
+        ¬ table order
+        ¬ price cart
+
+                                     */
+
+/**        ¬ table custom         **/
+.table {
+  border-collapse: collapse;
+  margin-bottom: 30/16 + em;
+
+  &-responsive {
+    border-width: 0;
+    margin-bottom: 0;
+  }
+
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: 0.47em 15px;
+        line-height: 1.88; // 30px
+        vertical-align: top;
+        border-width: 0;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  > tbody {
+    border: 1px solid $brand-gray;
+  }
+}
+
+/**        ¬ sections price         **/
+.section-pricing {
+  &__list {
+    color: #fff;
+    text-align: center;
+    margin-bottom: -31px;
+
+    .grid-item {
+      margin-bottom: 31px;
+    }
+
+    .img-responsive {
+      width: 100%;
+    }
+
+    .cost {
+      font-weight: 700;
+      color: $brand-default;
+    }
+
+    .pricing-banner {
+      position: relative;
+
+      &__top {
+        position: relative;
+      }
+
+      .over-hover-link {
+        height: calc(100% - 2.75em);
+      }
+
+      &__info {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 13/16 + em 3% 12/16 + em;
+        background-color: $gray-darker;
+        z-index: 2;
+      }
+    }
+
+    .pricing-card {
+      position: relative;
+
+      .over-hover-link {
+
+        .over {
+          background-color: $brand-default;
+        }
+      }
+
+      &__body {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 10px;
+        border: 1px solid $gray-light;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+      }
+
+      .expand-title {
+        span {
+          display: inline-block;
+          width: 100%;
+        }
+      }
+    }
+
+    .pricing-banner,
+    .pricing-card {
+      overflow: hidden;
+    }
+  }
+
+  .btn-wrapper-center {
+    margin-top: 20/16 + em;
+  }
+}
+
+/**        ¬ table pricing         **/
+.table-pricing {
+
+  .table {
+
+    > tbody,
+    > thead {
+      > tr {
+        > th,
+        > td {
+          &:first-child {
+            text-align: center;
+          }
+        }
+      }
+    }
+    > thead {
+      border: 1px solid $gray-darker;
+      > tr {
+        background-color: $gray-darker;
+        color: #fff;
+      }
+    }
+    > tbody {
+      > tr:nth-of-type(even) {
+        background-color: $brand-light;
+      }
+    }
+  }
+
+  @include media('<sm') {
+    margin-bottom: 24/16 + em;
+    padding-bottom: 24/16 + em;
+  }
+}
+
+/**        ¬ total panel         **/
+.total-panel {
+  padding: 45px 0;
+  font-size: 20/16 + em;
+  font-weight: 700;
+
+  &-caption {
+    white-space: nowrap;
+  }
+
+  &-sum {
+    display: block;
+    text-align: right;
+  }
+}
+
+/**        ¬ table order         **/
+.table-order {
+  > thead {
+    > tr {
+      background-color: $brand-light;
+    }
+  }
+  > tbody {
+    border-width: 0;
+
+    > tr {
+
+      &:nth-last-child(n+2) {
+        border-bottom: 1px solid $border-light;
+      }
+    }
+
+    > tr > td {
+      padding: 24/16 + em 15px;
+
+      p {
+        width: 100%;
+
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+      }
+
+      .form-group {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        align-content: center;
+      }
+    }
+  }
+
+  .btn-close {
+    margin-left: 10px;
+  }
+}
+
+/**        ¬ price cart         **/
+.price-cart {
+  &-shipping {
+    background-color: $brand-light;
+    padding: 30px 0;
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .label-control {
+      color: inherit;
+    }
+    .cost-total {
+      display: block;
+      text-align: right;
+    }
+
+    @include media('>sm') {
+      &:after,
+      &:before {
+        display: none;
+      }
+      display: flex;
+      align-items: center;
+      align-content: center;
+      margin: 0;
+
+      > * {
+        flex: 2 0 auto;
+      }
+
+      .form-group {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 0;
+      }
+      .label-control {
+        width: auto;
+        margin: 0 15px 0 0;
+      }
+      .select2 {
+        flex: 2 0 auto;
+        width: 50px !important;
+      }
+      .cost-total {
+        text-align: left;
+      }
+    }
+  }
+
+  &-total {
+
+    @include media('>sm') {
+      padding: 45px 15px;
+
+      .total-panel-sum {
+        text-align: left;
+      }
+    }
+  }
+}

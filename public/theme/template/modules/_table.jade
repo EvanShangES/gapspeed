@@ -1,0 +1,53 @@
+mixin tbhead(thead)
+  thead
+    tr
+      th #
+        form(method="get", action="/func.php")
+          input(type="checkbox", name="type" id="checkall")
+          label(for="checkall")
+
+      each th, index in thead
+        th.sort(data-sort="#{th[0]}")
+          | #{th[1]}
+
+mixin tbbody(tbody)
+  tbody.list
+    each td, index in tbody
+
+      - var check = "checked-", count = index + 0
+      tr
+        td #{td[0]}
+          form(method="get", action="/func.php")
+            input.checktype(
+              type="checkbox",
+              name="type",
+              id!=check + count
+            )
+            label(for!=check + count)
+        td.product #{td[1]}
+        td.category #{td[2]}
+        td.price #{td[3]}
+          div.price-edit
+            button.price-edit-btn(
+                data-price-tooltip="tooltip-edit",
+                data-tooltip-show="edit"
+              )
+              i.fa.fa-pencil
+            button.price-edit-btn(
+                data-price-tooltip="tooltip-delete",
+                data-tooltip-show="delete"
+              )
+              i.fa.fa-trash-o
+
+//- +tbhead([
+//-   ["product", "Product"],
+//-   ["category","Category"],
+//-   ["price","Price"]
+//- ])
+//- +tbbody([
+//-   ["1", "Bread",  "Food",        "$1"],
+//-   ["2", "Milk",   "Food",        "$2"],
+//-   ["3", "iPhone", "Electronics", "$699"],
+//-   ["4", "TV",     "Electronics", "$1099"],
+//-   ["5", "F.Dostoevsky \"Crime and Punishment\"", "Books", "$8"]
+//- ])

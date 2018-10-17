@@ -1,0 +1,98 @@
+//- Home page
+extends _base
+
+block page
+  -
+    page = {
+      language: 'en',
+      title: 'Carros | Blog list',
+      appTitle: 'Carros Blog list',
+      description: '',
+      id: 'page_blog',
+      class: 'page-blog page-inner'
+    }
+
+block icons
+
+block header
+  include ../partials/_header-tuning
+
+block content
+  main.page-content
+    +intro-tuning('Blog')
+
+    +bootstrap_breadcrumb(
+      ["Home", "index.html"],
+      ["blog"]
+    )
+
+    //           ¬ page-content-wrapper           /
+    .page-content-wrapper
+      .container
+        .row.table-row
+          //           ¬ inner-content           /
+          .col-md-9
+
+            //           ¬ blog-posts           /
+            .blog-posts
+              article.blog-list-post.hover-anim(style="background-image: url(#{ROOT + blogList[0]})")
+                +over-fade-link(ROOT + link.blog_post)
+                time.flag-date(datetime="2016-08-08")
+                  span.flag-date__day 08
+                  span.flag-date__month Aug
+
+                footer.blog-list-post__bottom
+                  h3.blog-list-post__title Running your car smooth at the right temperature
+
+              article.blog-list-post.hover-anim(style="background-image: url(#{ROOT + blogList[1]})")
+                +over-fade-link(ROOT + link.blog_post)
+                time.flag-date(datetime="2016-08-05")
+                  span.flag-date__day 05
+                  span.flag-date__month Aug
+
+                footer.blog-list-post__bottom
+                  h3.blog-list-post__title 5 helpful recommendations for engine customization
+
+              article.blog-list-post.hover-anim(style="background-image: url(#{ROOT + blogList[2]})")
+                +over-fade-link(ROOT + link.blog_post)
+                time.flag-date(datetime="2016-07-30")
+                  span.flag-date__day 30
+                  span.flag-date__month Jul
+
+                footer.blog-list-post__bottom
+                  h3.blog-list-post__title Which company to choose for a logbook service?
+
+              article.blog-list-post.hover-anim(style="background-image: url(#{ROOT + blogList[3]})")
+                +over-fade-link(ROOT + link.blog_post)
+                time.flag-date(datetime="2016-07-27")
+                  span.flag-date__day 27
+                  span.flag-date__month Jul
+
+                footer.blog-list-post__bottom
+                  h3.blog-list-post__title Air conditioner installment. 3 useful tips
+
+              article.blog-list-post.hover-anim(style="background-image: url(#{ROOT + blogList[4]})")
+                +over-fade-link(ROOT + link.blog_post)
+                time.flag-date(datetime="2016-07-24")
+                  span.flag-date__day 24
+                  span.flag-date__month Jul
+
+                footer.blog-list-post__bottom
+                  h3.blog-list-post__title Choosing the most accurate speedometer
+
+            //           end blog-posts           /
+
+            include ../partials/_pagination
+
+          //           end inner-content           /
+
+          include tuning/_tuning-sidebar
+
+    //           end page-content-wrapper           /
+
+
+block footer
+  include ../partials/_footer
+
+block bottom
+

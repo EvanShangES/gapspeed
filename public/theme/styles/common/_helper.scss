@@ -1,0 +1,25 @@
+/**************************************
+      = Helper classes
+
+        @bootstrap component
+                                     */
+.cf {
+  @include clearfix;
+}
+
+.dropdown-menu {
+  &.pull-right {
+    left: auto !important;
+    right: 0;
+  }
+  &.pull-left {
+    left: 0;
+    right: auto !important;
+  }
+
+  @include media('<sm') {
+    &.pull-left, &.pull-right {
+      float: none !important;
+    }
+  }
+}

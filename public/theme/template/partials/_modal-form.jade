@@ -1,0 +1,68 @@
+//           ¬ modal reservation           /
+#modalReserv.modal.modal-reservation.fade(role='dialog')
+  .modal-dialog.modal-lg
+    .modal-content-center
+      .panel.parallax-repeat.dark(style='background: url("#{ROOT + pattern}")')
+        .panel__inner
+          .section-header
+            button.btn-close(type='button' data-toggle='modal' data-target='#modalReserv')
+              span.btn-close__bar
+              span.btn-close__bar
+            h2 Reservation service
+            .divider
+          .panel__body
+              //           ¬ reservation form           /
+              .reservation-form
+                form#mdReserv(action="#", method="POST" data-toggle="validator")
+                  .reservation-form__center-wrapper
+                    .form-group.item-1
+                      label.label-control(for="mdResName") Your name
+                      .input-wrap.input-wrap--icon-left
+                        i.input-icon.pe-7s-user
+                        input#mdResName.form-control(
+                        type="text",
+                        name="field_name"
+                        placeholder="David Kraemer"
+                        required
+                        )
+
+                    .form-group.item-2
+                      label.label-control(for="mdResNumber") Your phone
+                      .input-wrap.input-wrap--icon-left
+                        i.input-icon.pe-7s-phone
+                        input#mdResNumber.form-control(
+                        type="tel",
+                        name="field_tel"
+                        placeholder="+1 (812) 281 55 23"
+                        required
+                        )
+
+                    .form-group.item-3
+                      label.label-control(for="mdResDate") Date
+                      .input-wrap.input-wrap--icon-left
+                        i.input-icon.pe-7s-date
+                        input#mdResDate.form-control.pick-date(
+                        type="text",
+                        name="field_date"
+                        placeholder="09/18/2016"
+                        required
+                        )
+
+                    .form-group.item-4
+                      label.label-control(for="mdResTime") Time
+                      .input-wrap
+                        i.input-icon.fa.fa-caret-down
+                        input#mdResTime.form-control.time-pick(
+                        type="text",
+                        name="field_time"
+                        placeholder='16:30'
+                        required
+                        )
+
+                  +btn-form
+                    | Make reservation
+
+              //           end reservation form           /
+          .panel__footer
+
+//           end modal reservation           /

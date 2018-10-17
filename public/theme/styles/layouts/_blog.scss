@@ -1,0 +1,282 @@
+/**************************************
+
+      = Blog
+        ¬ blog list post
+        ¬ blog grid post
+        ¬ blog gallery
+        ¬ blog post filter
+        ¬ post date
+        ¬ date latest blog
+        ¬ blog-post-nav
+        ¬ blog-tags
+        ¬ share-list
+        ¬ post comments
+
+                                     */
+
+/**        ¬ blog list post         **/
+.blog-list-post {
+  position: relative;
+  padding-top: 240px;
+  margin-bottom: 50/16 + em;
+  color: #fff;
+  border: 1px solid $brand-gray;
+  background-position: 50%;
+
+  &__bottom {
+    padding: 22px 50px;
+    @extend %bg-dark;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    z-index: 2;
+  }
+
+  &:hover {
+    .blog-list-post__bottom {
+      background-color: transparent;
+    }
+  }
+}
+
+/**        ¬ blog grid post         **/
+.blog-grid-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  height: 555px;
+  margin-bottom: 30px;
+  color: #fff;
+  border: 1px solid $brand-gray;
+  background-position: 50%;
+  text-align: center;
+
+  .flag-date {
+    left: 50%;
+    margin-left: -32px;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    z-index: 2;
+  }
+
+  &__bottom {
+    padding: 22px 50/554*100%;
+    @extend %bg-dark;
+  }
+
+  &:hover {
+    .blog-grid-post__bottom {
+      background-color: transparent;
+    }
+  }
+
+  @include media('<md') {
+    height: 360px;
+  }
+}
+
+/**        ¬ blog gallery         **/
+.blog-gallery {
+
+  .grid-gallery {
+    margin: 0 -5px;
+  }
+
+  section p:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
+}
+
+/**        ¬ blog post filter         **/
+.blog-post-filter {
+  padding: 23px 0;
+  margin-bottom: 80/16 + em;
+  background-color: $gray-darker;
+  color: #fff;
+  ul {
+    margin-left: -46/1140*100%;
+  }
+
+  ul > li {
+    display: inline-block;
+    margin-left: 46/1140*100%;
+
+    a {
+      color: inherit;
+      font-size: 20/16 + em;
+      line-height: 32px;
+      font-weight: 700;
+    }
+  }
+
+  @include media('<sm') {
+    text-align: center;
+  }
+}
+
+/**        ¬ post date         **/
+.flag-date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 50px;
+  width: 64px;
+  padding: 15px 0;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  background-color: $brand-default;
+  z-index: 2;
+  @extend %transition;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    border: 10px solid $brand-default;
+    border-width: 10px 32px;
+    border-bottom-color: transparent !important;
+    @extend %transition;
+  }
+
+  span {
+    display: inline-block;
+    width: 100%;
+  }
+
+  &__day {
+    font-size: 30px;
+  }
+}
+
+/**        ¬ date latest blog         **/
+.date-latest-blog {
+  margin-top: 30px;
+  padding: 8px 0;
+  border: 1px solid $border-light;
+  border-width: 1px 0;
+
+  [class^=link] {
+    border-width: 0;
+  }
+}
+
+/**        ¬ blog-post-nav         **/
+.blog-post-nav {
+  padding: 8/16 + em 0;
+  margin-top: 46/16 + em;
+  border: 1px solid $border-light;
+  border-width: 1px 0;
+
+  > .row {
+    margin-bottom: -20/16 + em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  @include media('<xs') {
+    > .row > * {
+      text-align: left;
+    }
+  }
+}
+
+/**        ¬ blog-tags         **/
+.blog-tags {
+  margin-bottom: 20/16 + em;
+
+  > li {
+    display: inline-block;
+    margin-right: 12px;
+
+    a {
+      @extend .link-accent;
+      border-bottom: none !important;
+    }
+  }
+}
+
+/**        ¬ share-list         **/
+.share-list {
+  margin-bottom: 20/16 + em;
+  white-space: nowrap;
+
+  > * {
+    vertical-align: middle;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-right: 12px;
+  }
+
+  ul {
+    display: inline-block;
+    margin-right: -4px;
+    margin-bottom: -6px;
+
+    > li {
+      display: inline-block;
+      margin-right: 4px;
+    }
+  }
+}
+
+/**        ¬ post comments         **/
+.post-comment {
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: $brand-light;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__heading {
+    margin-bottom: 1em;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+
+  &__reply {
+    @extend .link-accent;
+    vertical-align: top;
+    border-bottom: none !important;
+  }
+
+  &__body {
+    p {
+      &:nth-last-of-type(1) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include media('<sm') {
+    &__heading {
+      > * {
+        text-align: left;
+      }
+    }
+  }
+}

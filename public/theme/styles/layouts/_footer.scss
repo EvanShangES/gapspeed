@@ -1,0 +1,94 @@
+/**************************************
+
+      = Footer
+        ¬ instagram list
+
+                                     */
+.page-footer {
+  background-color: $gray-base;
+  color: $gray-light;
+  padding: 80px 0 15px;
+
+  .item {
+    margin-bottom: 50px;
+  }
+
+  h4, .title {
+    margin-top: 0;
+    color: #fff;
+  }
+
+  p {
+    margin-bottom: 10/16 + em;
+  }
+
+  &__working {
+
+    > li {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      margin-bottom: 6/16 + em;
+    }
+
+    > li > span {
+      display: block;
+    }
+  }
+
+  &__subscribe {
+    p {
+      margin-bottom: 20/16 + em;
+    }
+
+    .label-control {
+      color: #fff;
+    }
+
+    @include media('<lg','>xs') {
+      max-width: 767px;
+      width: 100%;
+      margin: 0 auto;
+
+      .form-control {
+        text-align: center;
+      }
+    }
+  }
+
+  &__social {
+
+    .list-title {
+      margin-bottom: 5px;
+    }
+  }
+
+  @include media('>xs', '<lg') {
+    .item-1 { padding-right: 25px; }
+    .item-2 { padding-left: 25px; }
+  }
+
+  @include media('>lg') {
+    .item:nth-last-child(n+2) {
+      padding: 0 35px 0 15px;
+    }
+  }
+}
+
+/**        ¬ instagram list         **/
+.instagram-list {
+  font-size: 0;
+  margin-right: -15px;
+
+  > li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px 15px 0;
+  }
+
+  &__link {
+    width: 77px;
+    display: block;
+    @extend %thumb-over;
+  }
+}

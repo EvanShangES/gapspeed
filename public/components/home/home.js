@@ -5,7 +5,7 @@ angular.module('gap.home', ['ui.router'])
                 url: '/',
                 views: {
                     navbar: {
-                        templateUrl: 'components/nav/homeNav.html'
+                        templateUrl: 'components/nav/navbar.html'
                     },
                     footer:{
                         templateUrl: 'components/nav/footer.html'
@@ -14,7 +14,8 @@ angular.module('gap.home', ['ui.router'])
                         templateUrl: 'components/index.html'
                     },
                     "contentHome@home":{
-                        templateUrl: 'components/home/home.html'
+                        templateUrl: 'components/home/home.html',
+                        controller: 'homeController'
                     }
                 }
             })

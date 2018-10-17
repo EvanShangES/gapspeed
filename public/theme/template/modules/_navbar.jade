@@ -1,0 +1,62 @@
+mixin nav(name, id, style, data)
+  - var style = (typeof style === 'undefined') ? "default" : style
+  nav(class=["navbar", "navbar-" + style])&attributes(attributes)= data
+    .navbar-header
+      .container
+        button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#" + id, aria-expanded="false", aria-controls="navbar")
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href=ROOT + "index.html")
+          span.navbar-brand__image
+            i.logo-font.pe-7s-car
+            img.img-responsive(src="#", alt="" style='display: none')
+          span.navbar-brand__text Carros
+
+    .container
+      .collapse.navbar-collapse( id=id )
+        block
+
+
+//- navbar-tuning
+mixin nav-2(name, id, style, data)
+  - var style = (typeof style === 'undefined') ? "default" : style
+  nav(class=["navbar", "navbar-" + style])&attributes(attributes)= data
+    .container
+      .navbar-header
+        .container
+          button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#" + id, aria-expanded="false", aria-controls="navbar")
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href=ROOT + "tuning.html")
+            span.navbar-brand__image
+              i.logo-font.pe-7s-car
+              img.img-responsive(src="#", alt="" style='display: none')
+            span.navbar-brand__text Carros
+
+      .collapse.navbar-collapse( id=id )
+        block
+
+
+mixin nav_item(href, active)
+  li(class=active): a( href=ROOT + href )
+    block
+
+mixin nav_item_dropdown(href, active)
+  - var href = (typeof href === 'undefined') ? "#" : ROOT + href;
+
+  li(class=["dropdown", active])
+    a.dropdown-toggle( href=href, data-toggle="dropdown", role="button", aria-expanded="false" )= attributes.label
+      span.fa.fa-caret-down
+    ul.dropdown-menu(role="menu")
+      block
+
+mixin nav_divider
+  li.divider
+
+mixin nav_header
+  li.dropdown-header
+    block

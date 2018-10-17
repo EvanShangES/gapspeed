@@ -1,0 +1,191 @@
+/**************************************
+
+    = Pages
+      ¬ Page repair
+        ¬ section quote
+        ¬ section statistic
+        ¬ section contacts
+
+      ¬ Page tuning
+       ¬ tuning-row-feature
+       ¬ section blog
+
+      ¬ Page 404
+                                     */
+
+/**        ¬ section quote         **/
+.section-quote {
+  padding-top: 120/16 + em;
+  position: relative;
+  color: #fff;
+  overflow-x: hidden;
+
+  &__content {
+    padding: 105/16 + em 0 110/16 + em;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  &__man {
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    bottom: 0;
+    margin-left: 30px;
+  }
+
+  &__accent-over {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    width: 4096px;
+    margin-left: 120px;
+    transform-origin: left bottom;
+    transform: skewX(-12deg);
+    background-color: rgba($brand-default, .7);
+  }
+}
+
+
+/**        ¬ section statistic         **/
+.section-stats {
+  padding: 110/16 + em 0 35/16 + em;
+
+  .container {
+    overflow: hidden;
+  }
+
+  &__row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-left: -16px;
+    margin-right: -15px;
+  }
+
+  .stats-item {
+    float: none;
+    border-left: 1px solid #555555;
+    margin-bottom: 75/16 + em;
+
+    &__counter {
+      margin: 0;
+      line-height: .8;
+      margin-bottom: 15/72 + em;
+    }
+
+    .divider-decor {
+      margin-bottom: 10/16 + em;
+    }
+
+    &__title {
+      margin-top: 0;
+      margin-bottom: -15/16 + em;
+      white-space: nowrap;
+
+      span {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+/**        ¬ section contacts         **/
+.section-contacts {
+
+  &__inner {
+    background-color: $gray-darker;
+    padding: 50/16 + em 0 0;
+    color: #fff;
+  }
+
+  .contacts-list {
+
+    &__item {
+      margin-bottom: 50/16 + em;
+    }
+
+    @include media('<lg', '>sm') {
+
+      &__item {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+/**        ¬ tuning-row-feature         **/
+.section-banner {
+  color: #fff;
+  padding: 115px 0;
+
+  header {
+    h1,h2 {
+      margin: 0;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+  }
+
+  p {
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+
+  .btn-wrapper {
+    max-width: 300px;
+  }
+}
+
+
+/**        = Page 404         **/
+.page-404 {
+
+  .page-content {
+    text-align: center;
+    margin: 150px 0 220px;
+
+    p:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+
+    .btn-wrapper {
+      max-width: 360px;
+      width: 100%;
+      margin: 45/16 + em auto 0;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    line-height: 1;
+    font-size: 200px;
+    color: $brand-gray;
+  }
+
+  @include media('<xs') {
+    .page-content {
+      margin: 150/479*100vw 0 220/479*100vw;
+    }
+
+    h1 {
+      font-size: 200/479*100vw;
+    }
+  }
+}

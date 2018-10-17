@@ -1,0 +1,108 @@
+//- Home page
+extends _base
+
+block page
+  -
+    page = {
+      language: 'en',
+      title: 'Carros | Contacts',
+      appTitle: 'Carros Contacts',
+      description: '',
+      id: 'page_contacts',
+      class: 'page-contacts page-inner'
+    }
+
+block icons
+
+block header
+  include partials/_header-repair
+
+block content
+  main.page-content
+    +intro-page('Contacts')
+
+    +bootstrap_breadcrumb(
+      ["Home", "index.html"],
+      ["Contacts"]
+    )
+
+    //           ¬ page-content-wrapper           /
+    .page-content-wrapper
+      .container
+        .row
+          //           ¬ inner-content           /
+          .col-md-9
+            //           ¬ section content           /
+            section.section-content
+              header.section-header
+                h2 Services overview
+                .divider
+                p Inhabiting discretion the her dispatched decisively boisterous joy. So form were wish open is able of mile of. Waiting express if prevent it we an musical. Especially reasonable travelling she son. Resources resembled forfeited no to zealously. Has procured daughter how friendly followed repeated who surprise.
+
+              include pages/repair/_contacts-list
+
+              +contacts-map
+
+              article.panel.contacts-panel
+                .panel__inner.contacts-panel__inner
+                  header.contacts-panel-header
+                    h2 Send us a message
+                    .divider
+                    p We will reply you in 48 hours (on business days).
+                  =ind
+
+                  .contacts-form
+                    form#contactsForm(action="#", method="POST" data-toggle="validator")
+                      .form-inner.row
+                        .col-sm-6.form-group
+                          label.label-control(for="contName") Your name
+                          .input-wrap.input-wrap--icon-left
+                            i.input-icon.pe-7s-user
+                            input#contName.form-control(
+                            type="text",
+                            name="user_name"
+                            placeholder="David Kraemer"
+                            required
+                            )
+                        =ind
+
+                        .col-sm-6.form-group
+                          label.label-control(for="contEmail") Your e-mail
+                          .input-wrap.input-wrap--icon-left
+                            i.input-icon.pe-7s-mail
+                            input#contEmail.form-control(
+                            type="email",
+                            name="user_email"
+                            placeholder="user@example.com"
+                            required
+                            )
+                        =ind
+
+                        .col-xs-12.form-group
+                          label.label-control(for="contMsg") Your message
+                          textarea#contMsg.form-control(
+                          name="user_message"
+                          required
+                          )
+                        =ind
+
+                        .col-xs-12
+                          +btn-form
+                            | Make reservation
+
+            //           end section content           /
+
+          //           end inner-content           /
+
+          include pages/repair/_repair-sidebar
+      include pages/repair/_maintenance
+    //           end page-content-wrapper           /
+
+
+block footer
+  include partials/_footer
+
+block bottom
+  include partials/_modal-form
+  +init-map
+

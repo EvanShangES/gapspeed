@@ -1,0 +1,85 @@
+//           ¬ section pricing           /
+section.section-row.tuning-row-pricing
+  .container
+    //           ¬ section-header           /
+    +section-row-header('Packages')
+      +divider-decor
+      p Abode shy shade she hours forth its use. Up whole of fancy ye quiet do. Justice fortune no to is if winding morning forming.
+
+    //           end section-header           /
+
+
+    //           ¬ pricing panels           /
+    .pricing-panels-group.row
+      //           ¬ item-1           /
+      .col-xs-12.col-sm-6.col-sm-push-3.col-md-4.col-md-push-0.item
+        .panel.pricing-panel
+          .panel__inner.pricing-panel__inner
+            .panel__heading
+              h2.panel__title
+                span Minor
+                span.text-danger $120
+            .panel__body
+              ul.list-default
+                li Changing engine oil
+                li Changing oil filter
+                li Brake inspection
+                li Critical components inspection
+
+            .panel__footer
+              +btn-link('accent')
+                | book now
+
+      //           end item-1           /
+
+
+      //           ¬ item-2           /
+      .col-xs-12.col-sm-6.col-md-4.item.order-2
+        .panel.pricing-panel.panel--accent
+          .panel__inner.pricing-panel__inner
+            .panel__heading
+              h2.panel__title
+                span Ultra
+                span $190
+            .panel__body
+              ul.list-default.list-default--accent
+                li Changing oil filter
+                li Changing spark plugs
+                li Computer scan
+                li Synthetic oil upgrade
+                li Air condition fluid refill
+
+            .panel__footer
+              +btn-link('light')
+                | book now
+
+      //           end item-2           /
+
+
+      //           ¬ item-3           /
+      .col-xs-12.col-sm-6.col-md-4.item
+        .panel.pricing-panel
+          .panel__inner.pricing-panel__inner
+            .panel__heading
+              h2.panel__title
+                span Vip
+                span.text-danger $290
+            .panel__body
+              ul.list-default
+                li Changing engine oil
+                li Changing oil filter
+                li Brake inspection
+                li Critical components inspection
+                li Visual inspection
+                li Top up of fluids
+
+            .panel__footer
+              +btn-link('accent')
+                | book now
+
+      //           end item-3           /
+
+    //           end pricing panels           /
+
+//           end section pricing           /
+

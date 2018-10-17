@@ -1,0 +1,32 @@
+//           ¬ Page header           /
+header.page-header
+  //           ¬ navbar           /
+  +nav-2("Carros", "navbar", "default navbar-tuning")(data-skin='default')
+    //           ¬ navbar-menu           /
+    ul.nav.navbar-nav.navbar-menu
+      +nav_item_dropdown()(label="Home")
+        +nav_item(link.home) Auto repair shop
+        +nav_item(link.tuning) Auto tuning service
+        +nav_item(link.retailer) Auto parts retailer
+
+      +nav_item_dropdown()(label="Services")
+        +nav_item(link.tuning_services) Services list
+        +nav_item(link.tuning_details) Service details
+
+      +nav_item_dropdown()(label="Gallery")
+        +nav_item(link.gallery1) Gallery v1
+        +nav_item(link.gallery2) Gallery v2
+        +nav_item(link.gallery3) Gallery v3
+
+      +nav_item_dropdown()(label="Blog")
+        +nav_item(link.blog) Blog list sidebar
+        +nav_item(link.blog_post) Blog single post sidebar
+        +nav_item(link.blog_grid) Blog grid
+        +nav_item(link.blog_grid_post) Blog single post
+
+      +nav_item(link.tuning_about) About
+      +nav_item(link.tuning_contacts) Contacts
+
+    //           end navbar-menu           /
+  //           end navbar           /
+//           end Page header           /

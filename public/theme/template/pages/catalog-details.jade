@@ -1,0 +1,384 @@
+//- Home page
+extends _base
+
+block page
+  -
+    page = {
+      language: 'en',
+      title: 'Carros | Catalog details',
+      appTitle: 'Carros Catalog details',
+      description: '',
+      id: 'catalog_details',
+      class: 'page-catalog-details page-inner'
+    }
+
+block icons
+
+block header
+  include ../partials/_header-retailer
+
+block content
+  main.page-content
+    //           ¬ section-intro           /
+    +catalog-intro-page('C.B.S. Brake disc')
+
+    //           end section-intro           /
+
+    include ../partials/_category-filter
+    =ind
+
+    +breadcrumb_catalog(
+      ["Home", "retailer.html"],
+      ["Catalog", "pages/catalog.html"],
+      ["Brakes", "pages/catalog-search.html"],
+      ["Brake discs", "pages/catalog-details.html"],
+      ["C.B.S. Brake disc"]
+    )
+
+    //           ¬ content inner           /
+    .page-content-wrapper
+      .container
+        .row
+          include retailer/_sidebar-full-filter
+          =ind
+
+          .col-xs-12.col-md-9
+
+            //           ¬ main-product           /
+            article.main-product
+              header.section-header
+                h2 C.B.S. Brake disc
+
+              .row
+                .col-rs.col-xs-10.col-xs-offset-1.col-sm-7.col-sm-offset-0
+                  //           ¬ carousel row           /
+                  .main-product__carousel-row.thumb
+                    .main-product__carousel.owl-carousel.owl-theme
+                      //           ¬ group slides           /
+                      each items, i in goods
+                        figure.section-about__slide.hover-anim
+                          img(src=ROOT + items, alt="")
+                          +over-catalog-link(ROOT + link.catalog_details)
+
+                    //           ¬ control carousel           /
+                    .control-carousel
+                      button.btn-control.prev: i.fa.fa-angle-left
+                      button.btn-control.next: i.fa.fa-angle-right
+                    //           end control carousel           /
+
+                  //           end carousel row           /
+                  =ind
+
+                  //           ¬ product price           /
+                  .main-product__price
+                    .cost-row.row
+                      .col-xs-6
+                        span.cost-current $55.98
+                        span.small 18% VAT included
+                      .col-xs-6.text-right
+                        span.cost-row-caption In Stock
+                        span.small Next day shipping
+
+                    .media-left
+                      .media-counter
+                        input.form-control-count(type='text', data-number value='1', readonly)
+                    .media-body
+                      +btn-link()(class='btn-lg')
+                        | Buy
+                  //           end product price           /
+                  =ind
+
+                //           ¬ product sidebar            /
+                .col-xs-12.col-sm-5.main-product-sidebar
+                  section.main-product-descr
+                    h4 Description
+                    p.product-descr Front axle vented, for for MERCEDES-BENZ M-CLASS (W164) ML 280 CDI 4-matic (164.120)
+                  section.main-product-properties
+                    h4 Compatability
+                    ul.list-default
+                      li
+                        a(href="#") ML 230 (163.136) (110 KW / 150 PS)
+                      li
+                        a(href="#") ML 320 (163.154) (160 KW / 218 PS)
+                      li
+                        a(href="#") ML 350 (163.157) (180 KW / 245 PS)
+                      li
+                        a(href="#") ML 350 4-matic (173 KW / 235 PS)
+                      li
+                        a(href="#") ML 430 (163.172) (200 KW / 272 PS)
+                      li
+                        a(href="#") ML 320 (163.154) (160 KW / 218 PS)
+                      li
+                        a(href="#") ML 500 (163.175) (215 KW / 292 PS)
+                      li
+                        a(href="#") ML 500 4-matic (215 KW / 292 PS)
+
+                  =ind
+                  section.main-product-mod
+                    h4 Modification
+
+                    //           ¬ color           /
+                    .main-product-mod-list
+                      p.label-title Color
+                      .main-product-pallete
+                        .check-color
+                          label.label-control
+                            input.form-checkbox(type="radio" name='product_color' value='option1')
+                            span.input-color
+                        .check-color
+                          label.label-control
+                            input.form-checkbox(type="radio" name='product_color' value='option2')
+                            span.input-color
+                        .check-color
+                          label.label-control
+                            input.form-checkbox(type="radio" name='product_color' value='option3')
+                            span.input-color
+                        .check-color
+                          label.label-control
+                            input.form-checkbox(type="radio" name='product_color' value='option4')
+                            span.input-color
+
+                    //           end color           /
+                    =ind
+
+                    //           ¬ type           /
+                    .main-product-mod-list
+                      .main-product-type
+                        .check-wrap
+                          label.label-control
+                            input.form-checkbox(type="checkbox")
+                            i.fa.fa-check
+                            | Ceramic composites
+                        .check-wrap
+                          label.label-control
+                            input.form-checkbox(type="checkbox")
+                            i.fa.fa-check
+                            | Extended warranty
+                        .check-wrap
+                          label.label-control
+                            input.form-checkbox(type="checkbox")
+                            i.fa.fa-check
+                            | Run-out
+
+                    //           end type           /
+                //           end product sidebar            /
+                =ind2
+
+                //           ¬ product tabs           /
+                .col-xs-12.col-sm-12
+                  .product-tabs
+                    ul.nav.nav-tabs(role='tablist')
+                      li(role='presentation')
+                        a(href='#prodDescr', aria-controls='prodDescr', role='tab', data-toggle='tab') Description
+                      li.active(role='presentation')
+                        a(href='#prodReviews', aria-controls='prodReviews', role='tab', data-toggle='tab') Reviews
+
+                    .tab-content
+                      #prodDescr.tab-pane.product-tabs__descr(role='tabpanel')
+                        p Front axle vented, for for MERCEDES-BENZ M-CLASS (W164) ML 280 CDI 4-matic (164.120)
+                      =ind
+                      #prodReviews.tab-pane.product-tabs__commets.active(role='tabpanel')
+                        .post-commets
+                          article.post-comment
+                            .post-comment__heading.row
+                              .col-xs-12.col-sm-6
+                                h3.post-comment__title Sammy T. Stone
+                              .col-xs-12.col-sm-6.text-right
+                                time(datetime='2016-08-06 12:52') 06 / 08 / 2016  @  12:52
+
+                            .post-comment__body
+                              p Wrote water woman of heart it total other. By in entirely securing suitable graceful at families improved. Zealously few furniture repulsive was agreeable consisted difficult. Collected breakfast estimable questions in to favourite it. Known he place worth words it as to. Spoke now noise off smart her ready. Sex scale sir style truth ought.
+
+                          article.post-comment
+                            .post-comment__heading.row
+                              .col-xs-12.col-sm-6
+                                h3.post-comment__title Nicholas L. Mire
+                              .col-xs-12.col-sm-6.text-right
+                                time(datetime='2016-08-06 12:52') 06 / 08 / 2016  @  12:52
+
+                            .post-comment__body
+                              p Its had resolving otherwise she contented therefore. Afford relied warmth out sir hearts sister use garden. Men day warmth formed admire former simple.
+                        =ind2
+
+                        section.comment-form
+                          h2.comment-form__title Write a review
+                          form.form-light(action="#", method="POST" data-toggle="validator")
+                            .form-group
+                              label.label-control(for="fieldName") Your name
+                              .input-wrap.input-wrap--icon-left
+                                i.input-icon.pe-7s-user
+                                input#fieldName.form-control(type="text", name="field_name" required)
+                            .form-group
+                              label.label-control(for="fieldMessage") Your comment
+                              textarea#fieldMessage.form-control(name="field_message" required)
+
+                            .form-group
+                              label.label-control(for="fieldMessage") Rating
+                              select#raitingStars
+                                option(value='1') 1
+                                option(value='2') 2
+                                option(value='3') 3
+                                option(value='4') 4
+                                option(value='5') 5
+
+                            +btn-form
+                              | Submit review
+
+                //           end product tabs           /
+            //           end main-product           /
+            =ind2
+
+            //           ¬ related catalog           /
+            section.catalog-row-wrapper
+              header
+                h2.text-center Related items
+
+              .catalog-row.row
+                //           ¬ item           /
+                .col-rs.col-xs-6.col-sm-4.col-md-4
+                  article.catalog-item-panel
+                    figure.catalog-item-panel__img.hover-anim
+                      img.img-responsive.thumb(src=ROOT + goods[0], alt="")
+                      +over-catalog-link('#')
+                    .catalog-item-panel__body
+                      a.link-title(href=ROOT + link.catalog_details)
+                        h3 C.B.S. Brake disc
+                      p Front axle vented, for for MERCEDES-BENZ M-CLASS (W164) ML 280 CDI 4-matic (164.120)
+
+                      .media.media-footer
+                        .media-body
+                          .media-counter
+                            input.form-control-count(type='text', data-number, value='1', readonly)
+                        .media-right.cost-row
+                          span.cost-current $55.98
+
+                        +btn-link
+                          | Buy
+
+                //           end item           /
+                =ind
+
+                //           ¬ item           /
+                .col-rs.col-xs-6.col-sm-4.col-md-4
+                  article.catalog-item-panel
+                    figure.catalog-item-panel__img.hover-anim
+                      img.img-responsive.thumb(src=ROOT + goods[1], alt="")
+                      +over-catalog-link('#')
+                    .catalog-item-panel__body
+                      a.link-title(href=ROOT + link.catalog_details)
+                        h3 SWAP Tappet
+                      p for HONDA CIVIC VIII Hatchback (FN, FK) 1.4 83 HP
+
+                      .media.media-footer
+                        .media-body
+                          .media-counter
+                            input.form-control-count(type='text', data-number, value='1', readonly)
+                        .media-right.cost-row
+                          span.cost-current $4.00
+                      +btn-link
+                        | Buy
+
+                //           end item           /
+                =ind
+
+                //           ¬ item           /
+                .col-rs.col-xs-6.col-sm-4.col-md-4
+                  article.catalog-item-panel
+                    figure.catalog-item-panel__img.hover-anim
+                      img.img-responsive.thumb(src=ROOT + goods[2], alt="")
+                      +over-catalog-link('#')
+                    .catalog-item-panel__body
+                      a.link-title(href=ROOT + link.catalog_details)
+                        h3 Elysium Oil filter
+                      p Filter insert, for BMW X5 (E53) 3.0 228 HP
+
+                      .media.media-footer
+                        .media-body
+                          .media-counter
+                            input.form-control-count(type='text', data-number, value='1', readonly)
+                        .media-right.cost-row
+                          span.cost-current $12.50
+                      +btn-link
+                        | Buy
+
+                //           end item           /
+                =ind
+
+                //           ¬ item           /
+                .col-rs.col-xs-6.col-sm-4.col-md-4
+                  article.catalog-item-panel
+                    figure.catalog-item-panel__img.hover-anim
+                      img.img-responsive.thumb(src=ROOT + goods[3], alt="")
+                      +over-catalog-link('#')
+                    .catalog-item-panel__body
+                      a.link-title(href=ROOT + link.catalog_details)
+                        h3 OBI Springs
+                      p Rear axle lucas w/o accessories, for AUDI A3 (8L1) 1.6 101 HP
+
+                      .media.media-footer
+                        .media-body
+                          .media-counter
+                            input.form-control-count(type='text', data-number, value='1', readonly)
+                        .media-right.cost-row
+                          span.cost-current $22.25
+                      +btn-link
+                        | Buy
+
+                //           end item           /
+                =ind
+
+                //           ¬ item           /
+                .col-rs.col-xs-6.col-sm-4.col-md-4
+                  article.catalog-item-panel
+                    figure.catalog-item-panel__img.hover-anim
+                      img.img-responsive.thumb(src=ROOT + goods[4], alt="")
+                      +over-catalog-link('#')
+                    .catalog-item-panel__body
+                      a.link-title(href=ROOT + link.catalog_details)
+                        h3 Elysium Oil filter
+                      p 8 Mechanical steel
+
+                      .media.media-footer
+                        .media-body
+                          .media-counter
+                            input.form-control-count(type='text', data-number, value='1', readonly)
+                        .media-right.cost-row
+                          span.cost-current $10.50
+                      +btn-link
+                        | Buy
+
+                //           end item           /
+                =ind
+
+                //           ¬ item           /
+                .col-rs.col-xs-6.col-sm-4.col-md-4
+                  article.catalog-item-panel
+                    figure.catalog-item-panel__img.hover-anim
+                      img.img-responsive.thumb(src=ROOT + goods[5], alt="")
+                      +over-catalog-link('#')
+                    .catalog-item-panel__body
+                      a.link-title(href=ROOT + link.catalog_details)
+                        h3 C.B.S. Spark plug
+                      p Copper plus, for Chevrolet (all models)
+
+                      .media.media-footer
+                        .media-body
+                          .media-counter
+                            input.form-control-count(type='text', data-number, value='1', readonly)
+                        .media-right.cost-row
+                          span.cost-current $19.50
+                      +btn-link
+                        | Buy
+
+                //           end item           /
+
+            //           end related catalog           /
+    //           end content inner           /
+
+    include retailer/_brands-carousel
+
+block footer
+  include ../partials/_footer
+
+block bottom
+

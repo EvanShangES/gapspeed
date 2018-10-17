@@ -1,0 +1,36 @@
+//           = lightbox gallery           /
+#blueimp-gallery.blueimp-gallery
+  .slides
+  a.close(href='#', role='button'): i.pe-7s-close
+
+  #galleryTrack.gallery-controls.container
+    .scrollbar
+      .handle
+        .mousearea
+
+    .gallery-controls__track
+      ul.indicator
+
+    .gallery-controls__row-btn.bg-danger.text-center
+      a.btn.prevPage(href='#', role='button')
+        i.icon.pe-7s-prev
+        | &nbsp;
+        span.btn-text page
+      a.btn.btn-accent.prev(href='#', role='button')
+        i.icon.pe-7s-angle-left
+        span.btn-text prev
+
+      a.btn.play-pause(href='#', role='button')
+        i.icon.play.fa.fa-play
+        i.icon.pause.fa.fa-pause
+
+      a.btn.next(href='#', role='button')
+        span.btn-text next
+        i.icon.pe-7s-angle-right
+
+      a.btn.nextPage(href='#', role='button')
+        span.btn-text page
+        | &nbsp;
+        i.icon.pe-7s-next
+
+//           end lightbox gallery           /

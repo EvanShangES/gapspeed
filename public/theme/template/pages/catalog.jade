@@ -1,0 +1,349 @@
+extends _base
+
+block page
+  -
+    page = {
+      language: 'en',
+      title: 'Carros | Catalog',
+      appTitle: 'Carros Catalog',
+      description: '',
+      id: 'pageCatalog',
+      class: 'page-catalog page-inner'
+    }
+
+block icons
+
+block header
+  include ../partials/_header-retailer
+
+block content
+  main.page-content
+    //           ¬ section-intro           /
+    +catalog-intro-page('Catalog')
+
+    //           end section-intro           /
+
+    include ../partials/_category-filter
+    =ind
+
+    +breadcrumb_catalog(
+      ["Home", "retailer.html"],
+      ["Catalog"]
+    )
+
+    //           ¬ content inner           /
+    .page-content-wrapper
+      .container
+        .row
+          //           ¬ sidebar finder           /
+          aside.sidebar.sidebar--md-right.col-sm-12.col-md-3
+            include retailer/_panel-finder
+          //           end sidebar finder           /
+          =ind
+
+          //           ¬ intro catalog           /
+          .col-sm-12.col-md-9.catalog-front-inner
+            //           ¬ row list           /
+            .catalog-front.row
+              //           ¬ list left           /
+              .col-xs-12.col-sm-6
+                .row
+                  .col-rs.col-xs-6.col-sm-5
+                    h2.catalog-front__title Brakes
+                .row
+                  .col-rs.col-xs-6.col-sm-5
+                    ul.list-default
+                      li
+                        a(href="#") Brake discs
+                      li
+                        a(href="#") Brake pads
+                      li
+                        a(href="#") Brake hoses
+                      li
+                        a(href="#") Brake drums
+                      li
+                        a(href="#") ABS Ring
+                      li
+                        a(href="#") ABS Controllers
+
+                  .col-rs.col-xs-6.col-sm-5
+                    ul.list-default
+                      li
+                        a(href="#") Handbrake shoes
+                      li
+                        a(href="#") Handbrake cables
+                      li
+                        a(href="#") Brake fluid
+
+              //           end list left           /
+              =ind
+
+              //           ¬ list-right           /
+              .col-xs-12.col-sm-6
+                .row
+                  .col-rs.col-xs-6.col-sm-5.col-sm-offset-2
+                    h2.catalog-front__title Engine
+                .row
+                  .col-rs.col-xs-6.col-sm-5.col-sm-offset-2
+                    ul.list-default
+                      li
+                        a(href="#") Engine parts
+                      li
+                        a(href="#") Belt chains
+                      li
+                        a(href="#") Tensioners
+                      li
+                        a(href="#") Filters
+                      li
+                        a(href="#") Ignition
+                      li
+                        a(href="#") Fuel management
+
+                  .col-rs.col-xs-6.col-sm-5
+                    ul.list-default
+                      li
+                        a(href="#") Turbo
+
+              //           end list-right           /
+            //           end row list           /
+            =ind
+
+            //           ¬ row list           /
+            .catalog-front.row
+              //           ¬ list left           /
+              .col-xs-12.col-sm-6
+                .row
+                  .col-rs.col-xs-6.col-sm-5
+                    h2.catalog-front__title Suspension
+                .row
+                  .col-rs.col-xs-6.col-sm-5
+                    ul.list-default
+                      li
+                        a(href="#") Anti roll bar
+                      li
+                        a(href="#") Bushes
+                      li
+                        a(href="#") Mount
+                      li
+                        a(href="#") Axle carriers
+                      li
+                        a(href="#") Shock absorbers
+                      li
+                        a(href="#") Springs
+
+                  .col-rs.col-xs-6.col-sm-5
+                    ul.list-default
+                      li
+                        a(href="#") Arms
+                      li
+                        a(href="#") Joints
+                      li
+                        a(href="#") Spheres
+                      li
+                        a(href="#") Dumper struts
+
+              //           end list left           /
+              =ind
+
+              //           ¬ list-right           /
+              .col-xs-12.col-sm-6
+                .row
+                  .col-rs.col-xs-6.col-sm-5.col-sm-offset-2
+                    h2.catalog-front__title Transmission
+                .row
+                  .col-rs.col-xs-6.col-sm-5.col-sm-offset-2
+                    ul.list-default
+                      li
+                        a(href="#") Clutch cables
+                      li
+                        a(href="#") Clutch covers
+                      li
+                        a(href="#") Clutch dampers
+                      li
+                        a(href="#") Clutch hydraulics
+                      li
+                        a(href="#") Clutch kits
+                      li
+                        a(href="#") Flywheels
+
+                  .col-rs.col-xs-6.col-sm-5
+                    ul.list-default
+                      li
+                        a(href="#") Spigot bearing
+                      li
+                        a(href="#") Freewheel clutches
+                      li
+                        a(href="#") Driveshafts
+                      li
+                        a(href="#") Seals
+                      li
+                        a(href="#") Stub axles
+
+              //           end list-right           /
+            //           end row list           /
+            =ind
+
+            //           ¬ row list           /
+            .catalog-front.row
+              //           ¬ list left           /
+              .col-xs-12.col-sm-6
+                .row
+                  .col-rs.col-xs-6.col-sm-5
+                    h2.catalog-front__title Electrical
+                .row
+                  .col-rs.col-xs-6.col-sm-5
+                    ul.list-default
+                      li
+                        a(href="#") Battery
+                      li
+                        a(href="#") Starter motors
+                      li
+                        a(href="#") Pressure sensors
+                      li
+                        a(href="#") Headlights
+                      li
+                        a(href="#") Indicators
+                      li
+                        a(href="#") Rear lights
+
+                  .col-rs.col-xs-6.col-sm-5
+                    ul.list-default
+                      li
+                        a(href="#") Glow plugs
+                      li
+                        a(href="#") Ignition leads
+                      li
+                        a(href="#") Spark plugs
+                      li
+                        a(href="#") Dumper struts
+
+              //           end list left           /
+              =ind
+
+              //           ¬ list-right           /
+              .col-xs-12.col-sm-6
+                .row
+                  .col-rs.col-xs-6.col-sm-5.col-sm-offset-2
+                    h2.catalog-front__title Cooling & heating
+                .row
+                  .col-rs.col-xs-6.col-sm-5.col-sm-offset-2
+                    ul.list-default
+                      li
+                        a(href="#") Intercoolers
+                      li
+                        a(href="#") Expansion tanks
+                      li
+                        a(href="#") Radiators
+                      li
+                        a(href="#") Thermostats
+                      li
+                        a(href="#") Compressors
+                      li
+                        a(href="#") Condensers
+
+                  .col-rs.col-xs-6.col-sm-5
+                    ul.list-default
+                      li
+                        a(href="#") Expansion valves
+                      li
+                        a(href="#") Heater cables
+                      li
+                        a(href="#") Heater matrix
+                      li
+                        a(href="#") Heater motors
+
+              //           end list-right           /
+            //           end row list           /
+            =ind
+
+            //           ¬ row list           /
+            .catalog-front.row
+              //           ¬ list left           /
+              .col-xs-12.col-sm-6
+                .row
+                  .col-rs.col-xs-6.col-sm-5
+                    h2.catalog-front__title Body
+                .row
+                  .col-rs.col-xs-6.col-sm-5
+                    ul.list-default
+                      li
+                        a(href="#") Body mouldings
+                      li
+                        a(href="#") Body panels
+                      li
+                        a(href="#") Grilles
+                      li
+                        a(href="#") Mirrors
+                      li
+                        a(href="#") Locking wheel kits
+                      li
+                        a(href="#") Wheel bolts
+
+                  .col-rs.col-xs-6.col-sm-5
+                    ul.list-default
+                      li
+                        a(href="#") Wheel nuts
+                      li
+                        a(href="#") Tailored mats
+                      li
+                        a(href="#") Washer system
+                      li
+                        a(href="#") Wiper blades
+                      li
+                        a(href="#") Heat exchangers
+                      li
+                        a(href="#") Cables
+
+              //           end list left           /
+              =ind
+
+              //           ¬ list-right           /
+              .col-xs-12.col-sm-6
+                .row
+                  .col-rs.col-xs-6.col-sm-5.col-sm-offset-2
+                    h2.catalog-front__title Accessories
+                .row
+                  .col-rs.col-xs-6.col-sm-5.col-sm-offset-2
+                    ul.list-default
+                      li
+                        a(href="#") Car cleaning
+                      li
+                        a(href="#") Car maintainance
+                      li
+                        a(href="#") Fluids
+                      li
+                        a(href="#") Security
+                      li
+                        a(href="#") For winter
+                      li
+                        a(href="#") For summer
+
+                  .col-rs.col-xs-6.col-sm-5
+                    ul.list-default
+                      li
+                        a(href="#") GPS navigators
+                      li
+                        a(href="#") Parking Aids
+                      li
+                        a(href="#") Entertainment
+                      li
+                        a(href="#") Sound systems
+                      li
+                        a(href="#") Bluetooth handsfree kits
+
+              //           end list-right           /
+
+            //           end row list           /
+            =ind
+          //           end intro catalog           /
+          =ind
+
+    //           end content inner           /
+
+    include retailer/_brands-carousel
+
+block footer
+  include ../partials/_footer
+
+block bottom
+
