@@ -232,103 +232,78 @@
 
 
     <!--           end section about-us           /-->
-    <section class="section-row section-contacts">
+    <section class="section-row section-contacts" style="margin-top: 60px">
         <div class="container">
             <!--           ¬ section-header           /-->
-            <header class="section-row-header text-center">
+            <header class="section-row-header text-center" style="margin-bottom: 0">
                 <h1>Contacts</h1>
                 <div class="divider-decor">
                     <div class="div"></div>
                     <div class="div"></div>
                 </div>
-                <p>Silent son man she wished mother. Distrusts allowance do knowledge eagerness assurance additions to.</p>
+                <!--<p>Silent son man she wished mother. Distrusts allowance do knowledge eagerness assurance additions to.</p>-->
             </header>
 
             <!--           end section-header           /-->
 
             <!-- need to add css conversion for the two buttons -->
-            <div class="btn-wrapper center-block">
+            <div class="btn-wrapper center-block" style="margin-top: 20px">
                 <a ng-click="changeOffice(tianjin)" role="button" class="btn btn-regular btn-accent"><span class="btn-text">Tianjin Office</span><span class="btn-over"></span></a>
                 <a ng-click="changeOffice(toronto)" role="button" class="btn btn-regular btn-accent"><span class="btn-text">Toronto Office</span><span class="btn-over"></span></a>
             </div>
-            <div class="section-content tuning-contacts-content row">
-                <!--           ¬ contacts panel           /-->
+        </div>
 
-                <div class="col-xs-12 col-md-5 col-lg-4">
-                    <article class="panel tuning-contacts-panel">
-                        <div class="panel__inner">
-                            <header class="panel__heading">
-                                <h1 class="panel__title text-danger">Carros</h1>
-                            </header>
-                            <!--           ¬ contacts-list           /-->
-                            <div class="panel__body">
-                                <p>Warmly little before cousin sussex entire men set. Blessing it ladyship on sensible judgment settling outweigh. Worse linen an of civil jokes leave offer. Parties all clothes removal cheered calling prudent her.</p>
-                                <div class="contacts-list">
-                                    <div class="contacts-list__item"><i class="icon pe-7s-map-2"></i>
-                                        <ul>
-                                            <li>{{currentOffice.address.address}}</li>
-                                            <li>{{currentOffice.address.country}}</li>
-                                        </ul>
-                                    </div>
-                                    <div class="contacts-list__item"><i class="icon pe-7s-phone"></i>
-                                        <ul>
-                                            <li><a href="tel:+18184925810">{{currentOffice.phoneNumbers.phone}}</a></li>
-                                            <li><a href="fax:+18184102900">{{currentOffice.phoneNumbers.fax}}</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="contacts-list__item"><i class="icon pe-7s-clock"></i>
-                                        <ul>
-                                            <li>{{currentOffice.officeHours.weekdays}}</li>
-                                            <li>{{currentOffice.officeHours.weekends}}</li>
-                                        </ul>
-                                    </div>
+        <div class="section-content tuning-contacts-content row" style="height: 700px; margin-bottom: 0; margin-top: 30px">
+            <!--           ¬ contacts panel           /-->
+
+            <div class="col-xs-12 col-md-3 col-lg-3">
+                <article class="panel tuning-contacts-panel">
+                    <div class="panel__inner">
+                        <header class="panel__heading">
+                            <img src="components/home/images/logo.png" width="50%">
+                            <h2 class="panel__title text-danger" style="vertical-align: bottom; display: inline-block">{{currentOffice.name}}</h2>
+                        </header>
+                        <!--           ¬ contacts-list           /-->
+                        <div class="panel__body">
+                            <p>Warmly little before cousin sussex entire men set. Blessing it ladyship on sensible judgment settling outweigh. Worse linen an of civil jokes leave offer. Parties all clothes removal cheered calling prudent her.</p>
+                            <div class="contacts-list">
+                                <div class="contacts-list__item"><i class="icon pe-7s-map-2"></i>
+                                    <ul>
+                                        <li>{{currentOffice.address.address}}</li>
+                                        <li>{{currentOffice.address.country}}</li>
+                                    </ul>
+                                </div>
+                                <div class="contacts-list__item"><i class="icon pe-7s-phone"></i>
+                                    <ul>
+                                        <li><a href="tel:+18184925810">{{currentOffice.phoneNumbers.phone}}</a></li>
+                                        <li><a href="fax:+18184102900">{{currentOffice.phoneNumbers.fax}}</a></li>
+                                    </ul>
+                                </div>
+                                <div class="contacts-list__item"><i class="icon pe-7s-clock"></i>
+                                    <ul>
+                                        <li>{{currentOffice.officeHours.weekdays}}</li>
+                                        <li>{{currentOffice.officeHours.weekends}}</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <!--           end contacts-list           /-->
                         </div>
-                    </article>
-                </div>
-                <!--           end contacts panel           /-->
-                <div class="col-xs-12 col-md-7 col-lg-8 map-col">
-                    <!--           ¬ map           /-->
-                    <section id="map" class="contacts-map">
-                        <h2 class="hide">Section title</h2>
-                    </section>
-                    <!--           end map           /-->
-                </div>
+                        <!--           end contacts-list           /-->
+                    </div>
+                </article>
             </div>
-
-        </div>
-        <!--           ¬ contacts row           /-->
-        <!--           end contacts row           /-->
-    </section>
-
-    <section style="background: url(&quot;../images/pattern.jpg&quot;)" class="section-maintenance parallax-repeat accent">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-7 col-md-6">
-                    <h2>Have a question or looking for a quote? We're here to help!</h2>
-                </div>
-                <div class="col-sm-5 col-md-6">
-                    <button type="button" class="btn btn-regular btn-dark btn-lg" data-toggle="modal" data-target="#modalReserv"><span class="btn-text">Contact us</span><span class="btn-over"></span></button>
-                </div>
+            <!--           end contacts panel           /-->
+            <div class="col-xs-12 col-md-5 col-lg-5">
+                <div id="map" style="width: 100%"></div>
             </div>
-        </div>
-    </section>
-
-    <div id="modalReserv" role="dialog" class="modal modal-reservation fade">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content-center">
-                <div style="background: url(&quot;images/pattern.jpg&quot;)" class="panel parallax-repeat dark">
+            <div class="col-xs-12 col-md-4 col-lg-4">
+                <article class="panel tuning-contacts-panel">
                     <div class="panel__inner">
-                        <div class="section-header">
-                            <button type="button" data-toggle="modal" data-target="#modalReserv" class="btn-close"><span class="btn-close__bar"></span><span class="btn-close__bar"></span></button>
+                        <div class="section-header" style="margin-top: 10px">
                             <h2>Send us a message</h2>
                             <div class="divider"></div>
                             <p>We will reply you in 48 hours (on business days).</p>
                         </div>
                         <div class="panel__body">
-
                             <!--           ¬ reservation form           /-->
                             <div class="reservation-form">
                                 <form id="contactsForm" action="#" method="POST" data-toggle="validator">
@@ -336,14 +311,14 @@
                                         <div class="col-sm-6 form-group">
                                             <label for="contName" class="label-control">Your name</label>
                                             <div class="input-wrap input-wrap--icon-left"><i class="input-icon pe-7s-user"></i>
-                                                <input id="contName" type="text" name="user_name" placeholder="David Kraemer" required class="form-control">
+                                                <input id="contName" type="text" name="user_name" placeholder="Name" required class="form-control">
                                             </div>
                                         </div>
 
                                         <div class="col-sm-6 form-group">
                                             <label for="contEmail" class="label-control">Your e-mail</label>
                                             <div class="input-wrap input-wrap--icon-left"><i class="input-icon pe-7s-mail"></i>
-                                                <input id="contEmail" type="email" name="user_email" placeholder="user@example.com" required class="form-control">
+                                                <input id="contEmail" type="email" name="user_email" placeholder="Email" required class="form-control">
                                             </div>
                                         </div>
 
@@ -359,10 +334,74 @@
                                 </form>                            </div>
                             <!--           end reservation form           /-->
                         </div>
-                        <div class="panel__footer"></div>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
-    </div>
+        <!--           ¬ contacts row           /-->
+        <!--           end contacts row           /-->
+    </section>
+
+    <!--<section style="background: url(&quot;../images/pattern.jpg&quot;)" class="section-maintenance parallax-repeat accent">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-sm-7 col-md-6">-->
+                    <!--<h2>Have a question or looking for a quote? We're here to help!</h2>-->
+                <!--</div>-->
+                <!--<div class="col-sm-5 col-md-6">-->
+                    <!--<button type="button" class="btn btn-regular btn-dark btn-lg" data-toggle="modal" data-target="#modalReserv"><span class="btn-text">Contact us</span><span class="btn-over"></span></button>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</section>-->
+
+    <!--<div id="modalReserv" role="dialog" class="modal modal-reservation fade">-->
+        <!--<div class="modal-dialog modal-lg">-->
+            <!--<div class="modal-content-center">-->
+                <!--<div style="background: url(&quot;images/pattern.jpg&quot;)" class="panel parallax-repeat dark">-->
+                    <!--<div class="panel__inner">-->
+                        <!--<div class="section-header">-->
+                            <!--<button type="button" data-toggle="modal" data-target="#modalReserv" class="btn-close"><span class="btn-close__bar"></span><span class="btn-close__bar"></span></button>-->
+                            <!--<h2>Send us a message</h2>-->
+                            <!--<div class="divider"></div>-->
+                            <!--<p>We will reply you in 48 hours (on business days).</p>-->
+                        <!--</div>-->
+                        <!--<div class="panel__body">-->
+
+                            <!--&lt;!&ndash;           ¬ reservation form           /&ndash;&gt;-->
+                            <!--<div class="reservation-form">-->
+                                <!--<form id="contactsForm" action="#" method="POST" data-toggle="validator">-->
+                                    <!--<div class="form-inner row">-->
+                                        <!--<div class="col-sm-6 form-group">-->
+                                            <!--<label for="contName" class="label-control">Your name</label>-->
+                                            <!--<div class="input-wrap input-wrap&#45;&#45;icon-left"><i class="input-icon pe-7s-user"></i>-->
+                                                <!--<input id="contName" type="text" name="user_name" placeholder="David Kraemer" required class="form-control">-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+
+                                        <!--<div class="col-sm-6 form-group">-->
+                                            <!--<label for="contEmail" class="label-control">Your e-mail</label>-->
+                                            <!--<div class="input-wrap input-wrap&#45;&#45;icon-left"><i class="input-icon pe-7s-mail"></i>-->
+                                                <!--<input id="contEmail" type="email" name="user_email" placeholder="user@example.com" required class="form-control">-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+
+                                        <!--<div class="col-xs-12 form-group">-->
+                                            <!--<label for="contMsg" class="label-control">Your message</label>-->
+                                            <!--<textarea id="contMsg" name="user_message" required class="form-control"></textarea>-->
+                                        <!--</div>-->
+
+                                        <!--<div class="col-xs-12">-->
+                                            <!--<button type="submit" class="btn btn-regular btn-accent"><span class="btn-text">Contact us</span><span class="btn-over"></span></button>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</form>                            </div>-->
+                            <!--&lt;!&ndash;           end reservation form           /&ndash;&gt;-->
+                        <!--</div>-->
+                        <!--<div class="panel__footer"></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 </main>

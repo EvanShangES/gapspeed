@@ -23,6 +23,7 @@ angular.module('gap.home').controller('homeController', function($scope, $rootSc
 
 
     $scope.tianjin = {
+        name: "Tianjin",
         address: {address: "Suite 1503, 65 Youyi N Rd,", country:"Hexi District, Tianjin China"},
         latLng:  {lat: 39.103088, lng: 117.204248},
         phoneNumbers: {phone: "86-22-85585197/98", fax: "86-22-85585185 (fax)"},
@@ -30,6 +31,7 @@ angular.module('gap.home').controller('homeController', function($scope, $rootSc
     };
 
     $scope.toronto = {
+        name: "Toronto",
         address: {address: "887 Bay St, Toronto", country:"Ontario Canada"},
         latLng:  {lat: 43.663235, lng:  -79.386132},
         phoneNumbers: {phone: "416-509-2745", fax: "647-921-2345"},
