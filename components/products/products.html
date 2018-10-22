@@ -1,0 +1,152 @@
+<main class="page-content">
+    <!--           ¬ section-intro           /-->
+    <!--           ¬ section intro           /-->
+    <section style="background-image: url(../images/pattern.jpg)" class="catalog-intro-page parallax-repeat dark">
+        <div class="container" style="margin-left: 150px">
+            <div class="catalog-intro-page__content">
+                <h1>Products</h1>
+            </div>
+        </div>
+    </section>
+    <!--           end section intro           /-->
+    <!--           end section-intro           /-->
+    <!--           ¬ navbar filter           /-->
+    <nav class="navbar navbar-accent navbar-panel">
+        <div class="container" style="margin-left: 150px; margin-right: 150px">
+            <div id="navCategories" class="collapse navbar-collapse" style="width: 1500px">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="true" class="dropdown-toggle">Mufflers<span class="fa fa-caret-down"></span></a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li>
+                                <ul class="list-default">
+                                    <li><a href="#">Universal Aluminized</a></li>
+                                    <li><a href="#">High Performance</a></li>
+                                    <li><a href="#">Tractor Mufflers</a></li>
+                                </ul>
+                                <ul class="list-default">
+                                    <li><a href="#">Stainless Steel</a></li>
+                                    <li><a href="#">Truck Mufflers</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Exhaust Tips<span class="fa fa-caret-down"></span></a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li>
+                                <ul class="list-default">
+                                    <li><a href="#">Body mouldings</a></li>
+                                    <li><a href="#">Body panels</a></li>
+                                    <li><a href="#">Grilles</a></li>
+                                    <li><a href="#">Mirrors</a></li>
+                                    <li><a href="#">Locking wheel kits</a></li>
+                                    <li><a href="#">Wheel bolts</a></li>
+                                </ul>
+                                <ul class="list-default">
+                                    <li><a href="#">Wheel nuts</a></li>
+                                    <li><a href="#">Tailored mats</a></li>
+                                    <li><a href="#">Washer system</a></li>
+                                    <li><a href="#">Wiper blades</a></li>
+                                    <li><a href="#">Heat exchangers</a></li>
+                                    <li><a href="#">Cables</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a ui-sref=".flexibleTube">Flexible Tubes</a></li>
+                    <li class="dropdown"><a href="#">Catalytic Converters</a></li>
+                    <li class="dropdown"><a href="#">Hangers & Insulators</a></li>
+                    <li class="dropdown"><a href="#">Exhaust Clamps</a></li>
+                    <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Accessories<span class="fa fa-caret-down"></span></a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li>
+                                <ul class="list-default">
+                                    <li><a href="#">Car cleaning</a></li>
+                                    <li><a href="#">Car maintainance</a></li>
+                                    <li><a href="#">Fluids</a></li>
+                                    <li><a href="#">Security</a></li>
+                                    <li><a href="#">For winter</a></li>
+                                    <li><a href="#">For summer</a></li>
+                                </ul>
+                                <ul class="list-default">
+                                    <li><a href="#">GPS navigators</a></li>
+                                    <li><a href="#">Parking Aids</a></li>
+                                    <li><a href="#">Entertainment</a></li>
+                                    <li><a href="#">Sound systems</a></li>
+                                    <li><a href="#">Bluetooth handsfree kits</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--           end navbar filter           /-->
+    <!--           ¬ content inner           /-->\
+    <div ui-view="contentProducts"></div>
+    <!--           end content inner           /-->
+
+    <!--           ¬ brands-row           /-->
+    <section style="background: url(&quot;../images/pattern.jpg&quot;)" class="section-maintenance parallax-repeat accent">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 col-md-6">
+                    <h2>Have a question or looking for a quote? We're here to help!</h2>
+                </div>
+                <div class="col-sm-5 col-md-6">
+                    <button type="button" class="btn btn-regular btn-dark btn-lg" data-toggle="modal" data-target="#modalReserv"><span class="btn-text">Contact us</span><span class="btn-over"></span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modalReserv" role="dialog" class="modal modal-reservation fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content-center">
+                <div style="background: url(&quot;images/pattern.jpg&quot;)" class="panel parallax-repeat dark">
+                    <div class="panel__inner">
+                        <div class="section-header">
+                            <button type="button" data-toggle="modal" data-target="#modalReserv" class="btn-close"><span class="btn-close__bar"></span><span class="btn-close__bar"></span></button>
+                            <h2>Send us a message</h2>
+                            <div class="divider"></div>
+                            <p>We will reply you in 48 hours (on business days).</p>
+                        </div>
+                        <div class="panel__body">
+
+                            <!--           ¬ reservation form           /-->
+                            <div class="reservation-form">
+                                <form id="contactsForm" action="#" method="POST" data-toggle="validator">
+                                    <div class="form-inner row">
+                                        <div class="col-sm-6 form-group">
+                                            <label for="contName" class="label-control">Your name</label>
+                                            <div class="input-wrap input-wrap--icon-left"><i class="input-icon pe-7s-user"></i>
+                                                <input id="contName" type="text" name="user_name" placeholder="David Kraemer" required class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6 form-group">
+                                            <label for="contEmail" class="label-control">Your e-mail</label>
+                                            <div class="input-wrap input-wrap--icon-left"><i class="input-icon pe-7s-mail"></i>
+                                                <input id="contEmail" type="email" name="user_email" placeholder="user@example.com" required class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12 form-group">
+                                            <label for="contMsg" class="label-control">Your message</label>
+                                            <textarea id="contMsg" name="user_message" required class="form-control"></textarea>
+                                        </div>
+
+                                        <div class="col-xs-12">
+                                            <button type="submit" class="btn btn-regular btn-accent"><span class="btn-text">Contact us</span><span class="btn-over"></span></button>
+                                        </div>
+                                    </div>
+                                </form>                            </div>
+                            <!--           end reservation form           /-->
+                        </div>
+                        <div class="panel__footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
