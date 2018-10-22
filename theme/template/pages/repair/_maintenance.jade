@@ -1,0 +1,13 @@
+//           ¬ maintenance           /
+section.section-maintenance.parallax-repeat.accent(style='background: url("#{ROOT + pattern}")')
+  .container
+    .row
+      .col-sm-7.col-md-6
+        h2
+          | Is your vehicle due for a qualified maintenance?
+
+      .col-sm-5.col-md-6
+        +btn('dark')(class='btn-lg', data-toggle='modal', data-target='#modalReserv')
+          | Book a service
+
+//           end maintenance           /

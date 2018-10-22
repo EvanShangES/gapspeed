@@ -1,0 +1,712 @@
+/**************************************
+
+      = Forms
+        ¬ reservation form
+        ¬ contacts-form
+        ¬ comment-form
+        ¬ validation styles
+        ¬ subscribe
+        ¬ search
+        ¬ datepicker
+        ¬ timepicker
+        ¬ select2
+
+                                     */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .form-control {
+    -webkit-appearance: none
+  }
+}
+
+.label-control {
+  margin-bottom: 12px;
+  font-weight: 300;
+  line-height: 1;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  height: 42px;
+  padding: 6px 15px;
+  font-size: inherit;
+  line-height: 28px;
+  vertical-align: top;
+  color: $gray-base;
+  background-color: #fff;
+  border: 1px solid $border-color;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  @include transition-regular;
+
+  &::-moz-placeholder {
+    color: $text-color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $text-color;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $text-color;
+  }
+
+  &[disabled],
+  &[readonly] {
+    background-color: $text-color;
+    color: $text-color;
+  }
+
+  &:focus {
+    border-color: $gray-dark;
+    box-shadow: none;
+    outline: none;
+  }
+
+  &.input-xs {
+    padding: 6px 7px;
+    text-align: center;
+  }
+}
+
+%inputTransition {
+  transition: all .2s;
+}
+
+.check-wrap,
+.check-color,
+.radio-input {
+  position: relative;
+
+  .label-control {
+    margin-bottom: 0;
+    line-height: inherit;
+    color: inherit;
+    user-select: none;
+    cursor: pointer;
+    white-space: normal;
+  }
+
+  .form-checkbox,
+  .form-radio {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+}
+
+.check-wrap,
+.radio-input {
+  padding-left: 20px;
+  margin-right: 8px;
+
+  &:nth-last-of-type(n+2) {
+    margin-bottom: 6/16 + em;
+  }
+
+  .label-control {
+    line-height: 28px;
+    vertical-align: top;
+  }
+}
+
+.check-wrap {
+  .fa {
+    position: absolute;
+    top: 7/14 + em;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    vertical-align: top;
+    font-size: 14/16 + em;
+    line-height: 1;
+    text-align: center;
+    color: transparent;
+    border: 1px solid $brand-gray;
+    @extend %inputTransition;
+
+    &::before {
+      font-size: 14px;
+    }
+  }
+
+  .form-checkbox {
+    &:hover,
+    &:focus {
+      + .fa {
+        border-color: $gray-dark;
+      }
+    }
+    &:checked {
+      + .fa {
+        color: $brand-default;
+      }
+    }
+  }
+
+  @include media('<md') {
+    display: inline-block;
+  }
+}
+
+.radio-input {
+  .label-control {
+    > i {
+      position: absolute;
+      top: 7/16 + em;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      background-color: #fff;
+      border: 1px solid $border-light;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        @extend %inputTransition;
+      }
+    }
+    .form-radio {
+      & + i,
+      & + i:before {
+        border-radius: 50%;
+      }
+
+      &:checked + i:before {
+        top: 3px;
+        left: 3px;
+        width: 6px;
+        height: 6px;
+        background-color: $brand-default;
+      }
+    }
+  }
+}
+
+.check-color {
+  width: 45px;
+  height: 30px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+
+  &:nth-last-of-type(n+2) {
+    margin-bottom: 8px;
+  }
+
+  .label-control,
+  .input-color {
+    display: block;
+    height: 100%;
+  }
+
+  .label-control {
+    width: 30px;
+  }
+
+  .input-color {
+    border: 1px solid $brand-gray;
+    @extend %inputTransition;
+  }
+
+  .form-checkbox {
+    &:checked {
+      + .input-color {
+        border-color: $gray-dark;
+      }
+    }
+  }
+}
+
+.separate {
+  @include text-hide();
+  display: inline-block;
+  width: 11px;
+  height: 1px;
+  background-color: $gray-light;
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 200px;
+}
+
+.input-wrap {
+  position: relative;
+  background-color: #fff;
+
+  .input-icon {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: $gray-base;
+    z-index: 1;
+  }
+
+  [class*=caret] {
+    left: auto;
+    right: 12px;
+  }
+
+  &--icon-left {
+
+    .form-control {
+      padding-left: 28px;
+    }
+  }
+}
+
+button[type="submit"] {
+  width: 100%;
+
+  &.disabled {
+    opacity: 1;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.form-inner {
+  margin: 0 -10px;
+
+  > [class^=col] {
+    padding: 0 10px;
+  }
+
+  button[type="submit"] {
+    margin-top: 15px;
+  }
+}
+
+/**        ¬ reservation form         **/
+.reservation-form {
+  position: relative;
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+  color: $gray-base;
+  z-index: 1;
+
+  &__center-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 -10px;
+  }
+
+  .item {
+    &-1, &-2 {
+      width: 235px;
+    }
+
+    &-3 {
+      width: 180px;
+    }
+
+    &-4 {
+      width: 120px;
+      flex-shrink: 0;
+    }
+  }
+
+  .form-group {
+    padding: 0 10px;
+  }
+
+  button[type="submit"] {
+    margin-top: 20px;
+  }
+}
+
+.form-light {
+  .label-control {
+    color: $gray-base;
+  }
+}
+
+/**        ¬ validation styles         **/
+.has-error {
+  color: $brand-danger;
+
+  .form-control,
+  .input-icon {
+    color: inherit;
+  }
+
+  .form-control {
+    border-color: $brand-danger;
+    box-shadow: none;
+
+    &::-moz-placeholder {
+      color: inherit;
+    }
+
+    &:-ms-input-placeholder {
+      color: inherit;
+    }
+
+    &::-webkit-input-placeholder {
+      color: inherit;
+    }
+
+    &[disabled],
+    &[readonly] {
+      background-color: inherit;
+      color: inherit;
+    }
+
+    &:focus {
+      border-color: $brand-danger;
+      box-shadow: none;
+    }
+  }
+  .select2-selection {
+    border-color: inherit;
+
+    * {
+      color: inherit !important;
+    }
+    .select2-selection__arrow b {
+      border-top-color: inherit !important;
+    }
+  }
+}
+
+
+/**        ¬ subscribe         **/
+.form-modul {
+  .input-wrap {
+    position: relative;
+  }
+
+  .form-control {
+    padding-right: 57px;
+  }
+
+  .form-modul-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 42px;
+    height: 42px;
+    background-color: $brand-default;
+    color: #fff;
+  }
+
+  .sidebar & .label-control {
+    color: $gray-base;
+  }
+
+  button[type="submit"] {
+    position: absolute !important;
+    margin-top: 0;
+    @extend %isi;
+  }
+}
+
+.form-modul-search {
+  max-width: 360px;
+  width: 100%;
+
+  .form-control {
+    padding-left: 15px;
+  }
+}
+
+.catalog-mdl-search {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: 260px;
+  bottom: 0;
+  background-color: $brand-light;
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px !important;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 1px;
+    margin-right: 1px;
+    background-color: #fff;
+  }
+
+  &__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 42px;
+    height: 42px;
+    top: 50%;
+    margin-top: -21px;
+    border: 1px solid $border-color;
+    z-index: 2;
+    color: $gray-base;
+    background-color: #fff;
+    @extend %transition;
+
+    [class*=icon] {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .icon-close {
+      display: none;
+      font-size: 28px;
+      color: $brand-default;
+    }
+  }
+
+  &__form {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -21px;
+    z-index: 2;
+  }
+
+  @include media('>sm') {
+    &__form {
+      display: block;
+    }
+  }
+
+  @include media('<sm') {
+    width: 42px;
+
+    &.active {
+      width: calc(100% - 30px);
+
+      .catalog-mdl-search__toggle {
+        margin-top: -21px;
+        border-width: none;
+      }
+      .icon-search {
+        display: none;
+      }
+      .icon-close {
+        display: block;
+      }
+
+      .catalog-mdl-search__form {
+        width: calc(100% - 40px);
+      }
+    }
+  }
+}
+
+/**        ¬ datepicker         **/
+.datepicker {
+  font-family: $font-regular;
+  text-transform: uppercase;
+  border-width: 0;
+
+  .prev, .next {
+    @extend %isi;
+    font-family: FontAwesome;
+    text-indent: -9999px;
+    background-color: $brand-default;
+
+    &:after {
+      text-indent: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      @extend %transition;
+    }
+
+    &:hover {
+      background: $brand-default;
+
+      &:before {
+        transform: scale3d(10.3, 10.3, 1);
+      }
+
+      &:after {
+        color: #fff;
+      }
+    }
+  }
+
+  .prev:after {
+    content: "\f104";
+  }
+
+  .next:after {
+    content: "\f105";
+  }
+}
+.bootstrap-datetimepicker-widget {
+  @include media('<sm') {
+    left: 15px !important;
+    right: 15px !important;
+    width: auto;
+
+    .datepicker {
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+  }
+}
+
+
+/**        ¬ timepicker dropdown time         **/
+.ui-timepicker-wrapper {
+  height: 210px;
+  width: 100px; // form reservation input time 100px
+  border: 1px solid $brand-default;
+  border-width: 0;
+}
+
+.ui-timepicker-list {
+  li {
+    padding: 7px 15px;
+  }
+
+  li,
+  li.ui-timepicker-selected {
+    &:hover,
+    &:focus {
+      background-color: $brand-default;
+      color: $color-reverse;
+    }
+  }
+
+  li.ui-timepicker-selected {
+    background-color: $brand-default;
+    color: #fff;
+  }
+}
+
+/**        ¬ select2         **/
+.select2-container {
+  .select2-selection--single {
+    height: 42px;
+    padding: 6px 15px;
+    background-color: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    outline-color: transparent;
+    @extend %transition;
+
+    &:hover {
+      border-color: $gray-dark;
+    }
+
+    .select2-selection__rendered {
+      padding-left: 0;
+      padding-right: 20px;
+      color: $text-color;
+
+      > * {
+        color: $text-color;
+      }
+    }
+
+    .select2-selection__arrow {
+      height: 42px;
+      top: 0;
+
+      b {
+        left: auto;
+        right: 15px;
+        border-color: $gray-darker transparent transparent transparent;
+        @extend %transition;
+      }
+    }
+  }
+
+  &.select2-container--open {
+    .select2-selection--single {
+      border-color: $brand-default;
+
+      .select2-selection__arrow {
+        b {
+          border-width: 5px 4px 0 4px;
+          border-color: $brand-default transparent transparent transparent;
+        }
+      }
+
+      &:hover {
+        border-color: $brand-default;
+      }
+    }
+  }
+
+  .select2-dropdown {
+    top: -1px;
+    border: 1px solid $brand-default;
+    border-radius: 0;
+
+    &--above {
+      top: 1px;
+      margin-top: 1px;
+      border-bottom-width: 0;
+    }
+
+    &--below {
+      border-top-width: 0;
+    }
+
+    .select2-search__field {
+      border-color: $brand-gray;
+      outline: none;
+      @extend %transition;
+
+      &:hover {
+        border-color: $gray-dark;
+      }
+      &:focus {
+        border-color: $brand-default;
+      }
+    }
+  }
+
+  .select2-results {
+    &__option {
+      padding-left: 15px;
+      @extend %transition;
+
+      &[aria-selected=true] {
+        background-color: #fff;
+      }
+
+      &--highlighted[aria-selected] {
+        color: #fff;
+        background-color: $brand-default;
+      }
+    }
+  }
+}
+
+.label-control,
+.form-control,
+.input-icon,
+.ui-timepicker-list > li {
+  @extend %transition;
+}

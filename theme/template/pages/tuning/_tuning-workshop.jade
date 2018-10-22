@@ -1,0 +1,104 @@
+//           ¬ our workshop           /
+section.section-row.our-workshop
+  .container
+    //           ¬ section-header           /
+    +section-row-header('Our Workshop')
+      +divider-decor
+      p Are own design entire former get should. Advantages boisterous day excellence boy.
+
+    //           end section-header           /
+
+
+  //           ¬ gallery-filter           /
+  nav.panel-nav-gallery.text-center
+    ul.gallery-filter.row
+      li.gallery-filter__item.col-xs-12
+        a(href="#" role="button" data-filter='.is-cars') Cars
+      li.gallery-filter__item.col-xs-12
+        a(href="#" role="button" data-filter='.is-moto') Motorcycles
+      li.gallery-filter__item.col-xs-12
+        a(href="#" role="button" data-filter='.is-dynamo') Dyno test
+      li.gallery-filter__item.col-xs-12
+        a(href="#" role="button" data-filter='.is-paint') Painting
+  //           end gallery-filter           /
+
+
+  //           ¬ gallery-content-wrapper           /
+  .gallery-content-inner.container-fluid
+    .grid-gallery.row(data-grid-sort)
+      .grid-sizer.col-xs-12.col-sm-6.col-md-4.col-lg-3
+
+      //           ¬ gallery-group           /
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3.grid-item.is-paint.hover-anim
+        a.gallery__img-wrap.grid-gallery-link(href=ROOT + lightbox.shutterstock)
+          img.img-responsive(src=ROOT + gallery1[0], alt="")
+          +gallery-over-link
+
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3.grid-item.is-moto.hover-anim
+        a.gallery__img-wrap.grid-gallery-link(href=ROOT + lightbox.battery)
+          img.img-responsive(src=ROOT + gallery1[1], alt="")
+          +gallery-over-link
+
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3.grid-item.is-dynamo.hover-anim
+        a.gallery__img-wrap.grid-gallery-link(href=ROOT + lightbox.speed)
+          img.img-responsive(src=ROOT + gallery1[2], alt="")
+          +gallery-over-link
+
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3.grid-item.is-cars.hover-anim
+        a.gallery__img-wrap.grid-gallery-link(href=ROOT + lightbox.buses)
+          img.img-responsive(src=ROOT + gallery1[3], alt="")
+          +gallery-over-link
+
+      //           end gallery-group           /
+
+
+      //           ¬ gallery group           /
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3.grid-item.is-dynamo.hover-anim
+        a.gallery__img-wrap.grid-gallery-link(href=ROOT + lightbox.mechanics)
+          img.img-responsive(src=ROOT + gallery1[4], alt="")
+          +gallery-over-link
+
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3.grid-item.is-dynamo.hover-anim
+        a.gallery__img-wrap.grid-gallery-link(href=ROOT + lightbox.motor)
+          img.img-responsive(src=ROOT + gallery1[5], alt="")
+          +gallery-over-link
+
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3.grid-item.is-paint.hover-anim
+        a.gallery__img-wrap.grid-gallery-link(href=ROOT + lightbox.engine)
+          img.img-responsive(src=ROOT + gallery1[6], alt="")
+          +gallery-over-link
+
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3.grid-item.is-cars.hover-anim
+        a.gallery__img-wrap.grid-gallery-link(href=ROOT + lightbox.featureCar)
+          img.img-responsive(src=ROOT + gallery1[7], alt="")
+          +gallery-over-link
+
+      //           end gallery group           /
+
+
+      //           ¬ gallery group           /
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3.grid-item.is-paint.hover-anim
+        a.gallery__img-wrap.grid-gallery-link(href=ROOT + lightbox.mechanical)
+          img.img-responsive(src=ROOT + gallery1[8], alt="")
+          +gallery-over-link
+
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3.grid-item.is-cars.hover-anim
+        a.gallery__img-wrap.grid-gallery-link(href=ROOT + lightbox.carRepair)
+          img.img-responsive(src=ROOT + gallery1[9], alt="")
+          +gallery-over-link
+
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3.grid-item.is-moto.hover-anim
+        a.gallery__img-wrap.grid-gallery-link(href=ROOT + lightbox.motorbike)
+          img.img-responsive(src=ROOT + gallery1[10], alt="")
+          +gallery-over-link
+
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3.grid-item.is-paint.hover-anim
+        a.gallery__img-wrap.grid-gallery-link(href=ROOT + lightbox.industry)
+          img.img-responsive(src=ROOT + gallery1[11], alt="")
+          +gallery-over-link
+
+        //           end gallery group           /
+
+  //           end gallery-content-wrapper           /
+
+//           end our workshop           /

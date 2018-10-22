@@ -1,0 +1,167 @@
+<div class="row justify-content-center" style="margin: 40px 25px 40px 25px">
+    <div class="col-md-12">
+        <div>
+            <h4 style="display: inline"><small>Promotions</small></h4>
+        </div>
+        <!--PROFILE FORM-->
+        <div class="row justify-content-center" style="margin-top: 30px">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="newPromotion()">
+                    New Promotion
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="newPromotionModal" tabindex="-1" role="dialog" aria-labelledby="newPromotionModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="newPromotionModalLabel" ng-show="newPromoFlag">New Promotion </h5>
+                                <h5 class="modal-title" id="editPromotionModalLabel" ng-hide="newPromoFlag">Edit Promotion </h5>
+                                <button type="button" class="close" ng-click='closeModal()' aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row justify-content-center">
+                                    <div class="form-group col-md-3">
+                                        <label for="id">Promo Id:</label>
+                                        <input id="id" type="text"
+                                               class="form-control"
+                                               placeholder="ID" ng-model="promo.promoId"/>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <label for="name">Promo Name:</label>
+                                        <input id="name" type="text"
+                                               class="form-control"
+                                               placeholder="Promotion Name" ng-model="promo.name"/>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="form-group col-md-12">
+                                        <label for="code">Promo Code:</label>
+                                        <input id="code" type="text"
+                                               class="form-control"
+                                               placeholder="Promo Code" ng-model="promo.code"/>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="form-group col-md-6">
+                                        <label for="discountType">Discount Type</label>
+                                        <select class="form-control" id="discountType" ng-model="promo.discountType">
+                                            <option ng-value="'%'">% (percentage)</option>
+                                            <option ng-value="'$'">$ (flat)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="amount">Discount Amount:</label>
+                                        <input id="amount" type="text"
+                                               class="form-control"
+                                               placeholder="Discount Amount" ng-model="promo.amount"/>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="form-group col-md-6">
+                                        <label for="usage">Usage Number:</label>
+                                        <input id="usage" type="text"
+                                               class="form-control"
+                                               placeholder="Usage Number" ng-model="promo.usageNumber"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="minOrder">Min Order:</label>
+                                        <input id="minOrder" type="text"
+                                               class="form-control"
+                                               placeholder="Min Order" ng-model="promo.minOrder"/>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="form-group col-md-6">
+                                        <label for="validFrom">Valid From:</label>
+                                        <input id="validFrom" type="text"
+                                               class="form-control"
+                                               placeholder="Valid From" ng-readonly="" ng-value="promo.valid.from" style="margin-bottom: 5px"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="validTo">Valid To:</label>
+                                        <input id="validTo" type="text"
+                                               class="form-control"
+                                               placeholder="Valid To" ng-readonly="" ng-value="promo.valid.to" style="margin-bottom: 5px"/>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" ng-click="closeModal()">Close</button>
+                                <button type="button" class="btn btn-primary" ng-click="savePromotion(promo, 'new')" ng-show="newPromoFlag">Save</button>
+                                <button type="button" class="btn btn-primary" ng-click="savePromotion(promo, 'edit')" ng-hide="newPromoFlag">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="modal fade" id="editProductModal" tabindex="-1" role="dialog" aria-labelledby="editProductModalLabel" aria-hidden="true">-->
+                <!--<div class="modal-dialog" role="document">-->
+                <!--<div class="modal-content">-->
+                <!--<div class="modal-header">-->
+                <!--<h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>-->
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+                <!--<span aria-hidden="true">&times;</span>-->
+                <!--</button>-->
+                <!--</div>-->
+                <!--<div class="modal-body">-->
+                <!--<div class="col-md-12">-->
+                <!--<div class="form-group row">-->
+                <!--<label for="number">Product Number:</label>-->
+                <!--<input id="number" type="text"-->
+                <!--class="form-control"-->
+                <!--placeholder="Product No." ng-model="product.productNo"/>-->
+                <!--</div>-->
+                <!--<div class="form-group row">-->
+                <!--<label for="name">Product Name:</label>-->
+                <!--<input id="name" type="text"-->
+                <!--class="form-control"-->
+                <!--placeholder="Product Name" ng-model="product.productName"/>-->
+                <!--</div>-->
+                <!--<div class="form-group row">-->
+                <!--<label for="selection">Selection Name:</label>-->
+                <!--<input id="selection" type="text"-->
+                <!--class="form-control"-->
+                <!--placeholder="Selection Name" ng-model="product.selectionName"/>-->
+                <!--</div>-->
+                <!--<div class="form-group row">-->
+                <!--<label for="price">Product Price:</label>-->
+                <!--<input id="price" type="text"-->
+                <!--class="form-control"-->
+                <!--placeholder="Price" ng-model="product.price"/>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="modal-footer">-->
+                <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                <!--<button type="button" class="btn btn-primary" ng-click="saveProduct(product, 'edit')">Edit</button>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <table id="promoTable" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                    <tr>
+                        <!--<th>id</th>-->
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Code</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Usage #</th>
+                        <th>Min Order</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Options</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

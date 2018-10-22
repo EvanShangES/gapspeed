@@ -1,0 +1,260 @@
+/**************************************
+
+      = Media Queries
+        ¬ lg <= 1199px;
+        ¬ md <= 991px;
+        ¬ sm <= 767px;
+        ¬ xs <= 479px;
+
+                                     */
+
+/**        ¬ lg <= 1199px;         **/
+@include media('<lg') {
+  .section-intro {
+    .container {
+      min-height: calc(100vh - 86px);
+    }
+  }
+
+  .services-features {
+
+    &__caption {
+      font-size: 14px;
+    }
+  }
+
+  .page-footer {
+    .item-3, .item-4 {
+      text-align: center;
+    }
+  }
+
+  .contacts-map,
+  .section-map {
+    height: 50vmax;
+  }
+}
+
+
+/**        ¬ md <= 991px;         **/
+
+@include media('<md') {
+  body {
+    font-size: 1.4rem;
+  }
+
+  .section-intro {
+    .container {
+      min-height: calc(100vh - 136px);
+    }
+  }
+
+  .team-intro-panel {
+    margin-bottom: 30/16 + em;
+  }
+}
+
+
+/**        ¬ sm <= 767px;         **/
+
+@include media('<sm') {
+  .navbar {
+    .dropdown-menu {
+      position: static;
+      float: none;
+      box-shadow: none !important;
+      border: none !important;
+    }
+
+    .navbar-menu .dropdown-menu {
+      text-align: center;
+    }
+
+    &-panel {
+      .navbar-nav {
+        text-align: center;
+      }
+      .navbar-header {
+        border-bottom: 1px solid $border-light;
+      }
+    }
+  }
+
+  .section-intro {
+    .container {
+      min-height: calc(100vh - 50px);
+    }
+  }
+
+  .section-row {
+    margin-top: 110/767*100vw;
+
+    &-number {
+      &:before {
+        margin-top: 30/767*100vw;
+      }
+
+      h1 {
+        font-size: 62/767*100vw;
+        margin-bottom: 65/767*100vw;
+      }
+    }
+  }
+
+  .reservation-form {
+    font-size: 14px;
+
+    &__center-wrapper {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+
+    .item {
+      &-1, &-2 {
+        width: 50%;
+      }
+
+      &-3 {
+        width: 60%;
+      }
+
+      &-4 {
+        width: 40%;
+        flex-shrink: 1;
+      }
+    }
+  }
+
+  .datepicker,
+  .ui-timepicker-wrapper {
+    font-size: 14px;
+  }
+
+  .datepicker {
+    left: 16px !important;
+    right: auto;
+    width: calc(100% - 26px);
+  }
+
+  .ui-timepicker-wrapper {
+    max-width: none;
+    left: auto !important;
+    right: 16px !important;
+    width: calc(40% - 26px);
+  }
+}
+
+
+/**        ¬ xs <= 479px;         **/
+
+@include media('<xs') {
+
+  .intro-page__content-wrapper {
+    margin: 110/480*100vw 0;
+  }
+
+  h1 {
+    font-size: 62/480*100vw;
+  }
+
+  h2,
+  .main-product__price .cost-current,
+  .main-product__price .cost-current + .cost-total {
+    font-size: 40/480*100vw !important;
+  }
+
+  h3 {
+    font-size: 20/480*100vw;
+  }
+
+  blockquote {
+    font-size: 18/16 + em;
+  }
+
+  .section-row {
+    &-header {
+      margin-bottom: 70/479*100vw;
+    }
+    &-number {
+      &:before {
+        margin-top: 40/767*100vw;
+      }
+
+      h1 {
+        font-size: 82/767*100vw;
+      }
+    }
+  }
+
+  .reservation-form {
+
+    &__center-wrapper {
+      flex-wrap: wrap;
+    }
+
+    .form-group {
+      width: 100%;
+    }
+  }
+
+  .ui-timepicker-wrapper {
+    left: 16px !important;
+    width: auto;
+  }
+
+  .testimonials-post {
+
+    &__heading {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: center;
+    }
+  }
+
+  .btn-regular {
+    padding: 18px 50/479*100vw;
+
+    .btn-text {
+      font-size: 16/479*100vw;
+    }
+  }
+
+  .panel {
+
+    &__inner {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .question-panel {
+    font-size: 14/16 + em;
+
+    .panel-tab {
+      padding-left: 15px;
+      padding-right: 55px;
+    }
+
+    &__body {
+      padding: 15px;
+    }
+
+    .panel-cross {
+      right: 15px;
+    }
+  }
+
+  .gallery-controls {
+
+    .indicator {
+      > li {
+        width: 70px;
+        height: 70px;
+
+        &:after {
+          border-width: 2px;
+        }
+      }
+    }
+  }
+}

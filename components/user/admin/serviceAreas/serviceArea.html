@@ -1,0 +1,303 @@
+<div class="row justify-content-center" style="margin: 40px 25px 40px 25px">
+    <div class="col-md-12">
+        <div>
+            <h4 style="display: inline"><small>Service Areas</small></h4>
+        </div>
+
+        <div class="row justify-content-start" id="areaTypeBoxList" style="margin-top: 30px;">
+            <div class="col-md-3 m-md-4 order-box" ng-repeat="areaType in areaTypes">
+                <div class="row no-gutters">
+                    <div class="col-md-12">
+                        <div style="padding: 30px 20px 30px 20px;" ng-show="!(editAreaType.flag && areaType._id === editAreaType.areaType._id) && !(deleteAreaType.flag && areaType._id === deleteAreaType.areaType._id)">
+                            <i style="font-size:3em; margin-bottom: 20px" class="fa fa-home"></i>
+                            <h4>{{areaType.name}}</h4>
+                            <p style="font-size: 14px; margin-bottom: 0; height: 107px"> {{areaType.notes}}</p>
+                            <p style="font-weight: 200; font-style: normal; line-height: normal; float: right;">
+                                <a ng-click="showDeleteAreaType(true, areaType)" style="text-decoration: underline; cursor: pointer">Remove</a> |
+                                <a ng-click="showEditAreaType(true, areaType)" style="text-decoration: underline; cursor: pointer">Edit</a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-12" style="text-align: center;" ng-show="editAreaType.flag && areaType._id === editAreaType.areaType._id">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="{{'areaTypeName' + areaType._id}}" style="margin-bottom: 0"><span style="font-weight: 200; font-style: normal">Area Type Name</span></label>
+                                    <br>
+                                    <input id="{{'areaTypeName' + areaType._id}}" type="text"
+                                           class="underline"
+                                           ng-value="" ng-model="editAreaType.areaType.name" style="margin-bottom: 5px;"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="{{'areaTypeNotes' + areaType._id}}" style="margin-bottom: 0"><span style="font-weight: 200; font-style: normal">Note (max 120)</span></label>
+                                <br>
+                                <textarea rows="2" id="{{'areaTypeNotes' + areaType._id}}" maxlength="120" ng-model="editAreaType.areaType.notes"></textarea>
+                            </div>
+                            <p style="font-weight: 200; font-style: normal; line-height: normal;">
+                                <a ng-click="showEditAreaType(false, undefined)" style="text-decoration: underline; cursor: pointer">Cancel</a> |
+                                <a ng-click="editAreaType(editAreaType.areaType)" style="text-decoration: underline; cursor: pointer">Save</a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-12" style="text-align: center; margin-top: 50px" ng-show="deleteAreaType.flag && areaType._id === deleteAreaType.areaType._id">
+                            <h5><small>Removing this area type will also remove all the service times and areas associated with this type</small></h5>
+
+                            <p style="font-weight: 200; font-style: normal; line-height: normal; margin-top: 30px">
+                                <a ng-click="showDeleteAreaType(false, undefined)" style="text-decoration: underline; cursor: pointer">Cancel</a> |
+                                <a ng-click="removeAreaType(areaType)" style="text-decoration: underline; cursor: pointer">Confirm</a>
+                            </p>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-md-3 m-md-4 add-service-box" id="newAreaTypeBox">
+                <div class="row no-gutters">
+                    <div class="col-md-12" style="text-align: center;">
+                        <div ng-hide="newAreaType" style="height: 100%; width: 100%" ng-click="createAreaType(true)">
+                            <i style="position:relative; top: 80%;" class="fas fa-plus fa-5x"></i>
+                        </div>
+                        <div ng-show="newAreaType">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="areaTypeName" style="margin-bottom: 0"><span style="font-weight: 200; font-style: normal">Area Type Name</span></label>
+                                    <br>
+                                    <input id="areaTypeName" type="text"
+                                           class="underline"
+                                           ng-value="" ng-model="areaType.name" style="margin-bottom: 5px;"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="areaTypeNotes" style="margin-bottom: 0"><span style="font-weight: 200; font-style: normal">Note (max 120)</span></label>
+                                <br>
+                                <textarea rows="2" id="areaTypeNotes" maxlength="120" ng-model="areaType.notes"></textarea>
+                            </div>
+                            <!--<div class="form-group">-->
+                            <!--<label for="areaTypeImg" style="margin-bottom: 0"><span style="font-weight: 200; font-style: normal">Note (max 120)</span></label>-->
+                            <!--<br>-->
+                            <!--<textarea rows="2" id="areaTypeImg" maxlength="120" ng-model="areaType.notes"></textarea>-->
+                            <!--</div>-->
+                            <p style="font-weight: 200; font-style: normal; line-height: normal;">
+                                <a ng-click="createAreaType(false)" style="text-decoration: underline; cursor: pointer">Cancel</a> |
+                                <a ng-click="saveAreaType(areaType)" style="text-decoration: underline; cursor: pointer">Save</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row justify-content-center" style="margin-top: 30px">
+            <div class="col m-md-3 areaType-tab" style="text-align: center"
+                 ng-repeat="areaType in areaTypes" ng-click="!newServiceAreaFlag && selectAreaType(areaType)"
+                 ng-class="{'selected' : selectedAreaType._id === areaType._id}">
+                <h5 style="font-weight: 400; font-style: normal; margin: 8px 0 0 0;">{{areaType.name}}</h5>
+            </div>
+        </div>
+
+        <div class="row justify-content-start no-gutters" style="margin-top: 30px;">
+
+            <div class="col-md-12">
+                <div id="map" style="height: 650px;width: 100%"></div>
+                <br>
+
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDV47ldl41Q8PLWz5xZKdw8AfCjPJUG32U&callback=initMap"
+                        async defer></script>
+            </div>
+        </div>
+
+        <div class="row justify-content-start no-gutters" style="margin-top: 30px;" ng-show="(newServiceAreaFlag === false && editServiceAreaFlag === false && selectedAreaType !== null)">
+            <div class="col-md-12 add-credit-card" style="display: inline-block;" ng-click="createNewServiceArea(true)">
+                <p style="text-align: center; margin: 20px 20px 20px 20px;">
+                    <i class="fa fa-plus-circle fa-fw"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Add New Service Area
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center no-gutters" style="margin-top: 30px;" ng-show="newServiceAreaFlag || editServiceAreaFlag">
+            <div class="col-md-12 Rectangle-21-ServiceArea">
+                <div class="row justify-content-start no-gutters">
+                    <div class="col-md-12 Rectangle-21-Copy-3">
+                        <h5 style="font-weight: 200; font-style: normal; margin-top: 20px; margin-bottom: 15px; margin-left: 37px"><small ng-show="newServiceAreaFlag">Add New Service Area</small><small ng-show="editServiceAreaFlag">Add New Service Area</small></h5>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-start" style="margin-left: 30px; margin-right: 30px">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input id="serviceAreaPostal" type="text"
+                                   class="form-control Rectangle-3-ServiceArea"
+                                   placeholder="Area Name" ng-readonly="" ng-model="serviceArea.name" style="margin-bottom: 5px"/>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input id="serviceAreaFwdHours" type="number" step="12" max="168"
+                                   class="form-control Rectangle-3-ServiceArea"
+                                   placeholder="Forward Hours" ng-readonly="" ng-model="serviceArea.forwardHours" style="margin-bottom: 5px"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-left: 30px; margin-right: 30px">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input id="serviceAreaPickupDate" type="text"
+                                   class="form-control Rectangle-3-ServiceArea"
+                                   placeholder="Pickup Date" ng-readonly="" ng-value="serviceArea.serviceTime.pickup.date" style="margin-bottom: 5px"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input id="serviceAreaPickupStart" type="text"
+                                   class="form-control Rectangle-3-ServiceArea"
+                                   placeholder="Pickup Start" ng-readonly="" ng-value="serviceArea.serviceTime.pickup.start" style="margin-bottom: 5px"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input id="serviceAreaPickupEnd" type="text"
+                                   class="form-control Rectangle-3-ServiceArea"
+                                   placeholder="Pickup End" ng-readonly="" ng-value="serviceArea.serviceTime.pickup.end" style="margin-bottom: 5px"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-left: 30px; margin-right: 30px">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input id="serviceAreaDeliveryDate" type="text"
+                                   class="form-control Rectangle-3-ServiceArea"
+                                   placeholder="Delivery Date" ng-readonly="" ng-value="serviceArea.serviceTime.delivery.date" style="margin-bottom: 5px"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input id="serviceAreaDeliveryStart" type="text"
+                                   class="form-control Rectangle-3-ServiceArea"
+                                   placeholder="Delivery Start" ng-readonly="" ng-value="serviceArea.serviceTime.delivery.start" style="margin-bottom: 5px"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input id="serviceAreaDeliveryEnd" type="text"
+                                   class="form-control Rectangle-3-ServiceArea"
+                                   placeholder="Delivery End" ng-readonly="" ng-value="serviceArea.serviceTime.delivery.end" style="margin-bottom: 5px"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-left: 30px; margin-right: 30px">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <textarea class="Rectangle-3-ServiceArea" ng-model="serviceArea.serviceTime.notes" rows="3" style="height: 125px" placeholder="Notes for the Service Area" ></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-left: 30px; margin-right: 30px">
+                    <div class="col-md-3">
+                        <p>Concierge Requirement</p>
+                        <form>
+                            <label class="radio-inline">
+                                <input type="radio" name="optradio" ng-model="serviceArea.conciergeReq" ng-value="true">&nbsp;&nbsp;&nbsp;Yes
+                            </label>
+                            <label class="radio-inline" style="margin-left: 30px">
+                                <input type="radio" name="optradio" ng-model="serviceArea.conciergeReq" ng-value="false">&nbsp;&nbsp;&nbsp;No
+                            </label>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-left: 30px; margin-right: 30px">
+                    <hr>
+                </div>
+
+                <div ng-show="serviceArea.conciergeReq">
+                    <div class="row" style="margin-left: 30px; margin-right: 30px">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input id="serviceAreaNoConPickupDate" type="text"
+                                       class="form-control Rectangle-3-ServiceArea"
+                                       placeholder="Pickup Date" ng-readonly="" ng-value="serviceArea.otherServiceTime.pickup.date" style="margin-bottom: 5px"/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input id="serviceAreaNoConPickupStart" type="text"
+                                       class="form-control Rectangle-3-ServiceArea"
+                                       placeholder="Pickup Start" ng-readonly="" ng-value="serviceArea.otherServiceTime.pickup.start" style="margin-bottom: 5px"/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input id="serviceAreaNoConPickupEnd" type="text"
+                                       class="form-control Rectangle-3-ServiceArea"
+                                       placeholder="Pickup End" ng-readonly="" ng-value="serviceArea.otherServiceTime.pickup.end" style="margin-bottom: 5px"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left: 30px; margin-right: 30px">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input id="serviceAreaNoConDeliveryDate" type="text"
+                                       class="form-control Rectangle-3-ServiceArea"
+                                       placeholder="Delivery Date" ng-readonly="" ng-value="serviceArea.otherServiceTime.delivery.date" style="margin-bottom: 5px"/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input id="serviceAreaNoConDeliveryStart" type="text"
+                                       class="form-control Rectangle-3-ServiceArea"
+                                       placeholder="Delivery Start" ng-readonly="" ng-value="serviceArea.otherServiceTime.delivery.start" style="margin-bottom: 5px"/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input id="serviceAreaNoConDeliveryEnd" type="text"
+                                       class="form-control Rectangle-3-ServiceArea"
+                                       placeholder="Delivery End" ng-readonly="" ng-value="serviceArea.otherServiceTime.delivery.end" style="margin-bottom: 5px"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left: 30px; margin-right: 30px">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <textarea class="Rectangle-3-ServiceArea" ng-model="serviceArea.otherServiceTime.notes" rows="3" style="height: 125px" placeholder="Notes for the Service Area without Concierge" ></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group" ng-show="newServiceAreaFlag">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div style="display: block; float: left">
+                            <button type="button" class="Cancel" ng-click="createNewServiceArea(false)">Cancel</button>
+                            <button type="button" class="Rectangle-9-Copy-3 " ng-click="saveServiceArea('new')">Save</button>
+                        </div>
+                        <!--&lt;!&ndash;<button type="submit" class="btn btn-default pull-right" ng-hide="addressEdit.home" ng-click="editAddress('home', true)">Edit</button>&ndash;&gt;-->
+                        <!--<button type="submit" ng-click="saveServiceArea(serviceArea)" class="btn btn-primary pull-right">Save</button>-->
+                        <!--&lt;!&ndash;<button type="submit" class="btn btn-default pull-right" ng-show="addressEdit.home" ng-click="editAddress('home', false)">Cancel</button>&ndash;&gt;-->
+                    </div>
+                </div>
+
+                <div class="form-group" ng-show="editServiceAreaFlag">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div style="display: block; float: left">
+                            <button type="button" class="Cancel" ng-click="editServiceArea(null, false)">Cancel</button>
+                            <button type="button" class="Rectangle-9-Copy-3 " ng-click="saveServiceArea('edit')">Save</button>
+                        </div>
+                        <!--&lt;!&ndash;<button type="submit" class="btn btn-default pull-right" ng-hide="addressEdit.home" ng-click="editAddress('home', true)">Edit</button>&ndash;&gt;-->
+                        <!--<button type="submit" ng-click="saveServiceArea(serviceArea)" class="btn btn-primary pull-right">Save</button>-->
+                        <!--&lt;!&ndash;<button type="submit" class="btn btn-default pull-right" ng-show="addressEdit.home" ng-click="editAddress('home', false)">Cancel</button>&ndash;&gt;-->
+                    </div>
+                </div>
+
+                <br>
+            </div>
+        </div>
+
+    </div>
+</div>

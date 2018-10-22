@@ -1,0 +1,65 @@
+//           ¬ Reservation           /
+section.tuning-reservation.parallax-repeat.accent(style='background: url("#{ROOT + pattern}")')
+  .reservation__inner
+    .container
+      .row
+        .col-sm-8.col-lg-6.col-sm-offset-2.col-lg-offset-3.text-center
+          header.section-header.section-header--white
+            h2 Reservation service
+            .divider
+            p To make your vehicle maintainance fast and hassle-free we strongly recommend you to make an online reservation. It’s completely free and won’t take a lot of your time.
+
+
+      //           ¬ reservation form           /
+      .reservation-form
+        form#reservForm(action="#", method="POST" data-toggle="validator")
+          .reservation-form__center-wrapper
+            .form-group.item-1
+              label.label-control(for="resName") Your name
+              .input-wrap.input-wrap--icon-left
+                i.input-icon.pe-7s-user
+                input#resName.form-control(
+                type="text",
+                name="field_name"
+                placeholder="David Kraemer"
+                required
+                )
+
+            .form-group.item-2
+              label.label-control(for="resNumber") Your phone
+              .input-wrap.input-wrap--icon-left
+                i.input-icon.pe-7s-phone
+                input#resNumber.form-control(
+                type="tel",
+                name="field_tel"
+                placeholder="+1 (812) 281 55 23"
+                required
+                )
+
+            .form-group.item-3
+              label.label-control(for="resDate") Date
+              .input-wrap.input-wrap--icon-left
+                i.input-icon.pe-7s-date
+                input#resDate.form-control.pick-date(
+                type="text",
+                name="field_date"
+                placeholder="09/18/2016"
+                required
+                )
+
+            .form-group.item-4
+              label.label-control(for="resTime") Time
+              .input-wrap
+                i.input-icon.fa.fa-caret-down
+                input#resTime.form-control.time-pick(
+                type="text",
+                name="field_time"
+                placeholder='16:30'
+                required
+                )
+
+          +btn-form('dark')
+            | Make reservation
+
+      //           end reservation form           /
+//           end Reservation           /

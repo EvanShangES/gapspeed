@@ -1,0 +1,67 @@
+//- Home page
+extends _base
+
+block page
+  -
+    page = {
+      language: 'en',
+      title: 'Carros | Service Details',
+      appTitle: 'Carros Logbook',
+      description: '',
+      id: 'page_logbook',
+      class: 'service-details page-inner'
+    }
+
+block icons
+
+block header
+  include ../partials/_header-repair
+
+block content
+  main.page-content
+    +intro-page('Services')
+
+    +bootstrap_breadcrumb(
+      ["Home", "index.html"],
+      ["Services", "pages/services.html"],
+      ["Logbook"]
+    )
+
+    //           ¬ page-content-wrapper           /
+    .page-content-wrapper
+      .container
+        .row
+          //           ¬ inner-content           /
+          .col-md-9
+            //           ¬ section-content           /
+            section.section-content
+              header.section-header
+                h2 What is logbook service?
+                .divider
+                p Did shy say mention enabled through elderly improve. As at so believe account evening behaved hearted is. House is tiled we aware. It ye greatest removing concerns an overcame appetite. Manner result square father boy behind its his. Their above spoke match ye mr right oh as first. Be my depending to believing perfectly concealed household. Point could to built no hours smile sense.
+
+              figure.img-wrap
+                img.img-responsive.thumb(src=ROOT + lightbox.shutterstock, alt="our workshop")
+                figcaption.text-center Vehicle examine in our workshop
+
+              p #[strong Started several mistake] joy say painful removed reached end. State burst think end are its. Arrived off she elderly beloved him affixed noisier yet. An course regard to up he hardly. View four has said does men saw find dear shy. Talent men wicket add garden.
+
+              p Rendered her for put improved concerns his. Ladies bed wisdom theirs mrs men months set. Everything so dispatched as it increasing pianoforte. #[strong Hearing now saw perhaps minutes herself his.] Of instantly excellent therefore difficult he northward. Joy green but least marry rapid quiet but. Way devonshire introduced expression saw travelling affronting. #[a.link-accent(href="#") Her and effects affixed pretend account ten natural.] Need eat week even yet that. Incommode delighted he resolving sportsmen do in listening.
+
+            //           end section-content           /
+
+          //           end inner-content           /
+
+          include repair/_repair-sidebar
+
+      include repair/_maintenance
+
+    //           end page-content-wrapper           /
+
+
+block footer
+  include ../partials/_footer
+
+block bottom
+  include ../partials/_modal-form
+

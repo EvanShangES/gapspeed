@@ -1,0 +1,99 @@
+<div class="row justify-content-center" style="margin-top: 100px">
+    <div class="modal fade" id="noNewOrder" role="dialog" aria-labelledby="noNewOrderLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!--<div class="modal-header">-->
+                    <!--<h5 class="modal-title" id="noNewOrderLabel">New Product</h5>-->
+                    <!--<button type="button" class="close" aria-label="Close"  ng-click="closeModal()">-->
+                        <!--<span aria-hidden="true">&times;</span>-->
+                    <!--</button>-->
+                <!--</div>-->
+                <div class="modal-body">
+                    <div class="col-md-12" style="text-align: center">
+                        <h4><small>No New Order Allowed</small></h4>
+                        <p>An order is in progress. Please wait until the order is completed or cancel the current order.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-md-12" style="text-align: center">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Got it!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cancelOrderModal" role="dialog" aria-labelledby="cancelOrderLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!--<div class="modal-header">-->
+                <!--<h5 class="modal-title" id="noNewOrderLabel">New Product</h5>-->
+                <!--<button type="button" class="close" aria-label="Close"  ng-click="closeModal()">-->
+                <!--<span aria-hidden="true">&times;</span>-->
+                <!--</button>-->
+                <!--</div>-->
+                <div class="modal-body">
+                    <div class="col-md-12" style="text-align: center" ng-show="!cancelFlag">
+                        <h4><small>Cancel Order</small></h4>
+                        <p>Are you sure you want to cancel the current order? The order is in progress!</p>
+                    </div>
+                    <div class="col-md-12" style="text-align: center" ng-show="cancelFlag">
+                        <h4><small>Order Cancelled</small></h4>
+                        <p>Order #{{currentOrder.orderId}} has been cancelled!</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-md-12" style="text-align: center" ng-show="!cancelFlag">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-primary" ng-click="cancelCurrentOrder()">Yes</button>
+                    </div>
+                    <div class="col-md-12" style="text-align: center" ng-show="cancelFlag">
+                        <button type="button" class="btn btn-secondary" ng-click="completeCancel()">Complete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="row justify-content-center">
+            <div class="col-md-2" style="text-align: center">
+                <h4>New Order</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-3" style="text-align: center">
+                <p>Click on one of the boxes to place a new order at your desired location</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" style="margin-top: 35px; margin-bottom: 35px" ng-show="currentOrder !== null">
+            <div class="col-md-8 open-order-box">
+                <div class="row justify-content-start" style="margin-top: 25px;margin-left: 20px">
+                    <div class="col-md-11">
+                        {{currentMessage}}
+                    </div>
+                    <div class="col-md-1" style="display: inline-flex">
+                        <i class="fa fa-edit" ng-click="editOrder()"></i>
+                        &nbsp &nbsp
+                        <i class="fa fa-trash" ng-click="cancelOrderModal()"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" id="areaList">
+            <div class="col-md-2 m-md-4 order-box" ng-repeat="area in areaTypes" ng-click="( (currentOrder === null) ? newOrder(area.name) : noNewOrder() )">
+                <div class="row no-gutters">
+                    <div class="col-md-12">
+                        <div style="padding: 30px 20px 30px 20px;">
+                            <i style="font-size:3em; margin-bottom: 20px" class="fa fa-home"></i>
+                            <h4>{{area.name}}</h4>
+                            <p style="font-size: 14px; margin-bottom: 0">{{area.notes}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

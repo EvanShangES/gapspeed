@@ -1,0 +1,213 @@
+//- Home page
+extends _base
+
+block page
+  -
+    page = {
+      language: 'en',
+      title: 'Carros | Address',
+      appTitle: 'Carros Address',
+      description: '',
+      id: 'page_address',
+      class: 'page-address page-inner'
+    }
+
+block icons
+
+block header
+  include partials/_header-retailer
+
+block content
+  main.page-content
+    //           ¬ section-intro           /
+    +catalog-intro-page('Account')
+
+    //           end section-intro           /
+
+    include partials/_category-filter
+    =ind
+
+    +breadcrumb_catalog(
+      ["Home", "retailer.html"],
+      ["Account"]
+    )
+    =ind
+
+    //           ¬ page-content-wrapper           /
+    .page-content-wrapper
+      .container
+        .row
+          include pages/retailer/_sidebar-account
+          =ind
+
+          //           ¬ inner-content           /
+          .col-sm-8.col-md-6
+            article.address-form
+              +hideTitle
+              form.form-light(action="#", method="POST" data-toggle="validator")
+                .row
+                  //           ¬ shipping address           /
+                  section.col-xs-12.order-1
+                    h2 Shipping address
+                    =ind
+
+                    .address-form-row.row
+                      .col-xs-12.col-sm-6.form-group
+                        label.label-control Country
+                        select#selectCountry1.form-control.select2(
+                        name='user_country',
+                        data-placeholder='Russian federation',
+                        required
+                        )
+                          option(value='') Country
+                          option(value='Russian federation') Russian federation
+                          option(value='Russian federation') Russian federation
+                      =ind
+
+                      .col-xs-12.col-sm-6.form-group
+                        label.label-control City
+                        select#selectCity1.form-control.select2(
+                        name='user_city',
+                        data-placeholder='Moscow',
+                        required
+                        )
+                          option(value='') City
+                          option(value='Moscow') Moscow
+                          option(value='Moscow') Moscow
+                      =ind
+
+                      .col-xs-12.col-sm-6.form-group
+                        label.label-control State
+                        select#selectState1.form-control.select2(
+                        name='user_state',
+                        data-placeholder='N / A'
+                        required
+                        )
+                          option(value='') State
+                          option(value='N / A') N / A
+                          option(value='N / A') N / A
+                      =ind
+
+                      .col-xs-12.col-sm-6.form-group
+                        label.label-control Postal code / ZIP
+                        input.form-control(
+                        type='text',
+                        name='user_code_zip',
+                        placeholder='589284',
+                        required
+                        )
+                      =ind
+
+                      .col-xs-12.form-group
+                        label.label-control Street Address 1
+                        input.form-control(
+                        type='text',
+                        name='first_address',
+                        required
+                        )
+                      =ind
+
+                      .col-xs-12.form-group
+                        label.label-control Street Address 2
+                        input.form-control(
+                        type='text',
+                        name='user_address',
+                        required
+                        )
+                      =ind
+
+                  //           end shipping address           /
+                  =ind
+
+                  //           ¬ billing address           /
+                  section.col-xs-12.order-2
+                    h2 Billing address
+                    =ind
+
+                    .address-form-row.row
+                      .col-xs-12.form-group
+                        .check-wrap
+                          label.label-control
+                            input.form-checkbox(type="checkbox")
+                            i.fa.fa-check
+                            | My billing address is the same as the shipping address
+
+                      .col-xs-12.col-sm-6.form-group
+                        label.label-control Country
+                        select#selectCountry2.form-control.select2(
+                        name='user_country',
+                        data-placeholder='Russian federation',
+                        required
+                        )
+                          option(value='') Country
+                          option(value='Russian federation') Russian federation
+                          option(value='Russian federation') Russian federation
+                      =ind
+
+                      .col-xs-12.col-sm-6.form-group
+                        label.label-control City
+                        select#selectCity2.form-control.select2(
+                        name='user_city',
+                        data-placeholder='Moscow',
+                        required
+                        )
+                          option(value='') City
+                          option(value='Moscow') Moscow
+                          option(value='Moscow') Moscow
+                      =ind
+
+                      .col-xs-12.col-sm-6.form-group
+                        label.label-control State
+                        select#selectState2.form-control.select2(
+                        name='user_state',
+                        data-placeholder='N / A'
+                        required
+                        )
+                          option(value='') State
+                          option(value='N / A') N / A
+                          option(value='N / A') N / A
+                      =ind
+
+                      .col-xs-12.col-sm-6.form-group
+                        label.label-control Postal code / ZIP
+                        input.form-control(
+                        type='text',
+                        name='user_code_zip',
+                        placeholder='589284',
+                        required
+                        )
+                      =ind
+
+                      .col-xs-12.form-group
+                        label.label-control Street Address 1
+                        input.form-control(
+                        type='text',
+                        name='user_address',
+                        required
+                        )
+                      =ind
+
+                      .col-xs-12.form-group
+                        label.label-control Street Address 2
+                        input.form-control(
+                        type='text',
+                        name='user_address_2',
+                        required
+                        )
+
+                  //           end billing address           /
+                  =ind
+
+                +btn-form()
+                  | Update
+          //           end inner-content           /
+
+    //           end page-content-wrapper           /
+
+
+
+block footer
+  include partials/_footer
+
+block bottom
+

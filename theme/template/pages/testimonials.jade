@@ -1,0 +1,149 @@
+//- Home page
+extends _base
+
+block page
+  -
+    page = {
+      language: 'en',
+      title: 'Carros | Testimonials',
+      appTitle: 'Testimonials',
+      description: '',
+      id: 'page_testimonials',
+      class: 'page-testimonials page-inner'
+    }
+
+block icons
+
+block header
+  include ../partials/_header-repair
+
+block content
+  main.page-content
+    +intro-page('Testimonials')
+
+    +bootstrap_breadcrumb(
+      ["Home", "index.html"],
+      ["Testimonials"]
+    )
+
+    //           ¬ page-content-wrapper           /
+    .page-content-wrapper
+      .container
+        .row
+          //           ¬ inner-content           /
+          .col-md-9
+            //           ¬ item-1           /
+            article.testimonials-post
+              header.testimonials-post__heading
+                figure.testimonials-post__img
+                  img.img-responsive(src=dir.img + 'upload/avatars/avatar1.jpg', alt='')
+
+                .testimonials-post__person-info
+                  h3.testimonials-post__title Sammy T. Stone
+                  ul.social-list
+                    li
+                      a.fa.fa-stack.fa-lg(href="#")
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-instagram.fa-stack-1x.fa-inverse
+                    li
+                      a.fa-stack.fa-lg(href="#")
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-facebook.fa-stack-1x.fa-inverse
+
+                time.testimonials-post__date(datetime='2016-08-06') 06 / 08 / 2016
+
+              .testimonials-post__body
+                p
+                  | Wrote water woman of heart it total other. By in entirely securing suitable graceful at families improved. Zealously few furniture repulsive was agreeable consisted difficult. Collected breakfast estimable questions in to favourite it. Known he place worth words it as to. Spoke now noise off smart her ready.
+
+            //           end item-1           /
+
+            //           ¬ item-2           /
+            article.testimonials-post
+              header.testimonials-post__heading
+                figure.testimonials-post__img
+                  img.img-responsive(src=dir.img + 'upload/avatars/avatar4.jpg', alt='')
+
+                .testimonials-post__person-info
+                  h3.testimonials-post__title Sarah Madden
+
+                time.testimonials-post__date(datetime='2016-07-15') 15 / 07 / 2016
+
+              .testimonials-post__body
+                p
+                  | Ten nearer rather hunted six parish indeed number. Allowance repulsive sex may contained can set suspected abilities cordially. Do part am he high rest that. So fruit to ready it being views match.
+
+            //           end item-2           /
+
+
+            //           ¬ item-3           /
+            article.testimonials-post
+              header.testimonials-post__heading
+                figure.testimonials-post__img
+                  img.img-responsive(src=dir.img + 'upload/avatars/avatar2.jpg', alt='')
+
+                .testimonials-post__person-info
+                  h3.testimonials-post__title Joel Michel
+                  ul.social-list
+                    li
+                      a.fa.fa-stack.fa-lg(href="#")
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-instagram.fa-stack-1x.fa-inverse
+                    li
+                      a.fa-stack.fa-lg(href="#")
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                    li
+                      a.fa-stack.fa-lg(href="#")
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-twitter.fa-stack-1x.fa-inverse
+
+                time.testimonials-post__date(datetime='2016-07-12') 12 / 07 / 2016
+
+              .testimonials-post__body
+                p
+                  | Objection delivered eagerness he exquisite at do in. Warmly up he nearer mr merely me.
+
+            //           end item-3           /
+
+
+            //           ¬ item-4           /
+            article.testimonials-post
+              header.testimonials-post__heading
+                figure.testimonials-post__img
+                  img.img-responsive(src=dir.img + 'upload/avatars/avatar3.jpg', alt='')
+
+                .testimonials-post__person-info
+                  h3.testimonials-post__title Harrison
+                  ul.social-list
+                    li
+                      a.fa.fa-stack.fa-lg(href="#")
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-instagram.fa-stack-1x.fa-inverse
+
+                time.testimonials-post__date(datetime='2016-07-02') 02 / 07 / 2016
+
+              .testimonials-post__body
+                p
+                  | Pianoforte solicitude so decisively unpleasing conviction is partiality he. Or particular so diminution entreaties oh do. Real he me fond show gave shot plan. Mirth blush linen small hoped way its along. Resolution frequently apartments off all discretion devonshire. Saw sir fat spirit seeing valley. He looked or valley lively. If learn woody spoil of taken he cause.
+
+            //           end item-4           /
+
+
+            include ../partials/_pagination
+
+          //           end inner-content           /
+
+          include repair/_repair-sidebar
+
+      include repair/_maintenance
+
+    //           end page-content-wrapper           /
+
+
+block footer
+  include ../partials/_footer
+
+block bottom
+  include ../partials/_modal-form
+

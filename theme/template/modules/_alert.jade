@@ -1,0 +1,10 @@
+//- Alert mixin
+mixin alert(style)
+  div( class=["alert", "alert-dismissable", "alert-" + style] )
+    button.close( type="button", data-dismiss="alert" ) ×
+    block
+
+//- +alert("warning") Warning!
+//- +alert("danger") Danger Will!
+//- +alert("success") You succeeded
+//- +alert("info") Some information for you

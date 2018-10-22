@@ -1,0 +1,165 @@
+//           ¬ sidebar finder           /
+aside.sidebar.sidebar--md-right.col-xs-12.col-md-3
+  include _panel-finder
+  =ind
+
+  //           ¬ panel-adjust           /
+  article.sidebar-panel.sidebar-panel-adjust
+    +hideTitle
+    .sidebar-panel__inner
+      form#filterForm.sidebar-form(action="/", method="GET")
+        //           ¬ parts type           /
+        section.filter-type
+          header.sidebar-panel__heading(data-toggle='collapse', data-target='#filterType')
+            h4 Parts type
+          #filterType.collapse.in
+            .form-group
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Parts type
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Brake discs
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Brake pads
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Brake hoses
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Brake drums
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | ABS Ring
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | ABS Controllers
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Handbrake shoes
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Handbrake cables
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Brake fluid
+
+        //           end parts type           /
+        =ind
+
+        //           ¬ parts maker           /
+        section.filter-maker
+          header.sidebar-panel__heading(data-toggle='collapse', data-target='#filterMaker')
+            h4  Parts maker
+          #filterMaker.collapse.in
+            .form-group
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Filtron
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Kager
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Premium
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Super
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Shuttea
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Elysium
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Atom
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | Lorex
+              .check-wrap
+                label.label-control
+                  input.form-checkbox(type="checkbox")
+                  i.fa.fa-check
+                  | ZET
+
+        //           end parts maker           /
+        =ind
+
+        //           ¬ price slider           /
+        section.price-slider
+          header.sidebar-panel__heading
+            h4 Price
+          .form-group
+            .row.price-slider__inputs
+              .col-xs-6
+                label.label-control From
+                .input-wrap
+                  input#inputNumbMin.form-control.input-xs(type='text')
+                  span.separate -
+              .col-xs-6
+                label.label-control To
+                .input-wrap
+                  input#inputNumbMax.form-control.input-xs(type='text')
+            .row
+              .col-xs-12
+                #sliderRange.price-slider-range
+
+        //           end price slider           /
+        =ind
+
+        //           ¬ Availability           /
+        section.filter-aty
+          header.sidebar-panel__heading
+            h4 Availability
+          .form-group
+            .check-wrap
+              label.label-control
+                input.form-checkbox(type="checkbox")
+                i.fa.fa-check
+                | In stock
+        //           end Availability           /
+        =ind
+
+        +btn-form('dark')
+          | Filter
+
+  //           end panel-adjust           /
+//           end sidebar finder           /

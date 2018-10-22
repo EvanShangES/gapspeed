@@ -1,0 +1,418 @@
+/**************************************
+
+      = Section
+        ¬ section intro
+        ¬ section row
+        ¬ section row number
+        ¬ section row header
+        ¬ section headings
+        ¬ section reservation
+        ¬ page-content-wrapper
+        ¬ section inner page
+        ¬ intro pages
+        ¬ section maintenance
+        ¬ parallax
+        ¬ parallax pattern
+        ¬ section overlays
+        ¬ page 404
+
+                                     */
+
+/**        ¬ section intro         **/
+.section-intro {
+  display: flex;
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding-top: 90px;
+    padding-bottom: 90px;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+
+    @include media('<sm') {
+      width: 100%;
+    }
+  }
+
+  .h5, h1 {
+    margin: 0;
+    line-height: 1;
+  }
+
+  p {
+    color: #f1f1f1;
+    margin-bottom: 10/16 + em;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  .btn,
+  .form-modul {
+    margin-top: 35/16 + em;
+  }
+}
+
+.intro-retailer {
+
+  &.bg-dark:after {
+    opacity: 0.7;
+  }
+
+  .container {
+    min-height: 600px !important;
+  }
+}
+
+.catalog-intro-page {
+  &__content {
+    position: relative;
+    margin: 70px 0;
+    z-index: 1;
+
+    h1 {
+      margin: 0;
+    }
+  }
+}
+
+
+/**        ¬ divider title         **/
+.divider-decor {
+  display: inline-block;
+  width: 100/16 + em;
+  border-top: 2px solid $brand-default;
+  margin: 5px 0 1em;
+
+  > * {
+    border-top: 2px solid $brand-default;
+    margin: 5px auto 0;
+
+    &:first-child {
+      width: 62/100*100%;
+    }
+
+    &:last-child {
+      width: 40/100*100%;
+    }
+  }
+}
+
+
+/**        ¬ section row         **/
+.section-row {
+  position: relative;
+  margin-top: 110px;
+
+  &__intro {
+    margin-bottom: 30/16 + em;
+  }
+
+  .btn-wrapper {
+    margin-top: 50px;
+  }
+}
+
+.section-content:nth-last-of-type(2) {
+  margin-bottom: 80/16 + em;
+}
+
+/**        ¬ section row number         **/
+.section-row-number {
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    margin-top: 35/16 + em;
+    border: 1px solid $brand-default;
+    z-index: 0;
+  }
+
+  h1 {
+    position: relative;
+    display: inline-block;
+    padding: 0 30/1140*100%;
+    margin-top: 0;
+    margin-left: -30/1140*100%;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    background-color: #fff;
+    z-index: 1;
+  }
+
+  span.number {
+    color: $brand-gray;
+  }
+}
+
+/**        ¬ section row header         **/
+.section-row-header {
+  max-width: 555px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 70/16 + em;
+
+  h1, h2 {
+    margin: 0;
+    line-height: 1;
+  }
+
+  .divider-decor {
+    display: block;
+    margin: 20/16 + em auto;
+  }
+
+  h2 {
+    margin-bottom: 10/40 + em;
+  }
+}
+
+
+/**        ¬ section headings         **/
+.section-header {
+  margin-top: 0;
+  margin-bottom: 40/16 + em;
+}
+
+.page-home {
+  .section-header {
+    margin-top: 70/16 + em;
+  }
+}
+
+.section-inner {
+  .section-header {
+    margin-top: 70/16 + em;
+  }
+}
+
+.section-header,
+.contacts-panel-header {
+  h1 {
+    margin-bottom: 30/72 + em;
+  }
+
+  h2 {
+    position: relative;
+    top: -4px;
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  .divider {
+    font-size: 1/16 + em;
+    line-height: 1;
+    margin: 14em 0;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 60px;
+      border: 1px solid $brand-default;
+    }
+  }
+
+  &--white {
+    .divider {
+      &:after {
+        border-color: #fff;
+      }
+    }
+  }
+}
+
+/**        ¬ section reservation         **/
+.reservation {
+  padding-bottom: 80/16 + em;
+}
+
+.tuning-reservation {
+  margin-top: 80/16 + em;
+  padding-bottom: 80/16 + em;
+}
+
+/**        ¬ page-content-wrapper         **/
+.page-content-wrapper {
+  margin-top: 80/16 + em;
+
+  > .container {
+    margin-bottom: 80/16 + em;
+  }
+}
+
+/**        ¬ section inner page         **/
+.inner-page {
+  .navbar {
+    position: relative;
+  }
+}
+
+.content-inner {
+  margin-bottom: 80/16 + em;
+}
+
+
+/**        ¬ intro pages         **/
+.intro-page {
+  &__content-wrapper {
+    position: relative;
+    margin: 110px 0;
+    text-align: center;
+    z-index: 1;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  &-tuning {
+    background-position: 50% !important;
+    color: #fff;
+    overflow: hidden;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: .7;
+      z-index: -1;
+    }
+    &:before {
+      background-color: $gray-darker;
+    }
+    &:after {
+      left: 50%;
+      background-color: $brand-default;
+      transform-origin: left bottom;
+      transform: skewX(-11deg);
+    }
+  }
+}
+
+
+/**        ¬ section maintenance         **/
+.section-maintenance {
+  padding: 75/16 + em 0;
+
+  .container > .row {
+    @include media('>sm') {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+
+      &:after,
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 38/16 + em;
+    line-height: 48/38 + em;
+  }
+
+  @include media('<sm') {
+    .btn {
+      margin-top: 40px;
+    }
+  }
+}
+
+
+/**        ¬ parallax         **/
+.parallax,
+.no-parallax {
+  position: relative;
+  background-position: 50%;
+  z-index: 1;
+}
+
+
+/**        ¬ parallax pattern         **/
+.parallax-repeat {
+  position: relative;
+  color: #fff;
+  background-position: 0 0;
+  background-repeat: repeat;
+  z-index: 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  &.dark {
+    &:before {
+      background-color: $gray-darker;
+      opacity: 0.985;
+    }
+  }
+
+  &.accent {
+    &:before {
+      background-color: $brand-default;
+      opacity: 0.96;
+    }
+  }
+}
+
+/**        ¬ section overlays         **/
+.bg-dark,
+.bg-accent {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    z-index: -1;
+    @extend %transition;
+  }
+}
+
+.bg-dark {
+  &:after {
+    background-color: $gray-base;
+  }
+}
+
+.bg-accent {
+  &:after {
+    background-color: $brand-default;
+  }
+}
+
+%bg-dark {
+  background-color: rgba($gray-base, .8);
+  @extend %transition;
+}
+%bg-accent {
+  background-color: rgba($brand-default, .8);
+  @extend %transition;
+}

@@ -1,0 +1,37 @@
+//           ¬ comment-form           /
+section.comment-form
+  h2 Post a comment
+  form.form-light(action="#", method="POST" data-toggle="validator")
+    .form-inner.row
+      .col-sm-6.form-group
+        label.label-control(for="fieldName") Your name
+        .input-wrap.input-wrap--icon-left
+          i.input-icon.pe-7s-user
+          input#fieldName.form-control(
+          type="text",
+          name="field_name"
+          required
+          )
+
+      .col-sm-6.form-group
+        label.label-control(for="fieldEmail") Your e-mail
+        .input-wrap.input-wrap--icon-left
+          i.input-icon.pe-7s-mail
+          input#fieldEmail.form-control(
+          type="email",
+          name="field_mail"
+          required
+          )
+
+      .col-xs-12.form-group
+        label.label-control(for="fieldMessage") Your comment
+        textarea#fieldMessage.form-control(
+        name="field_message"
+        required
+        )
+
+      .col-xs-12
+        +btn-form
+          | Post Comment
+
+//           end comment-form           /

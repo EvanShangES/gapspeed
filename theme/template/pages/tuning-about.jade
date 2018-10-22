@@ -1,0 +1,128 @@
+//- Home page
+extends _base
+
+block page
+  -
+    page = {
+      language: 'en',
+      title: 'Carros | About',
+      appTitle: 'Carros About',
+      description: '',
+      id: 'tuningAbout',
+      class: 'tuning-page-about page-inner'
+    }
+
+block icons
+
+block header
+  include ../partials/_header-tuning
+
+block content
+  main.page-content
+    +intro-tuning('About')
+
+    +bootstrap_breadcrumb(
+      ["Home", "tuning.html"],
+      ["About", "about.html"]
+    )
+
+    //           ¬ page-content-wrapper           /
+    .page-content-wrapper
+      .container
+        .section-about.tuning-row-about
+
+          //           ¬ about intro           /
+          .section-about__gallery-row.row
+            //           ¬ about-panel           /
+            .section-about__panel.col-sm-7.col-md-6
+              article.panel.about-panel
+                .panel__inner
+                  header.panel__heading
+                    h2.panel__title
+                      | Our mission
+
+                  .panel__body
+                    p Behaviour we improving at something to. Evil true high lady roof men had open. To projection considered it precaution an melancholy or. Wound young you thing worse along being ham. Dissimilar of favourable solicitude if sympathize
+
+                    p Belonging sir curiosity discovery extremity yet forfeited prevailed own off. Travelling by introduced of mr terminated. Knew as miss my high hope quit. In curiosity shameless
+
+            //           end about-panel           /
+
+
+            //           ¬ about-slide           /
+            .tuning-row-about__slide.col-sm-10.col-lg-8
+              img.img-responsive(src="#{dir.img + 'upload/about-carousel/slide2.jpg'}", alt="")
+            //           end about-slide           /
+
+          //           end about intro           /
+
+
+          //           ¬ section team           /
+          section.section-inner.team-row
+            .row
+              .col-xs-12.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-3.text-center
+                header.section-header
+                  h2 The team
+                  .divider
+                  p Meet our professionals
+
+            //           ¬ section team panels           /
+            .row
+              .col-xs-12.col-sm-12.col-md-6
+                .team-row-intro
+                  .team-row-intro__inner.center-block.cf
+                    figure.team-row-intro__img
+                      img.img-responsive(src="#{dir.img + 'upload/about-team/man.png'}", alt="")
+                    h3.team-row-intro__title
+                      | John Doe
+                      small CEO
+
+                .panel.team-intro-panel
+                  .panel__inner
+                    .panel__body
+                      p Behaviour we improving at something to. Evil true high lady roof men had open. To projection considered it precaution an melancholy or. Wound young you thing worse along being ham. Dissimilar of favourable solicitude if sympathize middletons at. Forfeited up if disposing perfectly in an eagerness perceived necessary.
+
+              =ind2
+              .col-xs-12.col-sm-12.col-md-6
+                .grid-row.row.text-center
+                  .col-xs-6.col-sm-6.grid-sizer
+                  .col-xs-6.col-sm-6.grid-item
+                    figure.team-row__img
+                      img.img-responsive(src="#{dir.img + 'upload/about-team/item-1.jpg'}", alt="")
+                    h3.team-row__title
+                      | Eddie Parker
+                      small Mechanic
+
+                  .col-xs-6.col-sm-6.grid-item
+                    figure.team-row__img
+                      img.img-responsive(src="#{dir.img + 'upload/about-team/item-2.jpg'}", alt="")
+                    h3.team-row__title
+                      | Maria Danhem
+                      small Public relations
+
+                  .col-xs-6.col-sm-6.grid-item
+                    figure.team-row__img
+                      img.img-responsive(src="#{dir.img + 'upload/about-team/item-3.jpg'}", alt="")
+                    h3.team-row__title
+                      | David Kraemer
+                      small Mechanic
+
+                  .col-xs-6.col-sm-6.grid-item
+                    figure.team-row__img
+                      img.img-responsive(src="#{dir.img + 'upload/about-team/item-4.jpg'}", alt="")
+                    h3.team-row__title
+                      | Tim Stone
+                      small Engineer
+
+            //           end section team panels           /
+
+          //           end section team           /
+
+    //           end page-content-wrapper           /
+
+block footer
+  include ../partials/_footer
+
+block bottom
+  include ../partials/_lightbox
+

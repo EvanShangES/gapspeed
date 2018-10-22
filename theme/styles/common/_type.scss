@@ -1,0 +1,150 @@
+/**************************************
+      = Typography
+                                     */
+$font-regular: $font-family-sans-serif;
+$font-raleway: 'Raleway', Helvetica, Arial, sans-serif;
+$ls-regular: 350/1000 + em;
+
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  color: $headings-color;
+
+  small,
+  .small {
+    font-weight: normal;
+    line-height: 1;
+    color: $headings-small-color;
+  }
+}
+
+h1, .h1,
+h2, .h2 {
+  small,
+  .small {
+    font-size: 53.33%;
+  }
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 20/16 + em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  letter-spacing: $ls-regular;
+
+  small,
+  .small {
+    font-size: 75%;
+  }
+}
+
+
+/**        ¬ UI Kit headings         **/
+h1, .h1 {
+  margin-bottom: 65/72 + em;
+  font-weight: 700;
+  font-size: 72/16 + em;
+  line-height: 1.1;
+}
+
+h2, .h2 {
+  margin: 65/40 + em 0 30/40 + em;
+  font-size: 40/16 + em;
+  line-height: 1.35; // 54
+}
+
+h3, .h3 {
+  margin: 0 0 15/20 + em;
+  font-size: 20/16 + em;
+  line-height: 1.6; // 32
+  font-weight: 700;
+
+  small,
+  .small {
+    font-size: 80%;
+  }
+}
+
+// Raleway font
+h4, .h4,
+h5, .h5 {
+  font: 700 1em/1.75 $font-raleway;
+}
+
+h6, .h6 {
+  font: 700 12px/2.33 $font-raleway;
+}
+
+
+// Body text
+// -------------------------
+p {
+  margin-bottom: 20/16 + em;
+}
+
+small,
+.small {
+  display: block;
+  width: 100%;
+  font-weight: 300;
+}
+
+// Lists
+// -------------------------
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+time,
+.time {
+  color: $gray-light;
+}
+
+
+// Blockquotes
+blockquote {
+  padding: 30/20 + em 30px;
+  margin: 0 0 1em;
+  font-size: 20/16 + em;
+  line-height: 1.75;
+  background-color: $brand-light;
+  border-left-width: 0;
+
+  p, ul, ol {
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+
+  footer {
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+
+    &:before {
+      font-weight: 700;
+    }
+
+    cite {
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+}
+
+.bg-darker {
+  background-color: $gray-darker;
+}
+.bg-danger {
+  background-color: $brand-default;
+}
+.text-danger {
+  color: $brand-default;
+}

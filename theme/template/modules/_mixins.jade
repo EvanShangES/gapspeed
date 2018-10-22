@@ -1,0 +1,202 @@
+include _navbar
+include _breadcrumb
+//- include _accordion
+//- include _buttons
+//- include _panels
+//- include _table
+//- include _alert
+
+mixin bootswatch(theme)
+  link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/" + theme + "/bootstrap.min.css", rel="stylesheet")
+
+
+//- SVG icons
+mixin svg(symbol, w, h)
+  - var w = (typeof w === 'undefined') ? "100%" : w;
+  - var h = (typeof h === 'undefined') ? "100%" : h;
+
+  svg(width=w, height=h)
+    use(xlink:href='#' + symbol)
+
+
+//- SVG filter
+mixin svg-filter
+  svg(style='display: none')
+    defs
+      filter#svg-filter
+        fegaussianblur(stddeviation='0')
+        feColorMatrix(type='saturate' values='0')
+      filter#svg-filter-hover
+        fegaussianblur(stddeviation='0')
+        feColorMatrix(type="saturate" values='1')
+
+mixin svg-img(imageLink)
+ svg.svg-filter
+  image(xlink:href='#{dir.img + imageLink}', width='100%' height='100%', filter='url(#svg-filter)' preserveAspectRatio='none')
+
+
+mixin hideTitle()
+  h2.hide Section title
+
+mixin btn-close()
+  button.btn-close(type='button')
+    span.btn-close__bar
+    span.btn-close__bar
+
+//- Repair intro page
+mixin intro-page(title, bg, img)
+  - var bg = (typeof bg === 'undefined') ? "dark" : bg;
+  - var img = (typeof img === 'undefined') ? ROOT + pattern : img;
+
+  //           ¬ section intro           /
+  section.intro-page.parallax-repeat(class=bg, style="background-image: url(#{img})")
+    .container
+      .intro-page__content-wrapper
+        h1=title
+
+  //           end section intro           /
+
+
+//- Tuning intro page
+mixin intro-tuning(title)
+  //           ¬ section intro           /
+  section.intro-page.intro-page-tuning.parallax(style="background-image: url(#{ROOT + tuning})")
+    .container
+      .intro-page__content-wrapper
+        h1=title
+
+  //           end section intro           /
+
+//- Catalog intro pages
+mixin catalog-intro-page(title, bg, img)
+  - var bg = (typeof bg === 'undefined') ? "dark" : bg;
+  - var img = (typeof img === 'undefined') ? ROOT + pattern : img;
+
+  //           ¬ section intro           /
+  section.catalog-intro-page.parallax-repeat(class=bg, style="background-image: url(#{img})")
+    .container
+      .catalog-intro-page__content
+        h1=title
+
+  //           end section intro           /
+
+//- section repair number
+mixin section-number(num, text)
+  header.section-row-number
+    h1
+      span.number=num
+      span=text
+
+
+mixin section-row-header(title)
+  header.section-row-header.text-center
+    h1=title
+    block
+
+//- divider section header
+mixin divider-decor()
+  .divider-decor
+    .div
+    .div
+
+
+mixin section-map()
+  //           ¬ map           /
+  section#map.section-map
+    h2.hide Section title
+
+  //           end map           /
+
+mixin contacts-map()
+  //           ¬ map           /
+  section#map.contacts-map
+    h2.hide Section title
+
+  //           end map           /
+
+mixin init-map()
+  // Google map
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyD3gFKhVywUkygSxQEBdGVrI5-ZRrdjueA')
+  script(src=dir.js + 'gmap.js')
+
+
+//- Components
+//-
+mixin social-list()
+  ul.social-list
+    li
+      a.fa.fa-stack.fa-lg(href="#")
+        i.fa.fa-circle.fa-stack-2x
+        i.fa.fa-instagram.fa-stack-1x.fa-inverse
+    li
+      a.fa-stack.fa-lg(href="#")
+        i.fa.fa-circle.fa-stack-2x
+        i.fa.fa-facebook.fa-stack-1x.fa-inverse
+    li
+      a.fa-stack.fa-lg(href="#")
+        i.fa.fa-circle.fa-stack-2x
+        i.fa.fa-twitter.fa-stack-1x.fa-inverse
+    li
+      a.fa-stack.fa-lg(href="#")
+        i.fa.fa-circle.fa-stack-2x
+        i.fa.fa-google-plus.fa-stack-1x.fa-inverse
+
+mixin gallery-over-link
+  span(class="over-fade-link")
+    i.icon.pe-7s-search
+
+mixin link-accent(href)
+  - var href = (typeof href === 'undefined') ? "#" : href;
+
+  a.link-accent(href="#{href}")&attributes(attributes)= data
+    block
+
+//- hover effects links
+mixin over-hover-link(href)
+  - var href = (typeof href === 'undefined') ? "#" : href;
+  a.over-hover-link(href="#{href}")
+    i.icon.pe-7s-exapnd2
+    span.over
+
+mixin over-fade-link(href)
+  - var href = (typeof href === 'undefined') ? "#" : href;
+  a.over-fade-link(href="#{href}")
+    i.icon.pe-7s-exapnd2
+
+mixin over-catalog-link(href)
+  .over-catalog
+    ul.over-catalog__panel
+      li
+        a(href="#", data-path="navbar-default", title="Add to Wish List", data-toggle="tooltip")
+          i.icon.pe-7s-like
+      li
+        a(href="#", data-path="navbar-default", title="Add to Cart", data-toggle="tooltip")
+          i.icon.pe-7s-graph3
+
+//- button link
+mixin btn-link(color, href)
+  - var color = (typeof color === 'undefined') ? "accent" : color;
+  - var href = (typeof href === 'undefined') ? "#" : href;
+
+  a(href=href, class=["btn", "btn-regular", "btn-" + color], role='button')&attributes(attributes)
+    span.btn-text
+      block
+    span.btn-over
+
+//- buttons
+mixin btn(color)
+  - var color = (typeof color === 'undefined') ? "accent" : color;
+
+  button(type='button', class=["btn", "btn-regular", "btn-" + color])&attributes(attributes)
+    span.btn-text
+      block
+    span.btn-over
+
+
+mixin btn-form(color)
+  - var color = (typeof color === 'undefined') ? "accent" : color;
+
+  button(type='submit', class=["btn", "btn-regular", "btn-" + color])&attributes(attributes)
+    span.btn-text
+      block
+    span.btn-over

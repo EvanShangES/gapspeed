@@ -1,0 +1,190 @@
+//           ¬ section about-us           /
+section.section-row.section-about.tuning-row-about
+  .container
+    //           ¬ section-header           /
+    +section-row-header('About Us')
+      +divider-decor
+      p After so power of young as. Bore year does has get long fat cold saw neat. Put boy carried chiefly shy general.
+    //           end section-header           /
+
+
+    //           ¬ about-intro           /
+    section.section-about__gallery-row.row
+      +hideTitle
+      //           ¬ about-panel           /
+      .section-about__panel.col-sm-7.col-md-6
+        article.panel.about-panel
+          .panel__inner
+            header.panel__heading
+              h2.panel__title
+                | Our mission
+
+            .panel__body
+              p Behaviour we improving at something to. Evil true high lady roof men had open. To projection considered it precaution an melancholy or. Wound young you thing worse along being ham. Dissimilar of favourable solicitude if sympathize
+
+              p Belonging sir curiosity discovery extremity yet forfeited prevailed own off. Travelling by introduced of mr terminated. Knew as miss my high hope quit. In curiosity shameless
+
+      //           end about-panel           /
+
+
+      //           ¬ about-slide           /
+      .tuning-row-about__slide.col-sm-10.col-lg-8
+        img.img-responsive(src="#{dir.img + 'upload/about-carousel/slide2.jpg'}", alt="")
+      //           end about-slide           /
+
+    //           end about-intro           /
+    =ind2
+
+    //           ¬ section team           /
+    section.team-row
+      .row
+        .col-xs-12.col-sm-8.col-lg-6.col-sm-offset-2.col-lg-offset-3.text-center
+          header.section-header
+            h2 The team
+            .divider
+            p Meet our professionals
+
+      //           ¬ section team panels           /
+      .row
+        .col-xs-12.col-sm-12.col-md-6
+          .team-row-intro
+            .team-row-intro__inner.center-block.cf
+              figure.team-row-intro__img
+                img.img-responsive(src="#{dir.img + 'upload/about-team/man.png'}", alt="")
+              h3.team-row-intro__title
+                | John Doe
+                small CEO
+
+          .panel.team-intro-panel
+            .panel__inner
+              .panel__body
+                p Behaviour we improving at something to. Evil true high lady roof men had open. To projection considered it precaution an melancholy or. Wound young you thing worse along being ham. Dissimilar of favourable solicitude if sympathize middletons at. Forfeited up if disposing perfectly in an eagerness perceived necessary.
+
+        =ind2
+        .col-xs-12.col-sm-12.col-md-6
+          .grid-row.row.text-center
+            .col-xs-6.col-sm-6.grid-sizer
+            .col-xs-6.col-sm-6.grid-item
+              figure.team-row__img
+                img.img-responsive(src="#{dir.img + 'upload/about-team/item-1.jpg'}", alt="")
+              h3.team-row__title
+                | Eddie Parker
+                small Mechanic
+
+            .col-xs-6.col-sm-6.grid-item
+              figure.team-row__img
+                img.img-responsive(src="#{dir.img + 'upload/about-team/item-2.jpg'}", alt="")
+              h3.team-row__title
+                | Maria Danhem
+                small Public relations
+
+            .col-xs-6.col-sm-6.grid-item
+              figure.team-row__img
+                img.img-responsive(src="#{dir.img + 'upload/about-team/item-3.jpg'}", alt="")
+              h3.team-row__title
+                | David Kraemer
+                small Mechanic
+
+            .col-xs-6.col-sm-6.grid-item
+              figure.team-row__img
+                img.img-responsive(src="#{dir.img + 'upload/about-team/item-4.jpg'}", alt="")
+              h3.team-row__title
+                | Tim Stone
+                small Engineer
+
+      //           end section team panels           /
+
+    //           end section team           /
+    =ind2
+
+    //           ¬ section blog           /
+    section.blog-row
+      .row
+        .col-sm-8.col-lg-6.col-sm-offset-2.col-lg-offset-3.text-center
+          header.section-header
+            h2 Latest from blog
+            .divider
+            p Latest company news and cool articles
+
+
+      //           ¬ group news           /
+      .row.blog-row__news
+        //           ¬ item-1           /
+        .col-xs-12.col-sm-6.col-md-4
+          article.blog-new
+            figure.blog-new__img.hover-anim
+              +over-hover-link(ROOT + link.blog_post)
+              img.img-responsive(src="#{dir.img + 'upload/blog/latest-1.jpg'}", alt="")
+
+            .blog-new__inner
+              .blog-new__meta.row
+                .col-xs-6.text-left
+                  time.blog-new__date(datetime='2016-08-15')
+                    | 15 / 08 / 2016
+                .col-xs-6.text-right
+                  +link-accent(ROOT + link.blog_post)(class='blog-new__type')
+                    | Reviews
+
+              .blog-new__body
+                +link-accent(href=ROOT + link.blog_post)
+                  h3 Top 10 of brake kits overview for sport cars
+                p Extremity direction existence as dashwoods do up. Securing marianne led welcomed offended but offering six raptures. Conveying concluded newspaper rapturous oh at. Two indeed suffer saw beyond far former mrs.
+
+        //           end item-1           /
+
+        //           ¬ item-2           /
+        .col-xs-12.col-sm-6.col-md-4
+          article.blog-new
+            figure.blog-new__img.hover-anim
+              +over-hover-link(ROOT + link.blog_post)
+              img.img-responsive(src="#{dir.img + 'upload/blog/latest-2.jpg'}", alt="")
+
+            .blog-new__inner
+              .blog-new__meta.row
+                .col-xs-6.text-left
+                  time.blog-new__date(datetime='2016-08-13')
+                    | 13 / 08 / 2016
+                .col-xs-6.text-right
+                  +link-accent(ROOT + link.blog_post)(class='blog-new__type')
+                    | Advices
+
+              .blog-new__body
+                +link-accent(href=ROOT + link.blog_post)
+                  h3 5 helpful recommendations for engine customization
+                p Building mr concerns servants in he outlived am breeding. He so lain good miss when sell some at if. Told hand so an rich gave next. How doubt yet again see son smart. While mirth large of on front.
+
+        //           end item-2           /
+
+
+        //           ¬ item-3           /
+        .col-xs-12.col-sm-6.col-md-4
+          article.blog-new
+            figure.blog-new__img.hover-anim
+              +over-hover-link(ROOT + link.blog_post)
+              img.img-responsive(src="#{dir.img + 'upload/blog/latest-3.jpg'}", alt="")
+
+            .blog-new__inner
+              .blog-new__meta.row
+                .col-xs-6.text-left
+                  time.blog-new__date(datetime='2016-08-06')
+                    | 06 / 08 / 2016
+                .col-xs-6.text-right
+                  +link-accent(ROOT + link.blog_post)(class='blog-new__type')
+                    | Advices
+
+              .blog-new__body
+                +link-accent(href=ROOT + link.blog_post)
+                  h3 20 tips to keep your vehicle clean
+                p Imprudence attachment him his for sympathize. Large above be to means. Dashwood do provided stronger is. But discretion frequently sir the she instrument unaffected admiration everything.
+
+        //           end item-3           /
+
+      //           end group news           /
+
+
+      .btn-wrapper.center-block
+        +btn-link('dark', ROOT + link.blog_list)
+          | view blog
+
+    //           end section blog           /
+//           end section about-us           /

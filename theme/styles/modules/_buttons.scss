@@ -1,0 +1,247 @@
+/**************************************
+      = Buttons
+        ¬ buttons custom
+        ¬ btn close
+        ¬ btn count
+        ¬ buttons theme
+                                     */
+.btn {
+  font: 400 16px/1 $font-raleway;
+  color: #fff;
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  outline-width: 0;
+  user-select: none;
+
+  &-wrapper {
+    text-align: center;
+
+    @include media('<sm') {
+
+      .btn {
+        display: block;
+      }
+    }
+  }
+
+  i {
+    color: $color-reverse;
+    @extend %transition;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus {
+    background-color: transparent;
+    box-shadow: none;
+    outline-width: 0;
+
+    i {
+      color: #fff;
+    }
+  }
+
+  &.btn-block {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/**        ¬ buttons custom         **/
+.btn-regular {
+  position: relative;
+  height: 52px;
+  padding: 18px 50px;
+  letter-spacing: $ls-regular;
+  text-transform: uppercase;
+  @extend %transition;
+
+  .btn-over {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: 100%;
+    transform-origin: 100% 50%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transform: skewX(-10deg);
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      margin: -15px 0 0 1px;
+      width: 13%;
+      height: 30px;
+      border-radius: 50%;
+      background: $gray-dark;
+      transform-origin: 100% 50%;
+      transform: scale3d(1, 3, 1);
+      z-index: -1;
+      transition: all 0.3s cubic-bezier(0.7,0,0.9,1);
+    }
+  }
+}
+
+.btn-text {
+  display: inline-block;
+  position: relative;
+  min-height: 16px;
+  color: #fff;
+  z-index: 1;
+  @extend %transition;
+}
+
+
+/**        ¬ buttons theme         **/
+.btn {
+  &-accent {
+    .btn-over {
+      background-color: $brand-default;
+    }
+
+    .btn-text {
+      color: $color-reverse;
+    }
+  }
+
+  &-dark {
+    .btn-over {
+      background-color: $gray-darker;
+    }
+  }
+
+  &-light {
+    .btn-text {
+      color: $gray-base;
+    }
+
+    .btn-over {
+      background-color: #fff;
+    }
+  }
+
+  &-accent,
+  &-dark,
+  &-light {
+    &:hover {
+      .btn-text {
+        color: #fff;
+      }
+      .btn-over {
+        &:before {
+          transform: scale3d(10.2, 10.2, 1);
+        }
+      }
+    }
+  }
+  &-lg {
+    width: 100%;
+    padding: 18px 0;
+  }
+}
+
+/**        ¬ btn close         **/
+.btn-close {
+  position: relative;
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  transform-origin: center;
+  transform: rotate(45deg);
+  vertical-align: middle;
+  opacity: 1;
+
+  &__bar {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 19px;
+    height: 1px;
+    margin-top: 9px;
+    background-color: $brand-default;
+    @extend %transition;
+
+    &:last-child {
+      height: 19px;
+      width: 1px;
+      margin-top: 0;
+      margin-left: 9px;
+    }
+  }
+
+  &:hover {
+    span {
+      background-color: $gray-dark;
+    }
+  }
+
+  &.order-1 {
+    order: -1;
+  }
+}
+
+.modal {
+  .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    span {
+      background-color: #fff;
+    }
+    &:hover {
+      span {
+        background-color: $brand-gray;
+      }
+    }
+  }
+}
+
+/**        ¬ btn count         **/
+.btn-count {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 19px;
+  height: 19px;
+  background-color: $gray-darker !important;
+  @include hide-text();
+
+  &:hover {
+    background-color: $gray-dark !important;
+
+    & ~ .form-control-count {
+      border-color: $gray-dark;
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11px;
+    height: 1px;
+    margin-top: 9px;
+    margin-left: 4px;
+    background-color: #fff;
+  }
+
+  &--plus {
+    order: 1;
+
+    span {
+      &:last-child {
+        width: 1px;
+        height: 11px;
+        margin-top: 4px;
+        margin-left: 9px;
+      }
+    }
+  }
+}

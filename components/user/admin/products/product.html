@@ -1,0 +1,122 @@
+<div class="row justify-content-center" style="margin: 40px 25px 40px 25px">
+    <div class="col-md-12">
+        <div>
+            <h4 style="display: inline"><small>Products</small></h4>
+        </div>
+        <!--PROFILE FORM-->
+        <div class="row justify-content-center" style="margin-top: 30px">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="newProduct()">
+                    New Product
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="newProductModal" tabindex="-1" role="dialog" aria-labelledby="newProductModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="newProductModalLabel" ng-show="newProductFlag">New Product</h5>
+                                <h5 class="modal-title" id="editProductModalLabel" ng-hide="newProductFlag">Edit Product</h5>
+                                <button type="button" class="close" aria-label="Close"  ng-click="closeModal()">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-md-12">
+                                    <div class="form-group row">
+                                        <label for="number">Product Number:</label>
+                                        <input id="number" type="text"
+                                               class="form-control"
+                                               placeholder="Product No." ng-model="product.productNo"/>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="name">Product Name:</label>
+                                        <input id="name" type="text"
+                                               class="form-control"
+                                               placeholder="Product Name" ng-model="product.productName"/>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="selection">Selection Name:</label>
+                                        <input id="selection" type="text"
+                                               class="form-control"
+                                               placeholder="Selection Name" ng-model="product.selectionName"/>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="price">Product Price:</label>
+                                        <input id="price" type="text"
+                                               class="form-control"
+                                               placeholder="Price" ng-model="product.price"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" ng-click="closeModal()">Close</button>
+                                <button type="button" class="btn btn-primary" ng-click="saveProduct(product, 'new')" ng-show="newProductFlag">Save</button>
+                                <button type="button" class="btn btn-primary" ng-click="saveProduct(product, 'edit')" ng-hide="newProductFlag">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="editProductModal" tabindex="-1" role="dialog" aria-labelledby="editProductModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-md-12">
+                                    <div class="form-group row">
+                                        <label for="number">Product Number:</label>
+                                        <input id="number" type="text"
+                                               class="form-control"
+                                               placeholder="Product No." ng-model="product.productNo"/>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="name">Product Name:</label>
+                                        <input id="name" type="text"
+                                               class="form-control"
+                                               placeholder="Product Name" ng-model="product.productName"/>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="selection">Selection Name:</label>
+                                        <input id="selection" type="text"
+                                               class="form-control"
+                                               placeholder="Selection Name" ng-model="product.selectionName"/>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="price">Product Price:</label>
+                                        <input id="price" type="text"
+                                               class="form-control"
+                                               placeholder="Price" ng-model="product.price"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" ng-click="saveProduct(product, 'edit')">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                    <tr>
+                        <!--<th>id</th>-->
+                        <th>No.</th>
+                        <th>Product Name</th>
+                        <th>Selection Name</th>
+                        <th>Price</th>
+                        <th>Options</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

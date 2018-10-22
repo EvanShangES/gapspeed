@@ -1,0 +1,179 @@
+//- Home page
+extends _base
+
+block page
+  -
+    page = {
+      language: 'en',
+      title: 'Carros | Overview',
+      appTitle: 'Carros Overview',
+      description: '',
+      id: 'page_overview',
+      class: 'page-overview page-inner'
+    }
+
+block icons
+
+block header
+  include partials/_header-retailer
+
+block content
+  main.page-content
+    //           ¬ section-intro           /
+    +catalog-intro-page('Account')
+
+    //           end section-intro           /
+
+    include partials/_category-filter
+    =ind
+
+    +breadcrumb_catalog(
+      ["Home", "retailer.html"],
+      ["Account"]
+    )
+    =ind
+
+    //           ¬ page-content-wrapper           /
+    .page-content-wrapper
+      .container
+        .row
+          include pages/retailer/_sidebar-account
+          =ind
+
+          //           ¬ content           /
+          .col-sm-8.col-md-9
+            .account-settings
+              form.form-light(action="#", method="POST" data-toggle="validator")
+                .account-settings-inner.row
+
+                  //           ¬ user profile           /
+                  section.col-xs-12.col-md-12.col-lg-6.order.order--left
+                    .row
+                      .col-xs-12.col-md-12.col-lg-11
+                        header.section-header
+                          h2 Account settings
+                        =ind
+
+                        .account-settings__profile
+                          .form-group
+                            label.label-control(for="signName") Full name
+                            input#signName.form-control(
+                            type='text',
+                            name='user_name',
+                            placeholder='David Kraemer',
+                            required
+                            )
+                          =ind
+
+                          .form-group
+                            label.label-control(for="signEmail") E-mail
+                            input#signEmail.form-control(
+                              type="email",
+                              name='user_email',
+                              placeholder='user@example.com',
+                              required
+                            )
+                          =ind
+
+                          .form-group
+                            label.label-control(for="oldPass") Old password
+                            input#oldPass.form-control(
+                              type="password",
+                              name='user_old_password',
+                              required
+                            )
+                          =ind
+
+                          .form-group
+                            label.label-control(for="signPass") New password
+                            input#signPass.form-control(
+                              type="password",
+                              name='user_new_password',
+                              required
+                            )
+                          =ind
+
+                          .form-group
+                            label.label-control(for="signConfirm") Retype password
+                            input#signConfirm.form-control(
+                              type="password",
+                              data-match="#signPass" data-match-error="Whoops, these don't match"
+                              required
+                            )
+
+                  //           end user profile           /
+                  =ind
+
+                  //           ¬ user car           /
+                  section.col-xs-12.col-md-12.col-lg-6.order
+                    .row
+                      .col-xs-12.col-md-12.col-lg-11.col-lg-push-1
+                        header.section-header
+                          h2 My car
+                        =ind
+
+                        .account-settings__car
+                          .form-group
+                            label.label-control Year
+                            select#selectYear.form-control.select2
+                              option(value='2000', selected='selected') 2000
+                              -for (var y = 2016; y > 1999; --y)
+                                option(value=y)=y
+                          =ind
+
+                          .form-group
+                            label.label-control Manufacturer
+                            select#selectManufacturer.form-control.select2
+                              option(value='Mercedes-Benz', selected='selected') Mercedes-Benz
+                              option(value='Mercedes-Benz') Mercedes-Benz
+                              option(value='Mercedes-Benz') Mercedes-Benz
+                              option(value='Mercedes-Benz') Mercedes-Benz
+                          =ind
+
+                          .form-group
+                            label.label-control Model
+                            select#selectModel.form-control.select2
+                              option(value='M-Class (W164)', selected='selected') M-Class (W164)
+                              option(value='M-Class (W164)') M-Class (W164)
+                              option(value='M-Class (W164)') M-Class (W164)
+                              option(value='M-Class (W164)') M-Class (W164)
+                          =ind
+
+                          .form-group
+                            label.label-control Engine
+                            select#selectEngine.form-control.select2
+                              option(value='6 Cyl 3.5L', selected='selected') 6 Cyl 3.5L
+                              option(value='6 Cyl 3.5L') 6 Cyl 3.5L
+                              option(value='6 Cyl 3.5L') 6 Cyl 3.5L
+                              option(value='6 Cyl 3.5L') 6 Cyl 3.5L
+                          =ind
+
+                          .form-group
+                            .radio-input
+                              label.label-control
+                                input.form-radio(type="radio", name="a", value="option1")
+                                i
+                                | Show me only parts in the catalog that are suitable for my car.
+
+                            .radio-input
+                              label.label-control
+                                input.form-radio(type="radio", name="a", value="option2")
+                                i
+                                | Show all parts in the catalog.
+
+                  //           end user car           /
+                  =ind
+
+                +btn-form()
+                  | Update preferences
+          //           end content           /
+
+    //           end page-content-wrapper           /
+
+
+
+block footer
+  include partials/_footer
+
+block bottom
+

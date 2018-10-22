@@ -1,0 +1,216 @@
+/*************************************
+
+    [TABLE OF CONTENTS]
+
+    General settings:
+      General
+      Typography
+      Custom Grid
+
+    Layouts:
+      = Header
+      = Section
+      = Pages
+      = Services
+      = About Us
+      = Contacts
+      = Tetimonials
+      = Gallery
+      = Blog
+      = Pricing
+      = Account
+      = Sidebar
+      = Footer
+
+    Modules:
+      = Buttons
+      = Breadcrumbs
+      = Panels
+      = Controls
+      = Forms
+      = Components
+      = Catolog elements
+      = Media Queries
+
+    Universal styles
+                                   */
+
+html {
+  font-size: 10px;
+}
+
+/**************************************
+      = General
+                                     */
+
+body {
+  font-family: $font-family-base;
+  font-size: 1.6rem; // 16px
+  line-height: 28/16 + em; // 28px
+  font-weight: 300;
+  color: $text-color;
+  background-color: $body-bg; // #fff
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// reset button
+button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  outline-width: 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+// Remove default fieldset styles.
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+// Allow only vertical resizing of textareas.
+textarea {
+  resize: vertical;
+}
+
+figure {
+  margin: 0;
+}
+
+// Links
+a {
+  display: inline-block;
+  color: $text-color;
+
+  &:hover,
+  &:focus {
+    color: $text-color;
+    text-decoration: none;
+  }
+
+  &.link-accent {
+    display: inline;
+    line-height: 1.4;
+    color: $brand-default;
+    border-bottom: 1px solid;
+    @extend %transition;
+
+    &:hover {
+      color: $gray-dark;
+    }
+
+    &:focus {
+      color: $gray-light;
+    }
+  }
+
+  &.link-title {
+    @extend %transition;
+
+    &:hover,
+    &:focus {
+      color: $brand-default;
+    }
+  }
+}
+
+img, svg, .icon {
+  display: inline-block;
+  line-height: 1;
+}
+
+figcaption {
+  margin: 10/16 + em 0 20/16 + em;
+}
+
+// Horizontal rules
+hr {
+  display: block;
+  margin-top:    $line-height-computed;
+  margin-bottom: $line-height-computed;
+  border-top: 1px solid $hr-border;
+}
+
+
+// filters settings
+.img-filter,
+.svg-filter {
+  display: block;
+  opacity: 1;
+  @extend %transition;
+}
+
+.img-filter {
+  filter: grayscale(100%);
+}
+
+.svg-filter {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+  image {
+    filter: url("#svg-filter");
+  }
+}
+
+// IE10+ detection
+html[data-agent*="Trident"] {
+  .svg-filter {
+    display: block;
+  }
+}
+
+// collapse tab
+[data-toggle="collapse"] {
+  cursor: pointer;
+}
+
+.bg-init,
+.animsition-overlay {
+  background-color: $brand-default;
+}
+
+/**        ¬ preloader start window hero         **/
+#preloader {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $brand-default;
+  z-index: 9999999;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 125px;
+    height: 125px;
+    transform: translate(-50%, -50%);
+  }
+}

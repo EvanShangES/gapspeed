@@ -1,0 +1,162 @@
+//- Home page
+extends _base
+
+block page
+  -
+    page = {
+      language: 'en',
+      title: 'Carros | Pricing',
+      appTitle: 'Carros Pricing',
+      description: '',
+      id: 'pagePricing',
+      class: 'page-pricing page-inner'
+    }
+
+block icons
+
+block header
+  include ../partials/_header-repair
+
+block content
+  main.page-content
+    +intro-page('Pricing')
+
+    +bootstrap_breadcrumb(
+      ["Home", "index.html"],
+      ["Pricing", "pricing.html"]
+    )
+
+    //           ¬ page-content-wrapper           /
+    .page-content-wrapper
+      .container
+        .row
+          //           ¬ inner-content           /
+          .col-md-9
+            .table-pricing.table-responsive
+              table.table
+                thead
+                  tr
+                    th.col-xs-1 #
+                    th.col-xs-4 Service
+                    th.col-xs-2 Cost
+                    th.col-xs-4 Additional information
+
+                tbody
+                  tr
+                    td.col-xs-1 1
+                    td.col-xs-4 Emission checks
+                    td.col-xs-2 $20
+                    td.col-xs-4 Extremity direction do up.
+                  tr
+                    td.col-xs-1 2
+                    td.col-xs-4 Computer wheel balancing
+                    td.col-xs-2 $25
+                    td.col-xs-4 Has six worse downs blush
+                  tr
+                    td.col-xs-1 3
+                    td.col-xs-4 Fully syntehic oil upgrade
+                    td.col-xs-2 $35
+                    td.col-xs-4
+                  tr
+                    td.col-xs-1 4
+                    td.col-xs-4 Clutch repair
+                    td.col-xs-2 from $50
+                    td.col-xs-4 Or belonging zealously
+                  tr
+                    td.col-xs-1 5
+                    td.col-xs-4 Cambelt replacement
+                    td.col-xs-2 $45
+                    td.col-xs-4
+                  tr
+                    td.col-xs-1 6
+                    td.col-xs-4 Steering repair
+                    td.col-xs-2 from $60
+                    td.col-xs-4
+                  tr
+                    td.col-xs-1 7
+                    td.col-xs-4 MOT and associated repairs
+                    td.col-xs-2 $20
+                    td.col-xs-4  He into walk roof made
+                  tr
+                    td.col-xs-1 8
+                    td.col-xs-4 Air conditioning service
+                    td.col-xs-2 $25
+                    td.col-xs-4 Wisdom happen suffer
+                  tr
+                    td.col-xs-1 9
+                    td.col-xs-4 Trailer service and repair
+                    td.col-xs-2 $35
+                    td.col-xs-4
+                  tr
+                    td.col-xs-1 10
+                    td.col-xs-4 Clutch repair
+                    td.col-xs-2 from $50
+                    td.col-xs-4
+                  tr
+                    td.col-xs-1 11
+                    td.col-xs-4 Cambelt replacement
+                    td.col-xs-2 $45
+                    td.col-xs-4
+                  tr
+                    td.col-xs-1 12
+                    td.col-xs-4 Steering repair
+                    td.col-xs-2 from $60
+                    td.col-xs-4
+                  tr
+                    td.col-xs-1 13
+                    td.col-xs-4 Emission checks
+                    td.col-xs-2 $20
+                    td.col-xs-4 Extremity direction do up.
+                  tr
+                    td.col-xs-1 14
+                    td.col-xs-4 Computer wheel balancing
+                    td.col-xs-2 $25
+                    td.col-xs-4 Has six worse downs blush
+                  tr
+                    td.col-xs-1 15
+                    td.col-xs-4 Fully syntehic oil upgrade
+                    td.col-xs-2 $35
+                    td.col-xs-4
+                  tr
+                    td.col-xs-1 16
+                    td.col-xs-4 Clutch repair
+                    td.col-xs-2 from $50
+                    td.col-xs-4 Or belonging zealously
+                  tr
+                    td.col-xs-1 17
+                    td.col-xs-4 Cambelt replacement
+                    td.col-xs-2 $45
+                    td.col-xs-4
+                  tr
+                    td.col-xs-1 18
+                    td.col-xs-4 Steering repair
+                    td.col-xs-2 from $60
+                    td.col-xs-4
+                  tr
+                    td.col-xs-1 19
+                    td.col-xs-4 MOT and associated repairs
+                    td.col-xs-2 $20
+                    td.col-xs-4 He into walk roof made
+                  tr
+                    td.col-xs-1 20
+                    td.col-xs-4 Air conditioning service
+                    td.col-xs-2 $25
+                    td.col-xs-4 Wisdom happen suffer
+
+            p #[strong Note:] all our services are inlusive of 18% tax fee.
+          //           end inner-content           /
+
+          include repair/_repair-sidebar
+
+      include repair/_maintenance
+
+    //           end page-content-wrapper           /
+
+
+
+block footer
+  include ../partials/_footer
+
+block bottom
+  include ../partials/_modal-form
+
