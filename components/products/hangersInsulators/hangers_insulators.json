@@ -1,0 +1,47 @@
+[
+  {
+    "partName": "Rubber Exhaust Hanger Insulator - RU-01",
+    "description": "Honda/Mazda/Renault 1976-1986",
+    "image": "components/products/hangersInsulators/product_images/RU-01.png"
+  },
+  {
+    "partName": "Rubber Exhaust Hanger Insulator - RU-02",
+    "description": "Audi/Volkswagen Products 1974-1988",
+    "image": "components/products/hangersInsulators/product_images/RU-02.png"
+  },
+  {
+    "partName": "Rubber Exhaust Hanger Insulator - RU-03",
+    "description": "Chrysler 1982-93",
+    "image": "components/products/hangersInsulators/product_images/RU-03.png"
+  },
+  {
+    "partName": "Rubber Exhaust HangerInsulator - RU-04",
+    "description": "General Motors Full Size",
+    "image": "components/products/hangersInsulators/product_images/RU-04.png"
+  },
+  {
+    "partName": "Rubber Exhaust Hanger Insulator - RU-05",
+    "description": "GM/Nissan/Toyota Products 1976-1993",
+    "image": "components/products/hangersInsulators/product_images/RU-05.png"
+  },
+  {
+    "partName": "Hanger - HG-02",
+    "description": "Exhaust Hanger",
+    "image": "components/products/hangersInsulators/product_images/HG-02.png"
+  },
+  {
+    "partName": "Exhaust Rod Hanger - HG-03",
+    "description": "Raw Diameters: 5/16\" and 3/8\"",
+    "image": "components/products/hangersInsulators/product_images/HG-03.png"
+  },
+  {
+    "partName": "Hanger - HG-04",
+    "description": "Raw Diameters: 5/16\" and 3/8\"",
+    "image": "components/products/hangersInsulators/product_images/HG-04.png"
+  },
+  {
+    "partName": "Hanger - HG-05",
+    "description": "Exhaust Hanger",
+    "image": "components/products/hangersInsulators/product_images/HG-04.png"
+  }
+]

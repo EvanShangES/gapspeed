@@ -1,0 +1,542 @@
+[
+  {
+    "partName": "Blank Flex - Internal Sleeve",
+    "description": "Inner Diameter: 1 3/4\" to 3\". Overall Length: 4\" to 10\"",
+    "image": "components/products/flexPipes/product_images/Blank_ends.png",
+    "numOfParts": 20,
+    "tableData": [
+      {
+      "partNo": "NF 17504B",
+      "innerDiameter": "1 1/3\"",
+      "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 17506B",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 17508B",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 17510B",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 20004B",
+        "innerDiameter": "2\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 20006B",
+        "innerDiameter": "2\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 20008B",
+        "innerDiameter": "2\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 20010B",
+        "innerDiameter": "2\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 22504B",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 22506B",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 22508B",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 22510B",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 25004B",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 25006B",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 25008B",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 25010B",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 30004B",
+        "innerDiameter": "3\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 30006B",
+        "innerDiameter": "3\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 30008B",
+        "innerDiameter": "3\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 30010B",
+        "innerDiameter": "3\"",
+        "overallLength": "10\""
+      }
+    ]
+  },
+  {
+    "partName": "Blank Flex - Inner Braiding",
+    "description":"Inner Diameter: 1 3/4\" to 3\". Overall Length: 4\" to 10\"",
+    "image":"components/products/flexPipes/product_images/Blank_ends-inner_braiding.png",
+    "numOfParts": 20,
+    "tableData": [
+      {
+        "partNo": "NF 17504B-IB",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 17506B-IB",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 17508B-IB",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 17510B-IB",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 20004B-IB",
+        "innerDiameter": "2\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 20006B-IB",
+        "innerDiameter": "2\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 20008B-IB",
+        "innerDiameter": "2\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 20010B-IB",
+        "innerDiameter": "2\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 22504B-IB",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 22506B-IB",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 22508B-IB",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 22510B-IB",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 25004B-IB",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 25006B-IB",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 25008B-IB",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 25010B-IB",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 30004B-IB",
+        "innerDiameter": "3\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 30006B-IB",
+        "innerDiameter": "3\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 30008B-IB",
+        "innerDiameter": "3\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 30010B-IB",
+        "innerDiameter": "3\"",
+        "overallLength": "10\""
+      }
+    ]
+  },
+  {
+    "partName": "Flex Pipe (Nipple Ends) - Internal Sleeve",
+    "description":"Inner Diameter: 1 3/4\" to 3\". Overall Length: 4\" to 10\"",
+    "image":"components/products/flexPipes/product_images/Nipple_ends.png",
+    "numOfParts": 20,
+    "tableData": [
+      {
+        "partNo": "NF 17504N",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 17506N",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 17508N",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 17510N",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 20004N",
+        "innerDiameter": "2\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 20006N",
+        "innerDiameter": "2\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 20008N",
+        "innerDiameter": "2\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 20010N",
+        "innerDiameter": "2\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 22504N",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 22506N",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 22508N",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 22510N",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 25004N",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 25006N",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 25008N",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 25010N",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 30004N",
+        "innerDiameter": "3\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 30006N",
+        "innerDiameter": "3\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 30008N",
+        "innerDiameter": "3\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 30010N",
+        "innerDiameter": "3\"",
+        "overallLength": "10\""
+      }
+    ]
+  },
+  {
+    "partName": "Flex Pipe (Nipple Ends) - Inner Braiding",
+    "description":"Inner Diameter: 1 3/4\" to 3\". Overall Length: 4\" to 10\"",
+    "image":"components/products/flexPipes/product_images/Nipple_ends-inner_braiding.png",
+    "numOfParts": 20,
+    "tableData": [
+      {
+        "partNo": "NF 17504N-IB",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 17506N-IB",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 17508N-IB",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 17510N-IB",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 20004N-IB",
+        "innerDiameter": "2\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 20006N-IB",
+        "innerDiameter": "2\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 20008N-IB",
+        "innerDiameter": "2\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 20010N-IB",
+        "innerDiameter": "2\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 22504N-IB",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 22506N-IB",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 22508N-IB",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 22510N-IB",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 25004N-IB",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 25006N-IB",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 25008N-IB",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 25010N-IB",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 30004N-IB",
+        "innerDiameter": "3\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 30006N-IB",
+        "innerDiameter": "3\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 30008N-IB",
+        "innerDiameter": "3\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 30010N-IB",
+        "innerDiameter": "3\"",
+        "overallLength": "10\""
+      }
+    ]
+  },
+  {
+    "partName": "Flex Pipe - Interlock",
+    "description":"Inner Diameter: 1 3/4\" to 3\". Overall Length: 4\" to 10\"",
+    "image":"components/products/flexPipes/product_images/Interlock.png",
+    "numOfParts": 20,
+    "tableData": [
+      {
+        "partNo": "NF 17504IL",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 17506IL",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 17508IL",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 17510IL",
+        "innerDiameter": "1 1/3\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 20004IL",
+        "innerDiameter": "2\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 20006IL",
+        "innerDiameter": "2\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 20008IL",
+        "innerDiameter": "2\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 20010IL",
+        "innerDiameter": "2\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 22504IL",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 22506IL",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 22508IL",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 22510IL",
+        "innerDiameter": "2 1/4\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 25004IL",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 25006IL",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 25008IL",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 25010IL",
+        "innerDiameter": "2 1/2\"",
+        "overallLength": "10\""
+      },
+      {
+        "partNo": "NF 30004IL",
+        "innerDiameter": "3\"",
+        "overallLength": "4\""
+      },
+      {
+        "partNo": "NF 30006IL",
+        "innerDiameter": "3\"",
+        "overallLength": "6\""
+      },
+      {
+        "partNo": "NF 30008IL",
+        "innerDiameter": "3\"",
+        "overallLength": "8\""
+      },
+      {
+        "partNo": "NF 30010IL",
+        "innerDiameter": "3\"",
+        "overallLength": "10\""
+      }
+    ]
+  }
+]

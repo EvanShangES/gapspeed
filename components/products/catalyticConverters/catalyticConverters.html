@@ -1,0 +1,172 @@
+<!--           ¬ content inner           /-->
+<div class="page-content-wrapper">
+    <div class="container">
+        <div class="row">
+            <!--           ¬ sidebar finder           /-->
+            <aside class="sidebar sidebar--md-right col-xs-12 col-md-3">
+                <!--           ¬ panel-finder           /-->
+                <article class="sidebar-panel sidebar-panel-categories ">
+                    <h2 class="hide">Section title</h2>
+                    <div class="sidebar-panel__inner">
+                        <section class="sidebar-categories">
+                            <h4>Categories</h4>
+                            <ul class="list-category">
+                                <li ><a href="#"><span>Mufflers</span></a></li>
+                                <li><a href="#"><span>Exhaust Tips</span></a></li>
+                                <li><a ui-sref="home.products.flexPipes"><span>Flex Pipes</span></a></li>
+                                <li class="active"><a><span>Catalytic Converters</span></a></li>
+                                <li><a ui-sref="home.products.hangersInsulators"><span>Hangers & Insulators</span></a></li>
+                                <li><a ui-sref="home.products.exhaustClamps"><span>Exhaust Clamps</span></a></li>
+                                <li><a href="#"><span>Accessories</span></a></li>
+                                <!--<li><a href="#"><span>Audio</span><span> [6]</span></a>-->
+                                    <!--<ul class="list-default border">-->
+                                        <!--<li><a href="#">2.0 Audio Systems <span>[5]</span></a></li>-->
+                                        <!--<li><a href="#">2.1 Audio Systems <span>[5]</span></a></li>-->
+                                        <!--<li><a href="#">5.1 Audio Systems <span>[5]</span></a></li>-->
+                                        <!--<li><a href="#">Amplifiers <span>[2]</span></a></li>-->
+                                        <!--<li><a href="#">AUX Cables <span>[5]</span></a></li>-->
+                                        <!--<li><a href="#">Receivers <span>[3]</span></a></li>-->
+                                        <!--<li><a href="#">Subwoofers <span>[3]</span></a></li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+
+                                <!--<li><a href="#"><span>Parts</span><span> [11]</span></a>-->
+                                    <!--<ul class="list-default border">-->
+                                        <!--<li><a href="#">Brakes <span>[8]</span></a></li>-->
+                                        <!--<li><a href="#">Cooling & Heating <span>[6]</span></a></li>-->
+                                        <!--<li><a href="#">Electrical <span>[5]</span></a></li>-->
+                                        <!--<li><a href="#">Engine <span>[5]</span></a></li>-->
+                                        <!--<li><a href="#">Suspension <span>[5]</span></a></li>-->
+                                        <!--<li><a href="#">Transmission <span>[5]</span></a></li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+
+                                <!--<li><a href="#"><span>Exterior</span><span> [5]</span></a>-->
+                                    <!--<ul class="list-default border">-->
+                                        <!--<li><a href="#">Body mouldings <span>[4]</span></a></li>-->
+                                        <!--<li><a href="#">Body panels <span>[3]</span></a></li>-->
+                                        <!--<li><a href="#">Cables <span>[3]</span></a></li>-->
+                                        <!--<li><a href="#">Grilles <span>[4]</span></a></li>-->
+                                        <!--<li><a href="#">Heat exchangers <span>[3]</span></a></li>-->
+                                        <!--<li><a href="#">Locking wheel kits <span>[4]</span></a></li>-->
+                                        <!--<li><a href="#">Mirrors <span>[3]</span></a></li>-->
+                                        <!--<li><a href="#">Tailored mats <span>[3]</span></a></li>-->
+                                        <!--<li><a href="#">Washer system <span>[4]</span></a></li>-->
+                                        <!--<li><a href="#">Wheel bolts <span>[4]</span></a></li>-->
+                                        <!--<li><a href="#">Wheel nuts <span>[3]</span></a></li>-->
+                                        <!--<li><a href="#">Wiper blades <span>[3]</span></a></li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+
+                                <!--<li><a href="#"><span>Interior</span><span> [6]</span></a>-->
+                                    <!--<ul class="list-default border">-->
+                                        <!--<li><a href="#">Air fresheners <span>[6]</span></a></li>-->
+                                        <!--<li><a href="#">Car maintainance <span>[5]</span></a></li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+            </aside>
+            <!--           end sidebar finder           /-->
+
+            <!--           ¬ intro catalog           /-->
+            <div class="col-xs-12 col-md-9">
+                <section class="catalog-row-wrapper">
+                    <header class="section-header" style="margin-top: 0">
+                        <h2>Universal Catalytic Converters</h2>
+                    </header>
+                    <!--           ¬ catalog search switcher           /-->
+                    <div class="catalog-search-switcher media">
+                        <div class="media-body">
+                            Stainless steel construction. Federal emissions compliant to customer requirements.
+                        </div>
+                    </div>
+                    <!--           end catalog search switcher           /-->
+
+                    <!--           ¬ catalog items           /-->
+                    <div id="catalogGrid" class="catalog-row row">
+                        <!--           ¬ item           /-->
+                        <div class="col-rs col-xs-6 col-sm-4 col-md-4 catalog-list-item" ng-repeat="converter in catConverterData">
+                            <article class="catalog-item-panel row">
+                                <figure class="col-xs-4 catalog-item-panel__img">
+                                    <img src={{converter.image}} alt="" style="height: auto; padding-top: 57px">
+                                    <!--<div class="over-catalog">-->
+                                        <!--<ul class="over-catalog__panel">-->
+                                            <!--<li><a href="#" data-path="navbar-default" title="Add to Wish List" data-toggle="tooltip"><i class="icon pe-7s-like"></i></a></li>-->
+                                            <!--<li><a href="#" data-path="navbar-default" title="Add to Cart" data-toggle="tooltip"><i class="icon pe-7s-graph3"></i></a></li>-->
+                                        <!--</ul>-->
+                                    <!--</div>-->
+                                </figure>
+                                <div class="catalog-item-panel__body col-xs-8">
+                                    <div class="catalog-item-header js-equalHeight"><a class="link-title">
+                                        <h3>{{converter.partName}}</h3></a>
+                                        <p>{{converter.description}}</p>
+                                    </div>
+                                    <div class="media media-footer row">
+                                        <div class="col-xs-12 col-sm-6 col-lg-7 order-1">
+                                            <div class="media-body">
+                                                <div class="media-counter">
+                                                    <input type="text" data-number value={{converter.numOfParts}} readonly class="form-control-count"> Different Parts
+                                                </div>
+                                            </div>
+                                            <!--<div class="media-right cost-row"><span class="cost-current text-danger">$4.00</span><span class="cost-special through">$4.00</span></div>-->
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-lg-5 order-2 pull-right">
+                                            <a role="button" class="btn btn-regular btn-accent" ng-click="showDetails(converter)"><span class="btn-text">Details</span><span class="btn-over"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!--           end item           /-->
+                    </div>
+                    <!--           end catalog items           /-->
+                </section>
+                <div id="modalDetails" role="dialog" class="modal modal-reservation fade">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content-center">
+                            <div style="background: url(&quot;images/pattern.jpg&quot;)" class="panel parallax-repeat dark">
+                                <div class="panel__inner">
+                                    <div class="section-header">
+                                        <button type="button" data-toggle="modal" data-target="#modalDetails" class="btn-close"><span class="btn-close__bar"></span><span class="btn-close__bar"></span></button>
+                                        <h3>{{tableData.partName}}</h3>
+                                        <div class="divider"></div>
+                                        <p>Parts and Sizing Details</p>
+                                    </div>
+                                    <div class="panel__body">
+                                        <div class="table-pricing table-responsive">
+                                            <table class="table">
+                                                <thead >
+                                                <tr>
+                                                    <th class="col-xs-1" style="text-align: center">Part No.</th>
+                                                    <th class="col-xs-3" style="text-align: center">Inlet ID</th>
+                                                    <th class="col-xs-3" style="text-align: center">Outlet ID</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr ng-repeat="detail in tableData.tableData">
+                                                    <td class="col-xs-1">{{detail.partNo}}</td>
+                                                    <td class="col-xs-3">{{detail.inletID}}</td>
+                                                    <td class="col-xs-3">{{detail.outletID}}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                    <div class="panel__footer"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--           end intro catalog           /-->
+        </div>
+    </div>
+
+</div>
+<!--           end content inner           /--

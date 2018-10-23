@@ -5,8 +5,8 @@ angular.module('gap.about', ['ui.router'])
                 url: 'about',
                 views: {
                     "contentHome@home":{
-                        templateUrl: 'components/about/about.html'
-                        // controller : 'aboutController'
+                        templateUrl: 'components/about/about.html',
+                        controller : 'aboutController'
                     }
                 }
             });

@@ -3374,16 +3374,19 @@ blockquote footer cite {
 }
 
 .table-pricing .table > thead {
-  border: 1px solid #222222;
+  border: 1px solid #ffffff;
 }
 
 .table-pricing .table > thead > tr {
+  text-align: center;
   background-color: #222222;
-  color: #fff;
+  color: #ff314c;
 }
 
-.table-pricing .table > tbody > tr:nth-of-type(even) {
-  background-color: #fafafa;
+.table-pricing .table > tbody > tr {
+  text-align: center;
+  background-color: #222222;
+  border: 1px solid #ffffff;
 }
 
 @media (max-width: 767px) {

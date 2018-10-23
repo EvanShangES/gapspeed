@@ -1,0 +1,22 @@
+[
+  {
+    "partName": "Band Clamp - BCJ Series Aluminized",
+    "description": "Sizes: 2\" ,2.25\" ,2.5\" ,2.75\" ,3\" ,3.5\" ,4\" ,5\" ,6\" ,7\" ",
+    "image": "components/products/exhaustClamps/product_images/BCJ_series.png"
+  },
+  {
+    "partName": "Flat Band Clamp - BCB Series Stainless Steel",
+    "description": "Sizes: 2\" ,2.25\" ,2.5\" ,2.75\" ,3\" ,3.5\" ,4\" ,5\" ,6\" ,7\" ",
+    "image": "components/products/exhaustClamps/product_images/BCB_series.png"
+  },
+  {
+    "partName": "Band Clamp - BCL Series Almunized",
+    "description": "Sizes: 2\" ,2.25\" ,2.5\" ,2.75\" ,3\" ,3.5\" ,4\" ,5\" ,6\" ,7\" ",
+    "image": "components/products/exhaustClamps/product_images/BCL_series.png"
+  },
+  {
+    "partName": "Band Clamp - BCS Series Stainless Steel",
+    "description": "Sizes: 2\" ,2.25\" ,2.5\" ,2.75\" ,3\" ,3.5\" ,4\" ,5\" ,6\" ,7\" ",
+    "image": "components/products/exhaustClamps/product_images/BCS_series.png"
+  }
+]
