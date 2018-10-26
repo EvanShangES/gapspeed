@@ -1,0 +1,42 @@
+[
+  {
+  "partName": "Angle Rolled Stainless Steel Tip",
+  "description": "Diameter x Length Overall: 3.5\"x12\", 3.5\"x18\", 4\"x12\", 4\"x16\", 4\"x18\"",
+  "image": "components/products/exhaustTips/specialized/product_images/Angle_rolled_stainless_steel_tip.png"
+  },
+  {
+    "partName": "Angle Cut Stainless Steel Tip",
+    "description": "Sizes available upon request",
+    "image": "components/products/exhaustTips/specialized/product_images/Angle_cut_stainless_steel_tip.png"
+  },
+  {
+    "partName": "Stainless Steel With Chrome Coating",
+    "description": "Sizes available upon request",
+    "image": "components/products/exhaustTips/specialized/product_images/Stainless_steel_with_chrome_coating.png"
+  },
+  {
+    "partName": "Chrome Tip - Electroplating",
+    "description": "Sizes available upon request",
+    "image": "components/products/exhaustTips/specialized/product_images/Chrome_tip.png"
+  },
+  {
+    "partName": "Multicoloured Chrome",
+    "description": "Sizes available upon request",
+    "image": "components/products/exhaustTips/specialized/product_images/Multicoloured_chrome.png"
+  },
+  {
+    "partName": "Gold Chrome",
+    "description": "Sizes available upon request",
+    "image": "components/products/exhaustTips/specialized/product_images/Gold_chrome.png"
+  },
+  {
+    "partName": "Black Chrome",
+    "description": "Sizes available upon request ",
+    "image": "components/products/exhaustTips/specialized/product_images/Black_chrome.png"
+  },
+  {
+    "partName": "Blue Chrome",
+    "description": "Sizes available upon request ",
+    "image": "components/products/exhaustTips/specialized/product_images/Blue_chrome.png"
+  }
+  ]

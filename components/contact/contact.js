@@ -5,8 +5,8 @@ angular.module('gap.contact', ['ui.router'])
                 url: 'contact',
                 views: {
                     "contentHome@home":{
-                        templateUrl: 'components/contact/contact.html'
-                        // controller : 'aboutController'
+                        templateUrl: 'components/contact/contact.html',
+                        controller : 'contactController'
                     }
                 }
             });

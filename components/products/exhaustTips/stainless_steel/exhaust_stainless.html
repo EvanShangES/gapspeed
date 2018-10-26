@@ -1,0 +1,148 @@
+<!--           ¬ content inner           /-->
+<div class="page-content-wrapper">
+    <div class="container">
+        <div class="row">
+            <!--           ¬ sidebar finder           /-->
+            <aside class="sidebar sidebar--md-right col-xs-12 col-md-3">
+                <!--           ¬ panel-finder           /-->
+                <article class="sidebar-panel sidebar-panel-categories ">
+                    <h2 class="hide">Section title</h2>
+                    <div class="sidebar-panel__inner">
+                        <section class="sidebar-categories">
+                            <h4>Categories</h4>
+                            <ul class="list-category">
+                                <li><a ui-sref="home.products.mufflers-stainless"><span>Mufflers</span></a></li>
+                                <li class="active"><a><span>Exhaust Tips</span></a>
+                                    <ul class="list-default border">
+                                        <li><a ui-sref="home.products.exhausts-specialized">Specialized Tips </a></li>
+                                        <li class="active"><a>Stainless Steel </a></li>
+                                    </ul>
+                                </li>
+                                <li><a ui-sref="home.products.flexPipes"><span>Flex Pipes</span></a></li>
+                                <li><a ui-sref="home.products.catConverters"><span>Catalytic Converters</span></a></li>
+                                <li><a ui-sref="home.products.hangersInsulators"><span>Hangers & Insulators</span></a></li>
+                                <li><a ui-sref="home.products.exhaustClamps"><span>Exhaust Clamps</span></a></li>
+                                <li><a ui-sref="home.products.other-parts"><span>Other Parts</span></a></li>
+                                <li><a ui-sref="home.products.accessories"><span>Accessories</span></a></li>
+
+
+
+
+                                <!--<li><a href="#"><span>Audio</span><span> [6]</span></a>-->
+                                <!--<ul class="list-default border">-->
+                                <!--<li><a href="#">2.0 Audio Systems <span>[5]</span></a></li>-->
+                                <!--<li><a href="#">2.1 Audio Systems <span>[5]</span></a></li>-->
+                                <!--<li><a href="#">5.1 Audio Systems <span>[5]</span></a></li>-->
+                                <!--<li><a href="#">Amplifiers <span>[2]</span></a></li>-->
+                                <!--<li><a href="#">AUX Cables <span>[5]</span></a></li>-->
+                                <!--<li><a href="#">Receivers <span>[3]</span></a></li>-->
+                                <!--<li><a href="#">Subwoofers <span>[3]</span></a></li>-->
+                                <!--</ul>-->
+                                <!--</li>-->
+
+                                <!--<li><a href="#"><span>Parts</span><span> [11]</span></a>-->
+                                <!--<ul class="list-default border">-->
+                                <!--<li><a href="#">Brakes <span>[8]</span></a></li>-->
+                                <!--<li><a href="#">Cooling & Heating <span>[6]</span></a></li>-->
+                                <!--<li><a href="#">Electrical <span>[5]</span></a></li>-->
+                                <!--<li><a href="#">Engine <span>[5]</span></a></li>-->
+                                <!--<li><a href="#">Suspension <span>[5]</span></a></li>-->
+                                <!--<li><a href="#">Transmission <span>[5]</span></a></li>-->
+                                <!--</ul>-->
+                                <!--</li>-->
+
+                                <!--<li><a href="#"><span>Exterior</span><span> [5]</span></a>-->
+                                <!--<ul class="list-default border">-->
+                                <!--<li><a href="#">Body mouldings <span>[4]</span></a></li>-->
+                                <!--<li><a href="#">Body panels <span>[3]</span></a></li>-->
+                                <!--<li><a href="#">Cables <span>[3]</span></a></li>-->
+                                <!--<li><a href="#">Grilles <span>[4]</span></a></li>-->
+                                <!--<li><a href="#">Heat exchangers <span>[3]</span></a></li>-->
+                                <!--<li><a href="#">Locking wheel kits <span>[4]</span></a></li>-->
+                                <!--<li><a href="#">Mirrors <span>[3]</span></a></li>-->
+                                <!--<li><a href="#">Tailored mats <span>[3]</span></a></li>-->
+                                <!--<li><a href="#">Washer system <span>[4]</span></a></li>-->
+                                <!--<li><a href="#">Wheel bolts <span>[4]</span></a></li>-->
+                                <!--<li><a href="#">Wheel nuts <span>[3]</span></a></li>-->
+                                <!--<li><a href="#">Wiper blades <span>[3]</span></a></li>-->
+                                <!--</ul>-->
+                                <!--</li>-->
+
+                                <!--<li><a href="#"><span>Interior</span><span> [6]</span></a>-->
+                                <!--<ul class="list-default border">-->
+                                <!--<li><a href="#">Air fresheners <span>[6]</span></a></li>-->
+                                <!--<li><a href="#">Car maintainance <span>[5]</span></a></li>-->
+                                <!--</ul>-->
+                                <!--</li>-->
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+            </aside>
+            <!--           end sidebar finder           /-->
+
+            <!--           ¬ intro catalog           /-->
+            <div class="col-xs-12 col-md-9">
+                <section class="catalog-row-wrapper">
+                    <header class="section-header" style="margin-top: 0">
+                        <h2>Stainless Steel Tips</h2>
+                    </header>
+                    <!--           ¬ catalog search switcher           /-->
+                    <div class="catalog-search-switcher media">
+                        <div class="media-body">
+                            Engineered with 3 perforated pipes, double wrapped, 100% aluminized with a interior welded neck to prevent leackage.
+                        </div>
+                    </div>
+                    <!--           end catalog search switcher           /-->
+
+                    <!--           ¬ catalog items           /-->
+
+                    <div id="catalogGrid" class="catalog-row row">
+                        <!--           ¬ item           /-->
+                        <div class="col-rs col-xs-6 col-sm-4 col-md-4" ng-repeat="item in exhausts_stainlessData[stainlessIndex]">
+                            <article class="catalog-item-panel">
+                                <figure class="catalog-item-panel__img hover-anim"><img src={{item.image}} alt="" class="img-responsive thumb">
+                                    <!--<div class="over-catalog">-->
+                                    <!--<ul class="over-catalog__panel">-->
+                                    <!--<li><a href="#" data-path="navbar-default" title="Add to Wish List" data-toggle="tooltip"><i class="icon pe-7s-like"></i></a></li>-->
+                                    <!--<li><a href="#" data-path="navbar-default" title="Add to Cart" data-toggle="tooltip"><i class="icon pe-7s-graph3"></i></a></li>-->
+                                    <!--</ul>-->
+                                    <!--</div>-->
+                                </figure>
+                                <div class="catalog-item-panel__body"><a class="link-title">
+                                    <h3>{{item.partName}}</h3></a>
+                                    <p style="min-height: 0">{{item.description}}</p>
+                                    <div class="media media-footer">
+                                        <!--<div class="media-body">-->
+                                        <!--<div class="media-counter">-->
+                                        <!--<input type="text" data-number value="1" readonly class="form-control-count">-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="media-right cost-row"><span class="cost-current">$55.98</span></div><a href="#" role="button" class="btn btn-regular btn-accent"><span class="btn-text">Buy</span><span class="btn-over"></span></a>-->
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!--           end item           /-->
+                    </div>
+                    <nav aria-label="Page navigation" class="pagination-page">
+                        <ul class="pagination">
+                            <li><a ng-style="stainlessIndex == 0 ? 'cursor: pointer' : 'cursor: none'" ng-click="stainlessNextPrevPage(-1)" aria-label="Previous" style="cursor: pointer"><span aria-hidden="true"><i class="fa fa-angle-double-left"></i></span></a></li>
+                            <li ng-class="stainlessIndex == 0 ? 'active': ''"><a ng-class="stainlessIndex == 0 ? 'disabled' : ''" ng-click="stainlessGoPage(0)" style="cursor: pointer">1</a></li>
+                            <li ng-class="stainlessIndex == 1 ? 'active': ''"><a ng-class="stainlessIndex == 1 ? 'disabled' : ''" ng-click="stainlessGoPage(1)" style="cursor: pointer">2</a></li>
+                            <li ng-class="stainlessIndex == 2 ? 'active': ''"><a ng-class="stainlessIndex == 2 ? 'disabled' : ''" ng-click="stainlessGoPage(2)" style="cursor: pointer">3</a></li>
+                            <li ng-class="stainlessIndex == 3 ? 'active': ''"><a ng-class="stainlessIndex == 3 ? 'disabled' : ''" ng-click="stainlessGoPage(3)" style="cursor: pointer">4</a></li>
+                            <li ng-class="stainlessIndex == 4 ? 'active': ''"><a ng-class="stainlessIndex == 4 ? 'disabled' : ''" ng-click="stainlessGoPage(4)" style="cursor: pointer">5</a></li>
+                            <li ng-class="stainlessIndex == 5 ? 'active': ''"><a ng-class="stainlessIndex == 5 ? 'disabled' : ''" ng-click="stainlessGoPage(5)" style="cursor: pointer">6</a></li>
+                            <li><a ng-click="stainlessNextPrevPage(1)" aria-label="Next"><span aria-hidden="true"><i class="fa fa-angle-double-right" style="cursor: pointer"></i></span></a></li>
+                        </ul>
+                    </nav>
+                    <!--           end catalog items           /-->
+                </section>
+            </div>
+            <!--           end intro catalog           /-->
+        </div>
+    </div>
+
+</div>
+<!--           end content inner           /--

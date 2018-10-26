@@ -1,3 +1,3 @@
-angular.module('gap.products').controller('productsController', function($scope, $rootScope, $stateParams){
-   console.log('hello');
+angular.module('gap.products').controller('productsController', function($scope, $rootScope, $state, $transitions, $stateParams){
+
 });

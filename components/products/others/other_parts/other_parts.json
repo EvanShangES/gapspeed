@@ -1,0 +1,33 @@
+[
+  {
+    "partName": "Spark Arrestor - 1",
+    "description": "",
+    "image": "components/products/others/other_parts/product_images/Spark_arrestors(1).png"
+  },
+  {
+    "partName": "Spark Arrestor - 2",
+    "description": "",
+    "image": "components/products/others/other_parts/product_images/Spark_arrestors(2).png"
+  },
+  {
+    "partName": "Rain Caps",
+    "description": "",
+    "image": "components/products/others/other_parts/product_images/Rain_cap.png"
+  },
+  {
+    "partName": "Galvanized Adapters",
+    "description": "",
+    "image": "components/products/others/other_parts/product_images/Galvanized.png"
+  },
+  {
+    "partName": "Muffler Clamps",
+    "description": "",
+    "image": "components/products/others/other_parts/product_images/Muffler_clamp.png"
+  },
+  {
+    "partName": "Maz Protege",
+    "description": "",
+    "image": "components/products/others/other_parts/product_images/MAZ_protege.png"
+  }
+
+]

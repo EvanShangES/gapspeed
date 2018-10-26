@@ -1,7 +1,7 @@
 <main class="page-content">
     <!--           ¬ section-intro           /-->
     <!--           ¬ section intro           /-->
-    <section style="background-image: url(../images/pattern.jpg)" class="catalog-intro-page parallax-repeat dark">
+    <section style="background-image: url('resources/images/pattern.jpg')" class="catalog-intro-page parallax-repeat dark">
         <div class="container">
             <div class="catalog-intro-page__content">
                 <h1>Products</h1>
@@ -12,20 +12,20 @@
     <!--           end section-intro           /-->
     <!--           ¬ navbar filter           /-->
     <nav class="navbar navbar-accent navbar-panel">
-        <div class="container" style="margin-left: 150px; margin-right: 150px">
+        <div class="container">
             <div id="navCategories" class="collapse navbar-collapse" style="width: 1500px">
                 <ul class="nav navbar-nav">
                     <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="true" class="dropdown-toggle">Mufflers<span class="fa fa-caret-down"></span></a>
                         <ul role="menu" class="dropdown-menu">
                             <li>
                                 <ul class="list-default">
-                                    <li><a href="#">Universal Aluminized</a></li>
-                                    <li><a href="#">High Performance</a></li>
-                                    <li><a href="#">Tractor Mufflers</a></li>
+                                    <li><a ui-sref=".mufflers-universal">Universal Aluminized</a></li>
+                                    <li><a ui-sref=".mufflers-performance">High Performance</a></li>
+                                    <li><a ui-sref=".mufflers-tractor">Tractor Mufflers</a></li>
                                 </ul>
                                 <ul class="list-default">
-                                    <li><a href="#">Stainless Steel</a></li>
-                                    <li><a href="#">Truck Mufflers</a></li>
+                                    <li><a ui-sref=".mufflers-stainless">Stainless Steel</a></li>
+                                    <li><a ui-sref=".mufflers-truck">Truck Mufflers</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -34,20 +34,11 @@
                         <ul role="menu" class="dropdown-menu">
                             <li>
                                 <ul class="list-default">
-                                    <li><a href="#">Body mouldings</a></li>
-                                    <li><a href="#">Body panels</a></li>
-                                    <li><a href="#">Grilles</a></li>
-                                    <li><a href="#">Mirrors</a></li>
-                                    <li><a href="#">Locking wheel kits</a></li>
-                                    <li><a href="#">Wheel bolts</a></li>
+                                    <li><a ui-sref=".exhausts-specialized">Specialized Tips</a></li>
                                 </ul>
                                 <ul class="list-default">
-                                    <li><a href="#">Wheel nuts</a></li>
-                                    <li><a href="#">Tailored mats</a></li>
-                                    <li><a href="#">Washer system</a></li>
-                                    <li><a href="#">Wiper blades</a></li>
-                                    <li><a href="#">Heat exchangers</a></li>
-                                    <li><a href="#">Cables</a></li>
+                                    <li><a ui-sref=".exhausts-stainless">Stainless Steel</a></li>
+
                                 </ul>
                             </li>
                         </ul>
@@ -56,27 +47,19 @@
                     <li class="dropdown"><a ui-sref=".catConverters">Catalytic Converters</a></li>
                     <li class="dropdown"><a ui-sref=".hangersInsulators">Hangers & Insulators</a></li>
                     <li class="dropdown"><a ui-sref=".exhaustClamps">Exhaust Clamps</a></li>
-                    <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Accessories<span class="fa fa-caret-down"></span></a>
+                    <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Other Parts<span class="fa fa-caret-down"></span></a>
                         <ul role="menu" class="dropdown-menu">
                             <li>
                                 <ul class="list-default">
-                                    <li><a href="#">Car cleaning</a></li>
-                                    <li><a href="#">Car maintainance</a></li>
-                                    <li><a href="#">Fluids</a></li>
-                                    <li><a href="#">Security</a></li>
-                                    <li><a href="#">For winter</a></li>
-                                    <li><a href="#">For summer</a></li>
+                                    <li><a ui-sref="home.products.astros">Astros Benz Parts</a></li>
                                 </ul>
                                 <ul class="list-default">
-                                    <li><a href="#">GPS navigators</a></li>
-                                    <li><a href="#">Parking Aids</a></li>
-                                    <li><a href="#">Entertainment</a></li>
-                                    <li><a href="#">Sound systems</a></li>
-                                    <li><a href="#">Bluetooth handsfree kits</a></li>
+                                    <li><a ui-sref="home.products.other-parts">Other Parts</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
+                    <li class="dropdown"><a ui-sref=".accessories">Accessories</a></li>
                 </ul>
             </div>
         </div>
@@ -87,7 +70,7 @@
     <!--           end content inner           /-->
 
     <!--           ¬ brands-row           /-->
-    <section style="background: url(&quot;../images/pattern.jpg&quot;)" class="section-maintenance parallax-repeat accent">
+    <section style="background: url('resources/images/pattern.jpg')" class="section-maintenance parallax-repeat accent">
         <div class="container">
             <div class="row">
                 <div class="col-sm-7 col-md-6">

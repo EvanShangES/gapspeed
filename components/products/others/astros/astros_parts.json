@@ -1,0 +1,27 @@
+[
+  {
+    "partName": "201 Stainless Steel",
+    "description": "OEM: 6214900065 - 115*280mm, 6204900465 - 105*285mm, 6204900365 - 90*285mm",
+    "image": "components/products/others/astros/product_images/201_stainless_steel.png"
+  },
+  {
+    "partName": "Cold Plated",
+    "description": "OEM: 9424902219, 9424903119, 9424903019",
+    "image": "components/products/others/astros/product_images/Cold_iron.png"
+  },
+  {
+    "partName": "Scania",
+    "description": "OEM: 1500455",
+    "image": "components/products/others/astros/product_images/Scania.png"
+  },
+  {
+    "partName": "Cold Iron",
+    "description": "OEM: 1321301",
+    "image": "components/products/others/astros/product_images/Cold_iron.png"
+  },
+  {
+    "partName": "Truck Muffler",
+    "description": "",
+    "image": "components/products/others/astros/product_images/Truck_muffler.png"
+  }
+]

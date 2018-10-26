@@ -3751,6 +3751,9 @@ blockquote footer cite {
 .sidebar-panel-categories .list-category > li.active > ul {
   display: block;
 }
+.sidebar-panel-categories .list-category > li.active > ul > li.active > a {
+  color: #333333;
+}
 
 /**        ¬ sidebar panel finder         **/
 .sidebar-panel-finder .form-group:nth-last-of-type(1) {
