@@ -172,7 +172,7 @@
   {
     "partName": "409 Stainless Steel Mufflers",
     "description": "",
-    "image": "components/products/mufflers/high_performance/product_images/409_stainless_steel_mufflers.png",
+    "image": "components/products/mufflers/high_performance/product_images/409_stainless.jpg",
     "numOfParts": 33,
     "tableData": [
       {
@@ -473,6 +473,11 @@
         "height_width": "8\" Round"
       }
     ]
+  },
+  {
+    "partName": "Y / X Pipes",
+    "description": "",
+    "image": "components/products/mufflers/high_performance/product_images/409_stainless_steel_mufflers.png"
   }
 ]
     

@@ -1,6 +1,6 @@
 <main class="page-content">
     <!--           ¬ section intro           /-->
-    <section style="background-image: url(../images/pattern.jpg)" class="intro-page parallax-repeat dark">
+    <section style="background-image: url(resources/images/pattern.jpg)" class="intro-page parallax-repeat dark">
         <div class="container">
             <div class="intro-page__content-wrapper">
                 <h1>About Us</h1>
@@ -47,7 +47,7 @@
                         <header class="section-header">
                             <h2>Our workshop inside</h2>
                             <div class="divider"></div>
-                            <p>At quitting in strictly up wandered of relation answered felicity. Side need at in what dear ever upon if. Same down want joy neat ask pain help she. Alone three stuff use law walls fat asked.</p>
+                            <p>Golden Apple process stainless and aluminized sheet coils into straight tubes that are cut to varying sizes. We utilize; automated CNC cold saws cut tubing machines, automated metal stamping machines, automatic or manual pipe bending systems, and seam welding techniques to create quality auto parts to deliver great power, sound, and performance. </p>
                         </header>
                         <div class="grid-gallery about-gallery row">
                             <!--           ¬ grid-sizer           /-->
@@ -73,18 +73,69 @@
             </div>
         </div>
         <!--           ¬ maintenance           /-->
+        <!--           ¬ brands-row           /-->
         <section style="background: url('resources/images/pattern.jpg')" class="section-maintenance parallax-repeat accent">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-7 col-md-6">
-                        <h2>Is your vehicle due for a qualified maintenance?</h2>
+                        <h2>Have a question or looking for a quote? We're here to help!</h2>
                     </div>
                     <div class="col-sm-5 col-md-6">
-                        <button type="button" class="btn btn-regular btn-dark btn-lg" data-toggle="modal" data-target="#modalReserv"><span class="btn-text">Book a service</span><span class="btn-over"></span></button>
+                        <button type="button" class="btn btn-regular btn-dark btn-lg" data-toggle="modal" data-target="#modalReserv"><span class="btn-text">Contact us</span><span class="btn-over"></span></button>
                     </div>
                 </div>
             </div>
         </section>
+
+        <div id="modalReserv" role="dialog" class="modal modal-reservation fade">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content-center">
+                    <div style="background: url(&quot;images/pattern.jpg&quot;)" class="panel parallax-repeat dark">
+                        <div class="panel__inner">
+                            <div class="section-header">
+                                <button type="button" data-toggle="modal" data-target="#modalReserv" class="btn-close"><span class="btn-close__bar"></span><span class="btn-close__bar"></span></button>
+                                <h2>Send us a message</h2>
+                                <div class="divider"></div>
+                                <p>We will reply you in 48 hours (on business days).</p>
+                            </div>
+                            <div class="panel__body">
+
+                                <!--           ¬ reservation form           /-->
+                                <div class="reservation-form">
+                                    <form id="contactsForm" action="mailto:ava@gaexhaust.com" method="POST" data-toggle="validator">
+                                        <div class="form-inner row">
+                                            <div class="col-sm-6 form-group">
+                                                <label for="contName" class="label-control">Your name</label>
+                                                <div class="input-wrap input-wrap--icon-left"><i class="input-icon pe-7s-user"></i>
+                                                    <input id="contName" type="text" name="user_name" placeholder="David Kraemer" required class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6 form-group">
+                                                <label for="contEmail" class="label-control">Your e-mail</label>
+                                                <div class="input-wrap input-wrap--icon-left"><i class="input-icon pe-7s-mail"></i>
+                                                    <input id="contEmail" type="email" name="user_email" placeholder="user@example.com" required class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xs-12 form-group">
+                                                <label for="contMsg" class="label-control">Your message</label>
+                                                <textarea id="contMsg" name="user_message" required class="form-control"></textarea>
+                                            </div>
+
+                                            <div class="col-xs-12">
+                                                <button type="submit" class="btn btn-regular btn-accent"><span class="btn-text">Contact us</span><span class="btn-over"></span></button>
+                                            </div>
+                                        </div>
+                                    </form>                            </div>
+                                <!--           end reservation form           /-->
+                            </div>
+                            <div class="panel__footer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--           end maintenance           /-->
     </div>
     <!--           end page-content-wrapper           /-->
